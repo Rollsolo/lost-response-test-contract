@@ -55,7 +55,12 @@ outputs, not summaries.
 - Action: after attempt 1 (K, A) commits with its response lost, the
   caller attempts recovery using only K. The recovery caller holds only
   K: it must not possess the original run ID, response, result, or digest
-  from attempt 1.
+  from attempt 1. "Using only K" excludes those response-derived
+  identifiers; it does not exclude caller authentication, operation
+  scoping, or the caller's permission to retrieve the historical
+  outcome. Retrieval permission is separate from authorization to
+  execute again: a caller may be permitted to recover an outcome it
+  may not re-execute.
 - Pass condition: the caller obtains the original committed outcome, and
   the recovered outcome is independently checked against the original
   committed result digest; the digests must be equal. Digest equality is
@@ -95,6 +100,21 @@ outputs, not summaries.
   parameters.
 - Basis: a record store pruning faster than clients can retry recreates
   the ambiguity this contract tests.
+
+## Second fault case: the persistence gap (tracked separately)
+
+The common setup drops the response after both the external effect and
+the completion record are committed. A harder interruption exists:
+the effect commits, but the interruption lands before the recovery
+result is durably persisted. Passing the baseline case does not
+establish recovery across this one.
+
+This case is tracked separately from the initial comparison. A1 to A5
+are scored on the baseline case. When the persistence-gap case is run,
+its outcomes are recorded in their own class: an explicit unresolved
+outcome with no additional effect is a distinct recorded outcome,
+neither a successful outcome recovery nor a silent re-execution, and
+it is never scored as either.
 
 ## Historical baselines
 
