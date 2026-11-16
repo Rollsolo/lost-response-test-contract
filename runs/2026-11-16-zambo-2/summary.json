@@ -1,0 +1,171 @@
+{
+  "adapter": "zambo",
+  "assertions": {
+    "A1": {
+      "K": "lr-op-f63fe15895-a1",
+      "count_after_attempt1": 1,
+      "execution_receipt_ids": [
+        "6b7d958a-f31b-47d1-8aef-09a868e2e865",
+        "1fb3a09e-1029-464c-9872-fb02fcc35a65"
+      ],
+      "final_external_effect_count": 2,
+      "reason": "external effect count for the logical operation is 2, not 1",
+      "retry_response_class": "success",
+      "score": "fail",
+      "session_id": "lr-f63fe15895-a1"
+    },
+    "A2": {
+      "K": "lr-op-f63fe15895-a2",
+      "count_after_attempt1": 1,
+      "execution_receipt_ids": [
+        "0c555b90-97fc-4763-a3c6-daa9fe1765dd",
+        "5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7"
+      ],
+      "final_external_effect_count": 2,
+      "mismatched_field": "action",
+      "reason": "mismatched retry executed as a new call: effect count rose from 1 to 2, response class success",
+      "retry_response_class": "success",
+      "score": "fail",
+      "session_id": "lr-f63fe15895-a2"
+    },
+    "A3": {
+      "committed_digest": "sha256:70a8dacb73738cf7e9d62f90e17d40191f42f7360fcb344d78a65753a2cd7fc1",
+      "legs": {
+        "k_only": {
+          "K": "lr-op-f63fe15895-a1",
+          "attempts": [
+            {
+              "http_status": 404,
+              "page_http_status": 200,
+              "page_title_not_found": true,
+              "path": "GET /api/v2/receipt/<K>/verify and GET /run/<K>",
+              "response_class": "not_found"
+            },
+            {
+              "path": "tools/call continuity_get_recent with K as the only identifier",
+              "receipt_ids_returned": [
+                "3e95a364-e96a-4115-b6a4-3a4c13e56211",
+                "5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7",
+                "92fda13a-249f-4bce-a169-1ccf0f3397f3",
+                "0c555b90-97fc-4763-a3c6-daa9fe1765dd",
+                "bbc2dad0-79a4-41ff-9ced-75f3999d78e0",
+                "eff82c14-9717-47de-b268-8991f8980467",
+                "1fb3a09e-1029-464c-9872-fb02fcc35a65",
+                "2352011e-2b2f-433f-9a3c-0b24730cd351",
+                "6b7d958a-f31b-47d1-8aef-09a868e2e865",
+                "dcf37960-64f2-4474-b53c-326647f573f3",
+                "16a73c19-c199-4822-8304-ed40b7e064d1",
+                "4eddd952-5360-48b3-882d-2bc435ede79a",
+                "e8c793c3-5891-49d5-afaf-73fe28f25804",
+                "688a4981-0103-460e-b42b-b80f874bcdec",
+                "4561ebc6-174e-4ec7-84bf-98b0fd50c503",
+                "4b895f0f-a304-4276-b58f-cff970df8868",
+                "5588cd70-f083-40f0-8b25-3b79ee4ad9f4",
+                "93f9fde0-c382-45d3-b5ef-13296f6e4c29",
+                "4c580706-541f-4837-98d3-c18a915f44f2",
+                "6e51ca36-a22f-4144-a59d-cb07af4c86bd",
+                "58bfe84c-1606-4760-b854-4800a9388aa5",
+                "example"
+              ],
+              "response_class": "success"
+            }
+          ],
+          "reason": "K-only recovery did not return the original committed outcome; the direct record lookup by K returned not found and no K-keyed lookup returned the committed digest",
+          "score": "fail"
+        },
+        "run_id": {
+          "digests_served": {
+            "input_hash": "sha256:8eb34c8b2a02d79511822ad6bf176f94d8659514f01a61c6a138d019035d8ce1",
+            "output_hash": "sha256:70a8dacb73738cf7e9d62f90e17d40191f42f7360fcb344d78a65753a2cd7fc1"
+          },
+          "http_status": 200,
+          "note": "Section 9 resolution returned the unaltered record from the public JSON record; Section 6 recomputation is the harness's own SHA-256 over the decoded canonical bytes compared with the served output_hash, recorded in the recomputation block.",
+          "page_http_status": 200,
+          "receipt_id": "6b7d958a-f31b-47d1-8aef-09a868e2e865",
+          "recomputation": {
+            "checks_served": {
+              "canonical_payload_matches": {
+                "detail": "The stored output and known call context reconstruct the exact canonical bytes.",
+                "label": "Canonical payload reconstruction",
+                "passed": true,
+                "status": "pass"
+              },
+              "chain": {
+                "detail": "This endpoint does not verify an append-only receipt chain.",
+                "status": "not_checked"
+              },
+              "commitment_matches": {
+                "computed_hash": "sha256:70a8dacb73738cf7e9d62f90e17d40191f42f7360fcb344d78a65753a2cd7fc1",
+                "detail": "SHA-256 of the exact decoded canonical bytes matches output_hash.",
+                "expected_hash": "sha256:70a8dacb73738cf7e9d62f90e17d40191f42f7360fcb344d78a65753a2cd7fc1",
+                "passed": true,
+                "status": "pass"
+              },
+              "issuer_authentication": {
+                "detail": "A zambo.dev receipt URL does not authenticate the issuer; no pinned signature or trusted issuer key was checked.",
+                "label": "Issuer authentication",
+                "passed": false,
+                "status": "not_checked"
+              },
+              "metadata_binding": {
+                "detail": "metadata_hash matches the canonical metadata block.",
+                "label": "AER-1 metadata hash",
+                "passed": true,
+                "status": "pass"
+              },
+              "provenance_binding": {
+                "detail": "The metadata claim is consistent with the verified receipt bytes; issuer is not authenticated.",
+                "label": "Provenance claim binding",
+                "passed": true,
+                "status": "pass"
+              },
+              "schema": {
+                "detail": "Schema conformance is left to the client using the linked hosted-profile schema.",
+                "status": "not_checked"
+              },
+              "signature": {
+                "detail": "No Ed25519 signature or pinned signing key is supplied.",
+                "status": "not_checked"
+              }
+            },
+            "computed_sha256_of_decoded_canonical_bytes": "70a8dacb73738cf7e9d62f90e17d40191f42f7360fcb344d78a65753a2cd7fc1",
+            "output_hash_served": "70a8dacb73738cf7e9d62f90e17d40191f42f7360fcb344d78a65753a2cd7fc1",
+            "status": "matched",
+            "verification_status_served": "verified"
+          },
+          "score": "pass"
+        }
+      },
+      "reason": "contract pass condition is the K-only leg: K-only recovery did not return the original committed outcome; the direct record lookup by K returned not found and no K-keyed lookup returned the committed digest; run-id leg scored pass separately in the evidence",
+      "score": "fail"
+    },
+    "A4": {
+      "reason": "every recorded retry resolved to the original outcome, a digest-verifiable record of it, or an explicit non-success state",
+      "response_classes": {
+        "A1_retry": "success",
+        "A2_retry": "success"
+      },
+      "score": "pass",
+      "verdicts": {
+        "A1_retry": "success corresponding to a committed record (see the A1/A2 counts); not a generic success with no record",
+        "A2_retry": "success corresponding to a committed record (see the A1/A2 counts); not a generic success with no record"
+      }
+    },
+    "A5": {
+      "due_at": "2026-11-17T20:33:31.461569Z",
+      "plant_file": "a5_plant.json",
+      "reason": "the 24 hour delayed leg cannot complete on the planting day; attempt 1 is planted with its commit timestamp recorded and the delayed leg is runnable later by run id and by K",
+      "score": "unproven"
+    }
+  },
+  "endpoint": "https://zambo.dev/mcp",
+  "finished_at": "2026-11-16T20:33:31.461774Z",
+  "initialize": {
+    "caller_handle_issued": true,
+    "http_status": 200
+  },
+  "run_tag": "f63fe15895",
+  "started_at": "2026-11-16T20:32:58.193547Z",
+  "system_name": "Zambo production",
+  "tool": "journal_log"
+}

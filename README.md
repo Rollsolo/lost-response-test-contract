@@ -53,14 +53,16 @@ pip install -r requirements.txt
 python3 lost_response.py --config config.zambo.json --out ../../runs/my-run
 ```
 
-Configuration knobs (in the config JSON): `endpoint` (the MCP endpoint
-to test), `public_base` (where the system's durable public record
-lives), `tool` (the target mutating tool), `args_template` (the
-arguments A, with `{K}` for the stable operation identity and
-`{SESSION}` for the fresh run-scoped session identity), `mismatch`
-(the one parameter A2 changes, and its altered value), and
-`a5_delay_hours` (the A5 delay, 24 by default). The delayed A5 leg
-runs later against a planted run:
+Configuration (in the config JSON): the top-level keys select the
+adapter (`adapter`, `system_name`, and `a5_delay_hours`, the A5
+delay, 24 by default); the adapter's own knobs live under
+`adapter_config`. For the Zambo adapter they are `endpoint` (the MCP
+endpoint to test), `public_base` (where the system's durable public
+record lives), `tool` (the target mutating tool), `args_template`
+(the arguments A, with `{K}` for the stable operation identity and
+`{SESSION}` for the fresh run-scoped session identity), and
+`mismatch` (the one parameter A2 changes, and its altered value).
+The delayed A5 leg runs later against a planted run:
 
 ```bash
 python3 lost_response.py --delayed-leg ../../runs/my-run/a5_plant.json
@@ -71,8 +73,66 @@ Zambo and how each assertion is executed and scored, is in
 fixtures/harness/README.md. Recorded runs and their raw outputs are
 in runs/, scored in RESULTS.md.
 
+## Run it against your system
+
+The harness driver owns the scoring; everything system-specific
+lives behind an adapter interface in fixtures/harness/adapters/.
+An adapter implements five operations: open the run, execute an
+attempt (including the dropped-response attempt), read the shared
+external effect counter from the system's durable public record,
+resolve a record by its server-issued id with a digest check, and
+attempt recovery holding only the operation identity K.
+
+To run the contract against another implementation:
+
+1. Copy fixtures/harness/adapters/stub.py to
+   fixtures/harness/adapters/<your_system>.py and implement the
+   five operations against your system. The stub is a template: it
+   describes no real system's behavior. The contract for each
+   operation is in fixtures/harness/adapters/base.py, and the full
+   guide is fixtures/harness/adapters/README.md.
+2. Write a config JSON (fixtures/harness/config.example.json is the
+   template) naming your adapter and carrying its settings under
+   `adapter_config`.
+3. Run it:
+
+   ```bash
+   cd fixtures/harness
+   pip install -r requirements.txt
+   python3 lost_response.py --config <your config>.json --out ../../runs/<run-dir>
+   ```
+
+   At or after the A5 delay (24 hours by default), run the delayed
+   leg against the plant the run wrote:
+
+   ```bash
+   python3 lost_response.py --delayed-leg ../../runs/<run-dir>/a5_plant.json
+   ```
+
+4. Publish the run back in the same form the recorded runs use:
+   the pinned versions (the contract and harness commit the run was
+   executed against, and the adapter's name and version or commit),
+   the full run directory of raw outputs, the external effect
+   counts with the identifier lists they were counted from, and the
+   caller-visible outcome of every retry and recovery path, as
+   returned. Add one row per assertion to RESULTS.md: pass, fail,
+   or unproven, evidence linked, no aggregate score.
+
+The contract remains a draft, ready to freeze on both parties'
+confirmation; runs published before the freeze are recorded as
+observed, under the same rules as the runs already in RESULTS.md.
+
 ## Changelog
 
+- 2026-11-16: The harness was refactored behind an adapter
+  interface (fixtures/harness/adapters/): the driver owns the
+  scoring, and each system under test is reached through an adapter
+  implementing five documented operations. The Zambo adapter is the
+  original harness behavior, moved unchanged; a stub adapter is
+  provided as the template for a new system, with a "Run it against
+  your system" guide in this README and in
+  fixtures/harness/adapters/README.md. A reproduction run through
+  the adapter (runs/2026-11-16-zambo-2/) is recorded in RESULTS.md.
 - 2026-11-16: Yared Mengistu reviewed assertions A1 to A5 and agreed
   with the assertions and the scoring model. Four clarifications from
   that review are incorporated in CONTRACT.md: a common external effect

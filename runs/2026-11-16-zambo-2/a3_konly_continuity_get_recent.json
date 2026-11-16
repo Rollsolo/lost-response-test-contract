@@ -1,0 +1,1176 @@
+{
+  "body": {
+    "id": "7b49dba482c9486785433eace6b960e4",
+    "jsonrpc": "2.0",
+    "result": {
+      "_meta": {
+        "dev.zambo/receipt": {
+          "id": "bbc2dad0-79a4-41ff-9ced-75f3999d78e0",
+          "output_hash": "sha256:a1ad82b831c28d8cca8e056c6695c6c16e68b09648867d27b830cd7c0f10cd8c",
+          "run_url": "https://zambo.dev/run/bbc2dad0-79a4-41ff-9ced-75f3999d78e0"
+        }
+      },
+      "_receipt": {
+        "anchor": {
+          "envelope": {
+            "anchored_at": "2026-11-16T20:33:31.422Z",
+            "evidence_byte_length": null,
+            "evidence_sha256": null,
+            "evidence_url": null,
+            "output_sha256": "sha256:a1ad82b831c28d8cca8e056c6695c6c16e68b09648867d27b830cd7c0f10cd8c",
+            "receipt_uuid": "bbc2dad0-79a4-41ff-9ced-75f3999d78e0",
+            "schema_version": "zambo-receipt-anchor/1"
+          },
+          "envelope_bytes": "{\"anchored_at\":\"2026-11-16T20:33:31.422Z\",\"evidence_byte_length\":null,\"evidence_sha256\":null,\"evidence_url\":null,\"output_sha256\":\"sha256:a1ad82b831c28d8cca8e056c6695c6c16e68b09648867d27b830cd7c0f10cd8c\",\"receipt_uuid\":\"bbc2dad0-79a4-41ff-9ced-75f3999d78e0\",\"schema_version\":\"zambo-receipt-anchor/1\"}",
+          "event_id": "675663618f05c4c5d1902fdf5825bd2d2f688343e1a29c197be42bf7cdebf37b",
+          "pubkey": "e13475107d30c918ec664adf2ab1141024a22fb35190f82c9e933704fa49af41",
+          "relays": [
+            "wss://relay.primal.net"
+          ],
+          "schema_version": "zambo-receipt-anchor/1",
+          "status": "pending"
+        },
+        "audit": "https://zambo.dev/run/bbc2dad0-79a4-41ff-9ced-75f3999d78e0",
+        "auth_scope": "public",
+        "bonus_calls_remaining": 0,
+        "caller": {
+          "id": "sha256:f0140344afebe6e66f55125014c19b28c947adf036a0db1392a7aecb3b76e662",
+          "type": "session"
+        },
+        "canonical_byte_length": 578,
+        "canonical_bytes": "eyJjYWxsZXIiOnsiaWQiOiJzaGEyNTY6ZjAxNDAzNDRhZmViZTZlNjZmNTUxMjUwMTRjMTliMjhjOTQ3YWRmMDM2YTBkYjEzOTJhN2FlY2IzYjc2ZTY2MiIsInR5cGUiOiJzZXNzaW9uIn0sImlzc3Vlcl9jbGFpbXMiOnsicHJvdmVuYW5jZV9jbGFzcyI6IkVYRUNVVEVEIEJZIFpBTUJPIn0sIm91dHB1dCI6eyJtZXNzYWdlIjoiUHJpdmF0ZSBkZWxpdmVyeSBjcmVhdGVkLiBVc2UgdGhlIGNsaWVudCBvciBvd25lciBsaW5rIHJldHVybmVkIHRvIHRoZSByZXF1ZXN0aW5nIHNlc3Npb24uIiwidmlzaWJpbGl0eSI6InByaXZhdGUifSwicmVjZWlwdF9zY2hlbWFfdmVyc2lvbiI6IjAuNCIsInNpZGVfZWZmZWN0cyI6eyJkZWNsYXJhdGlvbl9oYXNoIjoic2hhMjU2OjQ1YWFkMzhmM2FhOTgyYjlhYWZlOTJlY2I0MTZlYmU5ODc5MWVkZGJhZjhhYjZkZjBiZDA4NjA1YjdjMWJmZWUiLCJkZWNsYXJlZCI6WyJub25lIl0sInNjaGVtYV92ZXJzaW9uIjoiemFtYm8tc2lkZS1lZmZlY3RzLzEifSwidG9vbCI6eyJuYW1lIjoiY29udGludWl0eV9nZXRfcmVjZW50Iiwic2NvcGUiOiJwdWJsaWMiLCJ2ZXJzaW9uIjoiNC4xLjQifX0=",
+        "evidence_byte_length": null,
+        "evidence_content_type": null,
+        "evidence_sha256": null,
+        "evidence_source": null,
+        "evidence_source_url": null,
+        "evidence_status": "empty",
+        "evidence_url": null,
+        "execution_context": {
+          "environment": "zambo.dev hosted MCP",
+          "quota_identity": {
+            "meter_key": "sha256:9dd4006b8047458707c3773bb65290c99d293f72e9a660f497016dcc86b432ee",
+            "stable_handle_hash": "sha256:f0140344afebe6e66f55125014c19b28c947adf036a0db1392a7aecb3b76e662"
+          }
+        },
+        "execution_status": "step_completed",
+        "external_evidence": [],
+        "free_limit": 3,
+        "free_remaining": 0,
+        "free_used": 3,
+        "hash_algorithm": "sha256",
+        "id": "bbc2dad0-79a4-41ff-9ced-75f3999d78e0",
+        "input_hash": "sha256:f467f8253be426fbee4957da4fc823ffda75de61957bd1510beca792cff62335",
+        "input_hash_layout": "zambo-json-sorted-keys-utf8-v1",
+        "metadata_hash": "sha256:246c31771c3918b9dce34679b36b8a41ca508b755ab51f5630a9aec900fbedce",
+        "metered_bucket": "free_20",
+        "metered_limit": 3,
+        "metered_remaining": 0,
+        "metered_used": 3,
+        "output_hash": "sha256:a1ad82b831c28d8cca8e056c6695c6c16e68b09648867d27b830cd7c0f10cd8c",
+        "persistence": "stored",
+        "price": {
+          "burn_status": "not_attempted",
+          "program": "Token-2022",
+          "treasury": "GuGoJPgF2wufK5U983oTwW5mXJb3GN9KNyj9S5gyffkH",
+          "zambo_burned": 0
+        },
+        "provenance": {
+          "evidence_captures": [],
+          "evidence_source": null,
+          "evidence_status": "empty",
+          "result_source": null
+        },
+        "provenance_class": "EXECUTED BY ZAMBO",
+        "receipt_schema_version": "0.4",
+        "receipt_type": "meta",
+        "result_source": null,
+        "result_status": "verified",
+        "server": "zambo.dev/mcp",
+        "side_effects": {
+          "declaration_hash": "sha256:45aad38f3aa982b9aafe92ecb416ebe98791eddbaf8ab6df0bd08605b7c1bfee",
+          "declared": [
+            "none"
+          ],
+          "schema_version": "zambo-side-effects/1"
+        },
+        "signal_handle": null,
+        "status": "success",
+        "timestamp": "2026-11-16T20:33:31.422Z",
+        "today_url": "https://zambo.dev/today/k/zQJsEO2__To3U51i9s4rCoBxcQj4E_aVsmKQOD3CxszXAOEkaV3bvJ1U447Hcb25WhO6Y8BojypZGK5KkhyoH-mt4DPu1mHbM6VJ5EN_X5l13KJs6NgPx8Yh_nLQ",
+        "tool": "continuity_get_recent",
+        "tool_context": {
+          "name": "continuity_get_recent",
+          "scope": "public",
+          "version": "4.1.4"
+        },
+        "verification_status": "not_verified",
+        "workflow": {
+          "id": "7a67ef04-023e-4601-b3e7-5d7a8c79211e",
+          "step_index": 0,
+          "url": "https://zambo.dev/workflow/7a67ef04-023e-4601-b3e7-5d7a8c79211e"
+        },
+        "workflow_index_status": "stored"
+      },
+      "_session_depth": 0,
+      "_session_id": "scoped:6d470b92b211526bce4b6f1272cbc8cdc42e18c4",
+      "_workflow": {
+        "next_action": "The host AI should integrate this result, continue any remaining steps, verify the requested outcome, and then summarize what is complete.",
+        "protocol": "zambo-collaborative-v4",
+        "session_depth": 0,
+        "session_id": "scoped:6d470b92b211526bce4b6f1272cbc8cdc42e18c4",
+        "status": "step_completed",
+        "tool": "continuity_get_recent"
+      },
+      "content": [
+        {
+          "text": "status: ok\nevents 1 / id: f46b3d53-8204-4aa2-b05b-d072aeceeefc\nevents 1 / ts: 2026-11-16T20:33:24.551Z\nevents 1 / ai label source: not_reported\nevents 1 / summary: Used Workflow Close\nevents 1 / receipt id: 3e95a364-e96a-4115-b6a4-3a4c13e56211\nevents 1 / status: success\nevents 1 / tool: workflow_close\nevents 1 / receipt url: https://zambo.dev/run/3e95a364-e96a-4115-b6a4-3a4c13e56211\nevents 1 / verify url: https://zambo.dev/api/v2/receipt/3e95a364-e96a-4115-b6a4-3a4c13e56211/verify\nevents 2 / id: d32cde7b-eed2-420e-a368-471a84c0938e\nevents 2 / ts: 2026-11-16T20:33:22.919Z\nevents 2 / ai label source: not_reported\nevents 2 / summary: Agent submitted a work report\nevents 2 / receipt id: 5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7\nevents 2 / status: agent_reported\nevents 2 / tool: journal_log\nevents 2 / receipt url: https://zambo.dev/run/5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7\nevents 2 / verify url: https://zambo.dev/api/v2/receipt/5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7/verify\nevents 3 / id: f509cb8a-8217-4937-9e93-573b96727f19\nevents 3 / ts: 2026-11-16T20:33:19.510Z\nevents 3 / ai label source: not_reported\nevents 3 / summary: Used Workflow Close\nevents 3 / receipt id: 92fda13a-249f-4bce-a169-1ccf0f3397f3\nevents 3 / status: success\nevents 3 / tool: workflow_close\nevents 3 / receipt url: https://zambo.dev/run/92fda13a-249f-4bce-a169-1ccf0f3397f3\nevents 3 / verify url: https://zambo.dev/api/v2/receipt/92fda13a-249f-4bce-a169-1ccf0f3397f3/verify\nevents 4 / id: fcc719b4-050c-4563-9303-991209decb08\nevents 4 / ts: 2026-11-16T20:33:17.681Z\nevents 4 / ai label source: not_reported\nevents 4 / summary: Agent submitted a work report\nevents 4 / receipt id: 0c555b90-97fc-4763-a3c6-daa9fe1765dd\nevents 4 / status: agent_reported\nevents 4 / tool: journal_log\nevents 4 / receipt url: https://zambo.dev/run/0c555b90-97fc-4763-a3c6-daa9fe1765dd\nevents 4 / verify url: https://zambo.dev/api/v2/receipt/0c555b90-97fc-4763-a3c6-daa9fe1765dd/verify\nevents 5 / id: 5fee614a-1a36-4e6c-9666-f43c4b5804d7\nevents 5 / ts: 2026-11-16T20:33:10.144Z\nevents 5 / ai label source: not_reported\n\nReceipt: https://zambo.dev/run/bbc2dad0-79a4-41ff-9ced-75f3999d78e0\ntoday history: https://zambo.dev/today/k/zQJsEO2__To3U51i9s4rCoBxcQj4E_aVsmKQOD3CxszXAOEkaV3bvJ1U447Hcb25WhO6Y8BojypZGK5KkhyoH-mt4DPu1mHbM6VJ5EN_X5l13KJs6NgPx8Yh_nLQ\nEvery tool is free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free. The Day Pass makes every tool unlimited for 24 hours for $0.99. [Get Day Pass](https://zambo.dev/day-pass/?chat_checkout=dc0NqvCuZPObbtDSxK1Mjx49&quota_handle=zch_2B38TM_E3fSOfx_p-kpxwG.m0PDuPn1eAr-g8uVqAR4M2#checkout)\ntry a workflow: prepare a client onboarding pack: https://zambo.dev/workflows/client-onboarding-pack\nall workflows: https://zambo.dev/workflows\nnext visit: ask your AI to call zambo_home using the same caller identity to find your saved work. Save notes you choose to keep or wrap up before leaving; your private chat is not saved automatically.",
+          "type": "text"
+        },
+        {
+          "mimeType": "text/html",
+          "name": "Zambo execution receipt",
+          "type": "resource_link",
+          "uri": "https://zambo.dev/run/bbc2dad0-79a4-41ff-9ced-75f3999d78e0"
+        },
+        {
+          "text": "",
+          "type": "text"
+        }
+      ],
+      "continuity_status": "persisted",
+      "isError": false,
+      "resultType": "complete",
+      "structuredContent": {
+        "caller_handle": "zch_qlEnKQIk1z7KQZDPqIr700.Bw2TA_V0XabY3zdl-MT6xQ",
+        "caller_handle_instruction": "Persist the initialize caller_handle in private durable agent state scoped to this user or tenant. Reuse it as _caller_handle on every call, including after reconnects and restarts; never share it across unrelated users. Keep _session_id separate and stable only while resuming the same job. This handle can retrieve facts the user chose to save, so keep it private; it is not authentication or payment authorization. If you cannot retain it safely, do not promise cross-session continuity. Keep the handle private; it is not payment authorization.",
+        "cursor": "eyJ2IjoxLCJ0cyI6IjIwMjYtMTEtMTZUMTk6NTk6MTYuODYwMzEyWiIsImlkIjoiZDI2YzViZjktZjc5YS00MWYyLWIxNWItZmNmMDZiMjcyYzgxIiwic2luY2UiOm51bGx9",
+        "events": [
+          {
+            "ai_label": null,
+            "ai_label_source": "not_reported",
+            "id": "f46b3d53-8204-4aa2-b05b-d072aeceeefc",
+            "receipt_id": "3e95a364-e96a-4115-b6a4-3a4c13e56211",
+            "receipt_url": "https://zambo.dev/run/3e95a364-e96a-4115-b6a4-3a4c13e56211",
+            "status": "success",
+            "summary": "Used Workflow Close",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "workflow_close",
+            "ts": "2026-11-16T20:33:24.551Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/3e95a364-e96a-4115-b6a4-3a4c13e56211/verify"
+          },
+          {
+            "ai_label": null,
+            "ai_label_source": "not_reported",
+            "id": "d32cde7b-eed2-420e-a368-471a84c0938e",
+            "receipt_id": "5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7",
+            "receipt_url": "https://zambo.dev/run/5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7",
+            "status": "agent_reported",
+            "summary": "Agent submitted a work report",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "journal_log",
+            "ts": "2026-11-16T20:33:22.919Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7/verify"
+          },
+          {
+            "ai_label": null,
+            "ai_label_source": "not_reported",
+            "id": "f509cb8a-8217-4937-9e93-573b96727f19",
+            "receipt_id": "92fda13a-249f-4bce-a169-1ccf0f3397f3",
+            "receipt_url": "https://zambo.dev/run/92fda13a-249f-4bce-a169-1ccf0f3397f3",
+            "status": "success",
+            "summary": "Used Workflow Close",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "workflow_close",
+            "ts": "2026-11-16T20:33:19.510Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/92fda13a-249f-4bce-a169-1ccf0f3397f3/verify"
+          },
+          {
+            "ai_label": null,
+            "ai_label_source": "not_reported",
+            "id": "fcc719b4-050c-4563-9303-991209decb08",
+            "receipt_id": "0c555b90-97fc-4763-a3c6-daa9fe1765dd",
+            "receipt_url": "https://zambo.dev/run/0c555b90-97fc-4763-a3c6-daa9fe1765dd",
+            "status": "agent_reported",
+            "summary": "Agent submitted a work report",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "journal_log",
+            "ts": "2026-11-16T20:33:17.681Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/0c555b90-97fc-4763-a3c6-daa9fe1765dd/verify"
+          },
+          {
+            "ai_label": null,
+            "ai_label_source": "not_reported",
+            "id": "5fee614a-1a36-4e6c-9666-f43c4b5804d7",
+            "receipt_id": "eff82c14-9717-47de-b268-8991f8980467",
+            "receipt_url": "https://zambo.dev/run/eff82c14-9717-47de-b268-8991f8980467",
+            "status": "success",
+            "summary": "Used Workflow Close",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "workflow_close",
+            "ts": "2026-11-16T20:33:10.144Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/eff82c14-9717-47de-b268-8991f8980467/verify"
+          },
+          {
+            "ai_label": null,
+            "ai_label_source": "not_reported",
+            "id": "b0ac5797-959d-4ff8-bf70-1a32bfe78411",
+            "receipt_id": "1fb3a09e-1029-464c-9872-fb02fcc35a65",
+            "receipt_url": "https://zambo.dev/run/1fb3a09e-1029-464c-9872-fb02fcc35a65",
+            "status": "agent_reported",
+            "summary": "Agent submitted a work report",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "journal_log",
+            "ts": "2026-11-16T20:33:08.481Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/1fb3a09e-1029-464c-9872-fb02fcc35a65/verify"
+          },
+          {
+            "ai_label": null,
+            "ai_label_source": "not_reported",
+            "id": "82ede9c8-8a4d-4d2c-b424-3d2c8c94cc4d",
+            "receipt_id": "2352011e-2b2f-433f-9a3c-0b24730cd351",
+            "receipt_url": "https://zambo.dev/run/2352011e-2b2f-433f-9a3c-0b24730cd351",
+            "status": "success",
+            "summary": "Used Workflow Close",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "workflow_close",
+            "ts": "2026-11-16T20:33:03.769Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/2352011e-2b2f-433f-9a3c-0b24730cd351/verify"
+          },
+          {
+            "ai_label": null,
+            "ai_label_source": "not_reported",
+            "id": "751b6e83-e9ea-436c-a0a1-8249d7de2e24",
+            "receipt_id": "6b7d958a-f31b-47d1-8aef-09a868e2e865",
+            "receipt_url": "https://zambo.dev/run/6b7d958a-f31b-47d1-8aef-09a868e2e865",
+            "status": "agent_reported",
+            "summary": "Agent submitted a work report",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "journal_log",
+            "ts": "2026-11-16T20:33:01.910Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/6b7d958a-f31b-47d1-8aef-09a868e2e865/verify"
+          },
+          {
+            "ai_label": "lane1-wall",
+            "ai_label_source": "caller_reported",
+            "id": "be7e582c-0957-44b2-8438-65e255c9298a",
+            "receipt_id": "dcf37960-64f2-4474-b53c-326647f573f3",
+            "receipt_url": "https://zambo.dev/run/dcf37960-64f2-4474-b53c-326647f573f3",
+            "status": "success",
+            "summary": "Used Handover List",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "handover_list",
+            "ts": "2026-11-16T20:18:26.356Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/dcf37960-64f2-4474-b53c-326647f573f3/verify"
+          },
+          {
+            "ai_label": "lane1-wall",
+            "ai_label_source": "caller_reported",
+            "id": "6bffded2-8f4d-4266-9817-45f618bfe0a9",
+            "receipt_id": "16a73c19-c199-4822-8304-ed40b7e064d1",
+            "receipt_url": "https://zambo.dev/run/16a73c19-c199-4822-8304-ed40b7e064d1",
+            "status": "success",
+            "summary": "Scanned text for hidden instructions",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "prompt_shield",
+            "ts": "2026-11-16T20:18:21.208Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/16a73c19-c199-4822-8304-ed40b7e064d1/verify"
+          },
+          {
+            "ai_label": "lane1-wall",
+            "ai_label_source": "caller_reported",
+            "id": "6d5c3337-61aa-4fe4-89be-f0cc47e6ee4e",
+            "receipt_id": "4eddd952-5360-48b3-882d-2bc435ede79a",
+            "receipt_url": "https://zambo.dev/run/4eddd952-5360-48b3-882d-2bc435ede79a",
+            "status": "success",
+            "summary": "Scanned text for hidden instructions",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "prompt_shield",
+            "ts": "2026-11-16T20:18:17.572Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/4eddd952-5360-48b3-882d-2bc435ede79a/verify"
+          },
+          {
+            "ai_label": "lane1-wall",
+            "ai_label_source": "caller_reported",
+            "id": "70da9cc9-a054-462d-9738-47f285677245",
+            "receipt_id": "e8c793c3-5891-49d5-afaf-73fe28f25804",
+            "receipt_url": "https://zambo.dev/run/e8c793c3-5891-49d5-afaf-73fe28f25804",
+            "status": "success",
+            "summary": "Scanned text for hidden instructions",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "prompt_shield",
+            "ts": "2026-11-16T20:18:12.802Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/e8c793c3-5891-49d5-afaf-73fe28f25804/verify"
+          },
+          {
+            "ai_label": "lane1-wall",
+            "ai_label_source": "caller_reported",
+            "id": "88a00f73-04cc-4afc-a695-69a579ef933d",
+            "receipt_id": "688a4981-0103-460e-b42b-b80f874bcdec",
+            "receipt_url": "https://zambo.dev/run/688a4981-0103-460e-b42b-b80f874bcdec",
+            "status": "success",
+            "summary": "Scanned text for hidden instructions",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "prompt_shield",
+            "ts": "2026-11-16T20:18:06.957Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/688a4981-0103-460e-b42b-b80f874bcdec/verify"
+          },
+          {
+            "ai_label": "lane1-wall",
+            "ai_label_source": "caller_reported",
+            "id": "a0500261-57ee-4030-8301-37b375d86f19",
+            "receipt_id": "4561ebc6-174e-4ec7-84bf-98b0fd50c503",
+            "receipt_url": "https://zambo.dev/run/4561ebc6-174e-4ec7-84bf-98b0fd50c503",
+            "status": "success",
+            "summary": "Scanned text for hidden instructions",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "prompt_shield",
+            "ts": "2026-11-16T20:18:00.923Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/4561ebc6-174e-4ec7-84bf-98b0fd50c503/verify"
+          },
+          {
+            "ai_label": "lane1-wall",
+            "ai_label_source": "caller_reported",
+            "id": "b8281309-3f48-4ff8-a635-15c92ef47178",
+            "receipt_id": "4b895f0f-a304-4276-b58f-cff970df8868",
+            "receipt_url": "https://zambo.dev/run/4b895f0f-a304-4276-b58f-cff970df8868",
+            "status": "success",
+            "summary": "Used Day Pass Status",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "day_pass_status",
+            "ts": "2026-11-16T20:17:54.147Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/4b895f0f-a304-4276-b58f-cff970df8868/verify"
+          },
+          {
+            "ai_label": "lane1-job2",
+            "ai_label_source": "caller_reported",
+            "id": "64ec7ec6-ed6d-4648-9855-60ac0f943ed8",
+            "receipt_id": "5588cd70-f083-40f0-8b25-3b79ee4ad9f4",
+            "receipt_url": "https://zambo.dev/run/5588cd70-f083-40f0-8b25-3b79ee4ad9f4",
+            "status": "success",
+            "summary": "Scanned text for hidden instructions",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "prompt_shield",
+            "ts": "2026-11-16T20:17:11.250Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/5588cd70-f083-40f0-8b25-3b79ee4ad9f4/verify"
+          },
+          {
+            "ai_label": "lane1-job2",
+            "ai_label_source": "caller_reported",
+            "id": "ddb472af-f4da-46be-afc3-c9e4bc6711f4",
+            "receipt_id": "93f9fde0-c382-45d3-b5ef-13296f6e4c29",
+            "receipt_url": "https://zambo.dev/run/93f9fde0-c382-45d3-b5ef-13296f6e4c29",
+            "status": "success",
+            "summary": "Used Capability Search",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "capability_search",
+            "ts": "2026-11-16T20:17:06.558Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/93f9fde0-c382-45d3-b5ef-13296f6e4c29/verify"
+          },
+          {
+            "ai_label": "lane1-job",
+            "ai_label_source": "caller_reported",
+            "id": "2c3796df-8e7e-4e4c-87b7-99aa5386a13b",
+            "receipt_id": "4c580706-541f-4837-98d3-c18a915f44f2",
+            "receipt_url": "https://zambo.dev/run/4c580706-541f-4837-98d3-c18a915f44f2",
+            "status": "success",
+            "summary": "Used Capability Search",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "capability_search",
+            "ts": "2026-11-16T20:16:29.155Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/4c580706-541f-4837-98d3-c18a915f44f2/verify"
+          },
+          {
+            "ai_label": null,
+            "ai_label_source": "not_reported",
+            "id": "38f8a87e-c7da-4868-a575-5163e35180ff",
+            "receipt_id": "6e51ca36-a22f-4144-a59d-cb07af4c86bd",
+            "receipt_url": "https://zambo.dev/run/6e51ca36-a22f-4144-a59d-cb07af4c86bd",
+            "status": "success",
+            "summary": "Used Activity Today",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "activity_today",
+            "ts": "2026-11-16T19:59:18.356Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/6e51ca36-a22f-4144-a59d-cb07af4c86bd/verify"
+          },
+          {
+            "ai_label": null,
+            "ai_label_source": "not_reported",
+            "id": "d26c5bf9-f79a-41f2-b15b-fcf06b272c81",
+            "receipt_id": "58bfe84c-1606-4760-b854-4800a9388aa5",
+            "receipt_url": "https://zambo.dev/run/58bfe84c-1606-4760-b854-4800a9388aa5",
+            "status": "success",
+            "summary": "Used Spend Limit Status",
+            "thread_id": null,
+            "thread_name": null,
+            "tool": "spend_limit_status",
+            "ts": "2026-11-16T19:59:16.860Z",
+            "verify_url": "https://zambo.dev/api/v2/receipt/58bfe84c-1606-4760-b854-4800a9388aa5/verify"
+          }
+        ],
+        "facts": [],
+        "first_workflow": {
+          "consent": "Run only the workflow the user chooses. Do not add calls just to demonstrate features.",
+          "examples": [
+            "Check this public website and prepare a handover with receipts.",
+            "Research this decision and save a brief I can continue in another AI."
+          ],
+          "next_call": {
+            "arguments": {
+              "_session_id": "scoped:6d470b92b211526bce4b6f1272cbc8cdc42e18c4"
+            },
+            "tool": "zambo_home"
+          }
+        },
+        "handoff_text": "Recent Zambo work for this job (oldest first):\n- Used Spend Limit Status at 2026-11-16 19:59 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/58bfe84c-1606-4760-b854-4800a9388aa5\n  Check: https://zambo.dev/api/v2/receipt/58bfe84c-1606-4760-b854-4800a9388aa5/verify\n- Used Activity Today at 2026-11-16 19:59 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/6e51ca36-a22f-4144-a59d-cb07af4c86bd\n  Check: https://zambo.dev/api/v2/receipt/6e51ca36-a22f-4144-a59d-cb07af4c86bd/verify\n- Used Capability Search at 2026-11-16 20:16 UTC (client reported as lane1-job)\n  Receipt: https://zambo.dev/run/4c580706-541f-4837-98d3-c18a915f44f2\n  Check: https://zambo.dev/api/v2/receipt/4c580706-541f-4837-98d3-c18a915f44f2/verify\n- Used Capability Search at 2026-11-16 20:17 UTC (client reported as lane1-job2)\n  Receipt: https://zambo.dev/run/93f9fde0-c382-45d3-b5ef-13296f6e4c29\n  Check: https://zambo.dev/api/v2/receipt/93f9fde0-c382-45d3-b5ef-13296f6e4c29/verify\n- Scanned text for hidden instructions at 2026-11-16 20:17 UTC (client reported as lane1-job2)\n  Receipt: https://zambo.dev/run/5588cd70-f083-40f0-8b25-3b79ee4ad9f4\n  Check: https://zambo.dev/api/v2/receipt/5588cd70-f083-40f0-8b25-3b79ee4ad9f4/verify\n- Used Day Pass Status at 2026-11-16 20:17 UTC (client reported as lane1-wall)\n  Receipt: https://zambo.dev/run/4b895f0f-a304-4276-b58f-cff970df8868\n  Check: https://zambo.dev/api/v2/receipt/4b895f0f-a304-4276-b58f-cff970df8868/verify\n- Scanned text for hidden instructions at 2026-11-16 20:18 UTC (client reported as lane1-wall)\n  Receipt: https://zambo.dev/run/4561ebc6-174e-4ec7-84bf-98b0fd50c503\n  Check: https://zambo.dev/api/v2/receipt/4561ebc6-174e-4ec7-84bf-98b0fd50c503/verify\n- Scanned text for hidden instructions at 2026-11-16 20:18 UTC (client reported as lane1-wall)\n  Receipt: https://zambo.dev/run/688a4981-0103-460e-b42b-b80f874bcdec\n  Check: https://zambo.dev/api/v2/receipt/688a4981-0103-460e-b42b-b80f874bcdec/verify\n- Scanned text for hidden instructions at 2026-11-16 20:18 UTC (client reported as lane1-wall)\n  Receipt: https://zambo.dev/run/e8c793c3-5891-49d5-afaf-73fe28f25804\n  Check: https://zambo.dev/api/v2/receipt/e8c793c3-5891-49d5-afaf-73fe28f25804/verify\n- Scanned text for hidden instructions at 2026-11-16 20:18 UTC (client reported as lane1-wall)\n  Receipt: https://zambo.dev/run/4eddd952-5360-48b3-882d-2bc435ede79a\n  Check: https://zambo.dev/api/v2/receipt/4eddd952-5360-48b3-882d-2bc435ede79a/verify\n- Scanned text for hidden instructions at 2026-11-16 20:18 UTC (client reported as lane1-wall)\n  Receipt: https://zambo.dev/run/16a73c19-c199-4822-8304-ed40b7e064d1\n  Check: https://zambo.dev/api/v2/receipt/16a73c19-c199-4822-8304-ed40b7e064d1/verify\n- Used Handover List at 2026-11-16 20:18 UTC (client reported as lane1-wall)\n  Receipt: https://zambo.dev/run/dcf37960-64f2-4474-b53c-326647f573f3\n  Check: https://zambo.dev/api/v2/receipt/dcf37960-64f2-4474-b53c-326647f573f3/verify\n- Agent report: Agent submitted a work report at 2026-11-16 20:33 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/6b7d958a-f31b-47d1-8aef-09a868e2e865\n  Check: https://zambo.dev/api/v2/receipt/6b7d958a-f31b-47d1-8aef-09a868e2e865/verify\n- Used Workflow Close at 2026-11-16 20:33 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/2352011e-2b2f-433f-9a3c-0b24730cd351\n  Check: https://zambo.dev/api/v2/receipt/2352011e-2b2f-433f-9a3c-0b24730cd351/verify\n- Agent report: Agent submitted a work report at 2026-11-16 20:33 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/1fb3a09e-1029-464c-9872-fb02fcc35a65\n  Check: https://zambo.dev/api/v2/receipt/1fb3a09e-1029-464c-9872-fb02fcc35a65/verify\n- Used Workflow Close at 2026-11-16 20:33 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/eff82c14-9717-47de-b268-8991f8980467\n  Check: https://zambo.dev/api/v2/receipt/eff82c14-9717-47de-b268-8991f8980467/verify\n- Agent report: Agent submitted a work report at 2026-11-16 20:33 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/0c555b90-97fc-4763-a3c6-daa9fe1765dd\n  Check: https://zambo.dev/api/v2/receipt/0c555b90-97fc-4763-a3c6-daa9fe1765dd/verify\n- Used Workflow Close at 2026-11-16 20:33 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/92fda13a-249f-4bce-a169-1ccf0f3397f3\n  Check: https://zambo.dev/api/v2/receipt/92fda13a-249f-4bce-a169-1ccf0f3397f3/verify\n- Agent report: Agent submitted a work report at 2026-11-16 20:33 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7\n  Check: https://zambo.dev/api/v2/receipt/5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7/verify\n- Used Workflow Close at 2026-11-16 20:33 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/3e95a364-e96a-4115-b6a4-3a4c13e56211\n  Check: https://zambo.dev/api/v2/receipt/3e95a364-e96a-4115-b6a4-3a4c13e56211/verify\nA matching receipt shows the saved record was not changed. It does not prove the answer is right or that an outside action happened.\nAny AI client label shown here was reported by the caller and is not independently verified.",
+        "handovers": [
+          {
+            "acceptance_status": "pending",
+            "decided_at": null,
+            "goal": "Organize the Downloads folder: find duplicate files, show the owner the duplicate groups, and archive the extra copies after confirmation, with every step on a checkable record.",
+            "id": "7eb3d6dd-30f3-4e5d-b23e-ddcbd203fa4d",
+            "status": "open",
+            "url": "https://zambo.dev/handover/7eb3d6dd-30f3-4e5d-b23e-ddcbd203fa4d?owner_token=a2ae9231e7d4429969fdbffd1fb956d398158f95ec7140ca93c4b9ab78d560aa",
+            "visibility": "public",
+            "visibility_note": "Public link: anyone with the page link can view the work. Only the separate client link can Accept or Flag. Not listed on the sender's public track record."
+          }
+        ],
+        "has_more": true,
+        "human_line": "status: ok",
+        "ids": {
+          "receipt_id": "bbc2dad0-79a4-41ff-9ced-75f3999d78e0"
+        },
+        "latest_handover": null,
+        "next": "Your result and receipt are ready. Try a complete workflow: ask your AI to check a public website, summarize what was observed, and prepare a handover; or research a decision and save a brief. Call zambo_home for a private starting point. Free needs no card or signup; pickup is always free.\n\n**Level 2:** Keep every tool available without its daily free-call and shared continuation limits; saved notes follow across AI apps through the pass plus 30 days, and eligible private proof packs are included. [Compare one-time passes](https://zambo.dev/pricing/).",
+        "next_cursor": "eyJ2IjoxLCJ0cyI6IjIwMjYtMTEtMTZUMTk6NTk6MTYuODYwMzEyWiIsImlkIjoiZDI2YzViZjktZjc5YS00MWYyLWIxNWItZmNmMDZiMjcyYzgxIiwic2luY2UiOm51bGx9",
+        "next_steps": [
+          "Your result and receipt are ready. Try a complete workflow: ask your AI to check a public website, summarize what was observed, and prepare a handover; or research a decision and save a brief. Call zambo_home for a private starting point. Free needs no card or signup; pickup is always free.\n\n**Level 2:** Keep every tool available without its daily free-call and shared continuation limits; saved notes follow across AI apps through the pass plus 30 days, and eligible private proof packs are included. [Compare one-time passes](https://zambo.dev/pricing/)."
+        ],
+        "next_up": "Your result and receipt are ready. Try a complete workflow: ask your AI to check a public website, summarize what was observed, and prepare a handover; or research a decision and save a brief. Call zambo_home for a private starting point. Free needs no card or signup; pickup is always free.\n\n**Level 2:** Keep every tool available without its daily free-call and shared continuation limits; saved notes follow across AI apps through the pass plus 30 days, and eligible private proof packs are included. [Compare one-time passes](https://zambo.dev/pricing/).",
+        "offer": {
+          "agent_payment": {
+            "amount_usd": "0.99",
+            "duration_hours": 24,
+            "method": "POST",
+            "payment_required": {
+              "accepts": [
+                {
+                  "amount": "990000",
+                  "asset": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+                  "extra": {
+                    "domain": {
+                      "chainId": 8453,
+                      "name": "USD Coin",
+                      "verifyingContract": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+                      "version": "2"
+                    },
+                    "message": {
+                      "from": "<payer_address>",
+                      "nonce": "<bytes32_nonce>",
+                      "to": "0xb753be5Eac5B29c711051DfF91279834e9C9b9AC",
+                      "validAfter": "<unix_seconds>",
+                      "validBefore": "<unix_seconds>",
+                      "value": "990000"
+                    },
+                    "name": "USD Coin",
+                    "primaryType": "TransferWithAuthorization",
+                    "types": {
+                      "TransferWithAuthorization": [
+                        {
+                          "name": "from",
+                          "type": "address"
+                        },
+                        {
+                          "name": "to",
+                          "type": "address"
+                        },
+                        {
+                          "name": "value",
+                          "type": "uint256"
+                        },
+                        {
+                          "name": "validAfter",
+                          "type": "uint256"
+                        },
+                        {
+                          "name": "validBefore",
+                          "type": "uint256"
+                        },
+                        {
+                          "name": "nonce",
+                          "type": "bytes32"
+                        }
+                      ]
+                    },
+                    "version": "2"
+                  },
+                  "maxTimeoutSeconds": 900,
+                  "network": "eip155:8453",
+                  "payTo": "0xb753be5Eac5B29c711051DfF91279834e9C9b9AC",
+                  "scheme": "exact"
+                }
+              ],
+              "agent_payment": {
+                "activation": "24-hour access; never activates without a verified transfer",
+                "amount_atomic": "990000",
+                "amount_usdc": "0.99",
+                "asset": "USDC",
+                "autonomous_payment_policy": "Agents may pay the $0.99 USDC Day Pass (x402 on Base, 24 hours) directly. No human approval is required by Zambo. Your own wallet or spending policy still applies.",
+                "endpoint": "https://zambo.dev/mcp",
+                "network": "eip155:8453",
+                "network_name": "Base",
+                "step_1": "Sign accepts[0] in this response and POST PAYMENT-SIGNATURE to https://zambo.dev/api/x402/day-pass.",
+                "step_2": "After settlement succeeds, retry the same call with its original arguments and PAYMENT-SIGNATURE. The response includes the Proof Drop and continuation details.",
+                "tool": "day_pass_activate"
+              },
+              "autonomous_payment_policy": "Agents may pay the $0.99 USDC Day Pass (x402 on Base, 24 hours) directly. No human approval is required by Zambo. Your own wallet or spending policy still applies.",
+              "error": {
+                "code": "payment_required",
+                "message": "Payment required to access this resource",
+                "next_step": "Sign accepts[0] in this response and POST PAYMENT-SIGNATURE to https://zambo.dev/api/x402/day-pass.",
+                "next_url": "https://zambo.dev/api/x402/day-pass"
+              },
+              "extensions": {
+                "bazaar": {
+                  "info": {
+                    "input": {
+                      "body": {
+                        "_session_id": "agent-job-session"
+                      },
+                      "bodyType": "json",
+                      "method": "POST",
+                      "type": "http"
+                    },
+                    "output": {
+                      "example": {
+                        "activated": true,
+                        "receipt_url": "https://zambo.dev/run/example",
+                        "success": true
+                      },
+                      "type": "json"
+                    }
+                  },
+                  "schema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "properties": {
+                      "input": {
+                        "properties": {
+                          "body": {
+                            "additionalProperties": false,
+                            "properties": {
+                              "_quota_caller_handle": {
+                                "maxLength": 128,
+                                "type": "string"
+                              },
+                              "_session_id": {
+                                "description": "Optional job session to bind the pass and continuation to.",
+                                "maxLength": 64,
+                                "type": "string"
+                              },
+                              "quota_handle": {
+                                "maxLength": 128,
+                                "type": "string"
+                              },
+                              "ref": {
+                                "maxLength": 128,
+                                "type": "string"
+                              },
+                              "source_ref": {
+                                "maxLength": 128,
+                                "type": "string"
+                              },
+                              "sponsor": {
+                                "type": "boolean"
+                              },
+                              "workflow_id": {
+                                "maxLength": 128,
+                                "type": "string"
+                              }
+                            },
+                            "type": "object"
+                          },
+                          "bodyType": {
+                            "enum": [
+                              "json"
+                            ],
+                            "type": "string"
+                          },
+                          "method": {
+                            "enum": [
+                              "POST"
+                            ],
+                            "type": "string"
+                          },
+                          "type": {
+                            "const": "http",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "method",
+                          "bodyType",
+                          "body"
+                        ],
+                        "type": "object"
+                      },
+                      "output": {
+                        "properties": {
+                          "example": {
+                            "properties": {
+                              "activated": {
+                                "type": "boolean"
+                              },
+                              "expires_at": {
+                                "description": "The server-issued ISO-8601 expiry, 24 hours after successful activation.",
+                                "format": "date-time",
+                                "type": "string"
+                              },
+                              "receipt_url": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "success": {
+                                "type": "boolean"
+                              }
+                            },
+                            "type": "object"
+                          },
+                          "type": {
+                            "const": "json",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "example"
+                        ],
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "input",
+                      "output"
+                    ],
+                    "type": "object"
+                  }
+                }
+              },
+              "human_line": "[Get Day Pass \u00b7 $0.99](https://zambo.dev/day-pass/?source=mcp-quota&chat_checkout=dc0NqvCuZPObbtDSxK1Mjx49&quota_handle=zch_2B38TM_E3fSOfx_p-kpxwG.m0PDuPn1eAr-g8uVqAR4M2#checkout)",
+              "human_url": "https://zambo.dev/day-pass/?source=mcp-quota&chat_checkout=dc0NqvCuZPObbtDSxK1Mjx49&quota_handle=zch_2B38TM_E3fSOfx_p-kpxwG.m0PDuPn1eAr-g8uVqAR4M2#checkout",
+              "next": "Sign accepts[0] in this response and POST PAYMENT-SIGNATURE to https://zambo.dev/api/x402/day-pass.",
+              "next_url": "https://zambo.dev/api/x402/day-pass",
+              "no_wallet": "For human checkout, open human_url.",
+              "on_success_returns": [
+                "receipt_url",
+                "run_id",
+                "uuid",
+                "access_key",
+                "expires_at",
+                "x402_spend_receipt",
+                "settlement_tx_hash",
+                "level",
+                "proof_drop_url",
+                "paid_replay or retry",
+                "continue",
+                "show_to_human",
+                "human_line"
+              ],
+              "payment_proof": {
+                "accepted": {
+                  "amount": "990000",
+                  "asset": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+                  "extra": {
+                    "domain": {
+                      "chainId": 8453,
+                      "name": "USD Coin",
+                      "verifyingContract": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+                      "version": "2"
+                    },
+                    "message": {
+                      "from": "<payer_address>",
+                      "nonce": "<bytes32_nonce>",
+                      "to": "0xb753be5Eac5B29c711051DfF91279834e9C9b9AC",
+                      "validAfter": "<unix_seconds>",
+                      "validBefore": "<unix_seconds>",
+                      "value": "990000"
+                    },
+                    "name": "USD Coin",
+                    "primaryType": "TransferWithAuthorization",
+                    "types": {
+                      "TransferWithAuthorization": [
+                        {
+                          "name": "from",
+                          "type": "address"
+                        },
+                        {
+                          "name": "to",
+                          "type": "address"
+                        },
+                        {
+                          "name": "value",
+                          "type": "uint256"
+                        },
+                        {
+                          "name": "validAfter",
+                          "type": "uint256"
+                        },
+                        {
+                          "name": "validBefore",
+                          "type": "uint256"
+                        },
+                        {
+                          "name": "nonce",
+                          "type": "bytes32"
+                        }
+                      ]
+                    },
+                    "version": "2"
+                  },
+                  "maxTimeoutSeconds": 900,
+                  "network": "eip155:8453",
+                  "payTo": "0xb753be5Eac5B29c711051DfF91279834e9C9b9AC",
+                  "scheme": "exact"
+                },
+                "destination": "https://zambo.dev/api/x402/day-pass",
+                "encoding": "base64(JSON {x402Version:2,accepted:{scheme,network,asset,amount,payTo,maxTimeoutSeconds,extra},payload:{signature,authorization}})",
+                "header": "PAYMENT-SIGNATURE (X-Payment also accepted)",
+                "required": true,
+                "retry_policy": "A refused invalid signature is retryable with a newly signed authorization. Never reuse a consumed nonce or a prior signature. Request a fresh challenge if expired."
+              },
+              "resource": {
+                "description": "One-time $0.99 USDC on Base activates 24-hour Zambo MCP access after payment verification; the response includes expiry and receipt details.",
+                "mimeType": "application/json",
+                "serviceName": "Zambo",
+                "tags": [
+                  "ai-tools",
+                  "mcp",
+                  "agent-workflows",
+                  "continuity",
+                  "receipts"
+                ],
+                "url": "https://zambo.dev/api/x402/day-pass"
+              },
+              "step_1": "Sign accepts[0] in this response and POST PAYMENT-SIGNATURE to https://zambo.dev/api/x402/day-pass.",
+              "unlocks": "24-hour access to the Zambo MCP connection, subject to product/provider allowances listed at https://zambo.dev/pricing",
+              "x402Version": 2
+            },
+            "protocol": "x402",
+            "resume": {
+              "retry_same_call": true,
+              "session_id": "lr-op-f63fe15895-a1",
+              "tool_name": "day_pass_status"
+            },
+            "url": "https://zambo.dev/api/x402/day-pass"
+          },
+          "button_label": "Get Day Pass \u00b7 $0.99",
+          "checkout_url": "https://zambo.dev/day-pass/?source=continuity&job=lr-op-f63fe15895-a1&quota_handle=zch_2B38TM_E3fSOfx_p-kpxwG.m0PDuPn1eAr-g8uVqAR4M2&chat_checkout=dc0NqvCuZPObbtDSxK1Mjx49#checkout",
+          "text": "Continue free. Keep moving work between AIs: Get Level 2. [Get Day Pass \u00b7 $0.99](https://zambo.dev/day-pass/?source=continuity&job=lr-op-f63fe15895-a1&quota_handle=zch_2B38TM_E3fSOfx_p-kpxwG.m0PDuPn1eAr-g8uVqAR4M2&chat_checkout=dc0NqvCuZPObbtDSxK1Mjx49#checkout)",
+          "type": "level_2"
+        },
+        "ok": true,
+        "privacy": {
+          "capture_enabled": true,
+          "global_capture_enabled": true,
+          "note": "New anonymous sessions start with capture off. A verified Pass starts with capture on. These settings only control future private timeline entries. Public receipts remain available.",
+          "per_ai": []
+        },
+        "quota_handle": "zch_2B38TM_E3fSOfx_p-kpxwG.m0PDuPn1eAr-g8uVqAR4M2",
+        "quota_handle_instruction": "Reuse the issued caller_handle and quota_handle together, or keep reusing quota_handle if caller_handle is unavailable. Their paired values preserve one daily bucket; a different explicit caller_handle selects a separate bucket. Neither is payment authorization or private-memory ownership.",
+        "receipt_standard": "Every call returns an AER-1 receipt (IETF Internet-Draft draft-zambo-aer1-26, current revision) that anyone can verify offline at https://zambo.dev/verify/.",
+        "receipt_url": "https://zambo.dev/run/bbc2dad0-79a4-41ff-9ced-75f3999d78e0",
+        "result": {
+          "cursor": "eyJ2IjoxLCJ0cyI6IjIwMjYtMTEtMTZUMTk6NTk6MTYuODYwMzEyWiIsImlkIjoiZDI2YzViZjktZjc5YS00MWYyLWIxNWItZmNmMDZiMjcyYzgxIiwic2luY2UiOm51bGx9",
+          "events": [
+            {
+              "ai_label": null,
+              "ai_label_source": "not_reported",
+              "id": "f46b3d53-8204-4aa2-b05b-d072aeceeefc",
+              "receipt_id": "3e95a364-e96a-4115-b6a4-3a4c13e56211",
+              "receipt_url": "https://zambo.dev/run/3e95a364-e96a-4115-b6a4-3a4c13e56211",
+              "status": "success",
+              "summary": "Used Workflow Close",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "workflow_close",
+              "ts": "2026-11-16T20:33:24.551Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/3e95a364-e96a-4115-b6a4-3a4c13e56211/verify"
+            },
+            {
+              "ai_label": null,
+              "ai_label_source": "not_reported",
+              "id": "d32cde7b-eed2-420e-a368-471a84c0938e",
+              "receipt_id": "5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7",
+              "receipt_url": "https://zambo.dev/run/5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7",
+              "status": "agent_reported",
+              "summary": "Agent submitted a work report",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "journal_log",
+              "ts": "2026-11-16T20:33:22.919Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7/verify"
+            },
+            {
+              "ai_label": null,
+              "ai_label_source": "not_reported",
+              "id": "f509cb8a-8217-4937-9e93-573b96727f19",
+              "receipt_id": "92fda13a-249f-4bce-a169-1ccf0f3397f3",
+              "receipt_url": "https://zambo.dev/run/92fda13a-249f-4bce-a169-1ccf0f3397f3",
+              "status": "success",
+              "summary": "Used Workflow Close",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "workflow_close",
+              "ts": "2026-11-16T20:33:19.510Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/92fda13a-249f-4bce-a169-1ccf0f3397f3/verify"
+            },
+            {
+              "ai_label": null,
+              "ai_label_source": "not_reported",
+              "id": "fcc719b4-050c-4563-9303-991209decb08",
+              "receipt_id": "0c555b90-97fc-4763-a3c6-daa9fe1765dd",
+              "receipt_url": "https://zambo.dev/run/0c555b90-97fc-4763-a3c6-daa9fe1765dd",
+              "status": "agent_reported",
+              "summary": "Agent submitted a work report",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "journal_log",
+              "ts": "2026-11-16T20:33:17.681Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/0c555b90-97fc-4763-a3c6-daa9fe1765dd/verify"
+            },
+            {
+              "ai_label": null,
+              "ai_label_source": "not_reported",
+              "id": "5fee614a-1a36-4e6c-9666-f43c4b5804d7",
+              "receipt_id": "eff82c14-9717-47de-b268-8991f8980467",
+              "receipt_url": "https://zambo.dev/run/eff82c14-9717-47de-b268-8991f8980467",
+              "status": "success",
+              "summary": "Used Workflow Close",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "workflow_close",
+              "ts": "2026-11-16T20:33:10.144Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/eff82c14-9717-47de-b268-8991f8980467/verify"
+            },
+            {
+              "ai_label": null,
+              "ai_label_source": "not_reported",
+              "id": "b0ac5797-959d-4ff8-bf70-1a32bfe78411",
+              "receipt_id": "1fb3a09e-1029-464c-9872-fb02fcc35a65",
+              "receipt_url": "https://zambo.dev/run/1fb3a09e-1029-464c-9872-fb02fcc35a65",
+              "status": "agent_reported",
+              "summary": "Agent submitted a work report",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "journal_log",
+              "ts": "2026-11-16T20:33:08.481Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/1fb3a09e-1029-464c-9872-fb02fcc35a65/verify"
+            },
+            {
+              "ai_label": null,
+              "ai_label_source": "not_reported",
+              "id": "82ede9c8-8a4d-4d2c-b424-3d2c8c94cc4d",
+              "receipt_id": "2352011e-2b2f-433f-9a3c-0b24730cd351",
+              "receipt_url": "https://zambo.dev/run/2352011e-2b2f-433f-9a3c-0b24730cd351",
+              "status": "success",
+              "summary": "Used Workflow Close",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "workflow_close",
+              "ts": "2026-11-16T20:33:03.769Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/2352011e-2b2f-433f-9a3c-0b24730cd351/verify"
+            },
+            {
+              "ai_label": null,
+              "ai_label_source": "not_reported",
+              "id": "751b6e83-e9ea-436c-a0a1-8249d7de2e24",
+              "receipt_id": "6b7d958a-f31b-47d1-8aef-09a868e2e865",
+              "receipt_url": "https://zambo.dev/run/6b7d958a-f31b-47d1-8aef-09a868e2e865",
+              "status": "agent_reported",
+              "summary": "Agent submitted a work report",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "journal_log",
+              "ts": "2026-11-16T20:33:01.910Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/6b7d958a-f31b-47d1-8aef-09a868e2e865/verify"
+            },
+            {
+              "ai_label": "lane1-wall",
+              "ai_label_source": "caller_reported",
+              "id": "be7e582c-0957-44b2-8438-65e255c9298a",
+              "receipt_id": "dcf37960-64f2-4474-b53c-326647f573f3",
+              "receipt_url": "https://zambo.dev/run/dcf37960-64f2-4474-b53c-326647f573f3",
+              "status": "success",
+              "summary": "Used Handover List",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "handover_list",
+              "ts": "2026-11-16T20:18:26.356Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/dcf37960-64f2-4474-b53c-326647f573f3/verify"
+            },
+            {
+              "ai_label": "lane1-wall",
+              "ai_label_source": "caller_reported",
+              "id": "6bffded2-8f4d-4266-9817-45f618bfe0a9",
+              "receipt_id": "16a73c19-c199-4822-8304-ed40b7e064d1",
+              "receipt_url": "https://zambo.dev/run/16a73c19-c199-4822-8304-ed40b7e064d1",
+              "status": "success",
+              "summary": "Scanned text for hidden instructions",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "prompt_shield",
+              "ts": "2026-11-16T20:18:21.208Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/16a73c19-c199-4822-8304-ed40b7e064d1/verify"
+            },
+            {
+              "ai_label": "lane1-wall",
+              "ai_label_source": "caller_reported",
+              "id": "6d5c3337-61aa-4fe4-89be-f0cc47e6ee4e",
+              "receipt_id": "4eddd952-5360-48b3-882d-2bc435ede79a",
+              "receipt_url": "https://zambo.dev/run/4eddd952-5360-48b3-882d-2bc435ede79a",
+              "status": "success",
+              "summary": "Scanned text for hidden instructions",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "prompt_shield",
+              "ts": "2026-11-16T20:18:17.572Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/4eddd952-5360-48b3-882d-2bc435ede79a/verify"
+            },
+            {
+              "ai_label": "lane1-wall",
+              "ai_label_source": "caller_reported",
+              "id": "70da9cc9-a054-462d-9738-47f285677245",
+              "receipt_id": "e8c793c3-5891-49d5-afaf-73fe28f25804",
+              "receipt_url": "https://zambo.dev/run/e8c793c3-5891-49d5-afaf-73fe28f25804",
+              "status": "success",
+              "summary": "Scanned text for hidden instructions",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "prompt_shield",
+              "ts": "2026-11-16T20:18:12.802Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/e8c793c3-5891-49d5-afaf-73fe28f25804/verify"
+            },
+            {
+              "ai_label": "lane1-wall",
+              "ai_label_source": "caller_reported",
+              "id": "88a00f73-04cc-4afc-a695-69a579ef933d",
+              "receipt_id": "688a4981-0103-460e-b42b-b80f874bcdec",
+              "receipt_url": "https://zambo.dev/run/688a4981-0103-460e-b42b-b80f874bcdec",
+              "status": "success",
+              "summary": "Scanned text for hidden instructions",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "prompt_shield",
+              "ts": "2026-11-16T20:18:06.957Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/688a4981-0103-460e-b42b-b80f874bcdec/verify"
+            },
+            {
+              "ai_label": "lane1-wall",
+              "ai_label_source": "caller_reported",
+              "id": "a0500261-57ee-4030-8301-37b375d86f19",
+              "receipt_id": "4561ebc6-174e-4ec7-84bf-98b0fd50c503",
+              "receipt_url": "https://zambo.dev/run/4561ebc6-174e-4ec7-84bf-98b0fd50c503",
+              "status": "success",
+              "summary": "Scanned text for hidden instructions",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "prompt_shield",
+              "ts": "2026-11-16T20:18:00.923Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/4561ebc6-174e-4ec7-84bf-98b0fd50c503/verify"
+            },
+            {
+              "ai_label": "lane1-wall",
+              "ai_label_source": "caller_reported",
+              "id": "b8281309-3f48-4ff8-a635-15c92ef47178",
+              "receipt_id": "4b895f0f-a304-4276-b58f-cff970df8868",
+              "receipt_url": "https://zambo.dev/run/4b895f0f-a304-4276-b58f-cff970df8868",
+              "status": "success",
+              "summary": "Used Day Pass Status",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "day_pass_status",
+              "ts": "2026-11-16T20:17:54.147Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/4b895f0f-a304-4276-b58f-cff970df8868/verify"
+            },
+            {
+              "ai_label": "lane1-job2",
+              "ai_label_source": "caller_reported",
+              "id": "64ec7ec6-ed6d-4648-9855-60ac0f943ed8",
+              "receipt_id": "5588cd70-f083-40f0-8b25-3b79ee4ad9f4",
+              "receipt_url": "https://zambo.dev/run/5588cd70-f083-40f0-8b25-3b79ee4ad9f4",
+              "status": "success",
+              "summary": "Scanned text for hidden instructions",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "prompt_shield",
+              "ts": "2026-11-16T20:17:11.250Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/5588cd70-f083-40f0-8b25-3b79ee4ad9f4/verify"
+            },
+            {
+              "ai_label": "lane1-job2",
+              "ai_label_source": "caller_reported",
+              "id": "ddb472af-f4da-46be-afc3-c9e4bc6711f4",
+              "receipt_id": "93f9fde0-c382-45d3-b5ef-13296f6e4c29",
+              "receipt_url": "https://zambo.dev/run/93f9fde0-c382-45d3-b5ef-13296f6e4c29",
+              "status": "success",
+              "summary": "Used Capability Search",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "capability_search",
+              "ts": "2026-11-16T20:17:06.558Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/93f9fde0-c382-45d3-b5ef-13296f6e4c29/verify"
+            },
+            {
+              "ai_label": "lane1-job",
+              "ai_label_source": "caller_reported",
+              "id": "2c3796df-8e7e-4e4c-87b7-99aa5386a13b",
+              "receipt_id": "4c580706-541f-4837-98d3-c18a915f44f2",
+              "receipt_url": "https://zambo.dev/run/4c580706-541f-4837-98d3-c18a915f44f2",
+              "status": "success",
+              "summary": "Used Capability Search",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "capability_search",
+              "ts": "2026-11-16T20:16:29.155Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/4c580706-541f-4837-98d3-c18a915f44f2/verify"
+            },
+            {
+              "ai_label": null,
+              "ai_label_source": "not_reported",
+              "id": "38f8a87e-c7da-4868-a575-5163e35180ff",
+              "receipt_id": "6e51ca36-a22f-4144-a59d-cb07af4c86bd",
+              "receipt_url": "https://zambo.dev/run/6e51ca36-a22f-4144-a59d-cb07af4c86bd",
+              "status": "success",
+              "summary": "Used Activity Today",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "activity_today",
+              "ts": "2026-11-16T19:59:18.356Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/6e51ca36-a22f-4144-a59d-cb07af4c86bd/verify"
+            },
+            {
+              "ai_label": null,
+              "ai_label_source": "not_reported",
+              "id": "d26c5bf9-f79a-41f2-b15b-fcf06b272c81",
+              "receipt_id": "58bfe84c-1606-4760-b854-4800a9388aa5",
+              "receipt_url": "https://zambo.dev/run/58bfe84c-1606-4760-b854-4800a9388aa5",
+              "status": "success",
+              "summary": "Used Spend Limit Status",
+              "thread_id": null,
+              "thread_name": null,
+              "tool": "spend_limit_status",
+              "ts": "2026-11-16T19:59:16.860Z",
+              "verify_url": "https://zambo.dev/api/v2/receipt/58bfe84c-1606-4760-b854-4800a9388aa5/verify"
+            }
+          ],
+          "facts": [],
+          "first_workflow": {
+            "consent": "Run only the workflow the user chooses. Do not add calls just to demonstrate features.",
+            "examples": [
+              "Check this public website and prepare a handover with receipts.",
+              "Research this decision and save a brief I can continue in another AI."
+            ],
+            "next_call": {
+              "arguments": {
+                "_session_id": "scoped:6d470b92b211526bce4b6f1272cbc8cdc42e18c4"
+              },
+              "tool": "zambo_home"
+            }
+          },
+          "handoff_text": "Recent Zambo work for this job (oldest first):\n- Used Spend Limit Status at 2026-11-16 19:59 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/58bfe84c-1606-4760-b854-4800a9388aa5\n  Check: https://zambo.dev/api/v2/receipt/58bfe84c-1606-4760-b854-4800a9388aa5/verify\n- Used Activity Today at 2026-11-16 19:59 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/6e51ca36-a22f-4144-a59d-cb07af4c86bd\n  Check: https://zambo.dev/api/v2/receipt/6e51ca36-a22f-4144-a59d-cb07af4c86bd/verify\n- Used Capability Search at 2026-11-16 20:16 UTC (client reported as lane1-job)\n  Receipt: https://zambo.dev/run/4c580706-541f-4837-98d3-c18a915f44f2\n  Check: https://zambo.dev/api/v2/receipt/4c580706-541f-4837-98d3-c18a915f44f2/verify\n- Used Capability Search at 2026-11-16 20:17 UTC (client reported as lane1-job2)\n  Receipt: https://zambo.dev/run/93f9fde0-c382-45d3-b5ef-13296f6e4c29\n  Check: https://zambo.dev/api/v2/receipt/93f9fde0-c382-45d3-b5ef-13296f6e4c29/verify\n- Scanned text for hidden instructions at 2026-11-16 20:17 UTC (client reported as lane1-job2)\n  Receipt: https://zambo.dev/run/5588cd70-f083-40f0-8b25-3b79ee4ad9f4\n  Check: https://zambo.dev/api/v2/receipt/5588cd70-f083-40f0-8b25-3b79ee4ad9f4/verify\n- Used Day Pass Status at 2026-11-16 20:17 UTC (client reported as lane1-wall)\n  Receipt: https://zambo.dev/run/4b895f0f-a304-4276-b58f-cff970df8868\n  Check: https://zambo.dev/api/v2/receipt/4b895f0f-a304-4276-b58f-cff970df8868/verify\n- Scanned text for hidden instructions at 2026-11-16 20:18 UTC (client reported as lane1-wall)\n  Receipt: https://zambo.dev/run/4561ebc6-174e-4ec7-84bf-98b0fd50c503\n  Check: https://zambo.dev/api/v2/receipt/4561ebc6-174e-4ec7-84bf-98b0fd50c503/verify\n- Scanned text for hidden instructions at 2026-11-16 20:18 UTC (client reported as lane1-wall)\n  Receipt: https://zambo.dev/run/688a4981-0103-460e-b42b-b80f874bcdec\n  Check: https://zambo.dev/api/v2/receipt/688a4981-0103-460e-b42b-b80f874bcdec/verify\n- Scanned text for hidden instructions at 2026-11-16 20:18 UTC (client reported as lane1-wall)\n  Receipt: https://zambo.dev/run/e8c793c3-5891-49d5-afaf-73fe28f25804\n  Check: https://zambo.dev/api/v2/receipt/e8c793c3-5891-49d5-afaf-73fe28f25804/verify\n- Scanned text for hidden instructions at 2026-11-16 20:18 UTC (client reported as lane1-wall)\n  Receipt: https://zambo.dev/run/4eddd952-5360-48b3-882d-2bc435ede79a\n  Check: https://zambo.dev/api/v2/receipt/4eddd952-5360-48b3-882d-2bc435ede79a/verify\n- Scanned text for hidden instructions at 2026-11-16 20:18 UTC (client reported as lane1-wall)\n  Receipt: https://zambo.dev/run/16a73c19-c199-4822-8304-ed40b7e064d1\n  Check: https://zambo.dev/api/v2/receipt/16a73c19-c199-4822-8304-ed40b7e064d1/verify\n- Used Handover List at 2026-11-16 20:18 UTC (client reported as lane1-wall)\n  Receipt: https://zambo.dev/run/dcf37960-64f2-4474-b53c-326647f573f3\n  Check: https://zambo.dev/api/v2/receipt/dcf37960-64f2-4474-b53c-326647f573f3/verify\n- Agent report: Agent submitted a work report at 2026-11-16 20:33 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/6b7d958a-f31b-47d1-8aef-09a868e2e865\n  Check: https://zambo.dev/api/v2/receipt/6b7d958a-f31b-47d1-8aef-09a868e2e865/verify\n- Used Workflow Close at 2026-11-16 20:33 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/2352011e-2b2f-433f-9a3c-0b24730cd351\n  Check: https://zambo.dev/api/v2/receipt/2352011e-2b2f-433f-9a3c-0b24730cd351/verify\n- Agent report: Agent submitted a work report at 2026-11-16 20:33 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/1fb3a09e-1029-464c-9872-fb02fcc35a65\n  Check: https://zambo.dev/api/v2/receipt/1fb3a09e-1029-464c-9872-fb02fcc35a65/verify\n- Used Workflow Close at 2026-11-16 20:33 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/eff82c14-9717-47de-b268-8991f8980467\n  Check: https://zambo.dev/api/v2/receipt/eff82c14-9717-47de-b268-8991f8980467/verify\n- Agent report: Agent submitted a work report at 2026-11-16 20:33 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/0c555b90-97fc-4763-a3c6-daa9fe1765dd\n  Check: https://zambo.dev/api/v2/receipt/0c555b90-97fc-4763-a3c6-daa9fe1765dd/verify\n- Used Workflow Close at 2026-11-16 20:33 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/92fda13a-249f-4bce-a169-1ccf0f3397f3\n  Check: https://zambo.dev/api/v2/receipt/92fda13a-249f-4bce-a169-1ccf0f3397f3/verify\n- Agent report: Agent submitted a work report at 2026-11-16 20:33 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7\n  Check: https://zambo.dev/api/v2/receipt/5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7/verify\n- Used Workflow Close at 2026-11-16 20:33 UTC (AI client not reported)\n  Receipt: https://zambo.dev/run/3e95a364-e96a-4115-b6a4-3a4c13e56211\n  Check: https://zambo.dev/api/v2/receipt/3e95a364-e96a-4115-b6a4-3a4c13e56211/verify\nA matching receipt shows the saved record was not changed. It does not prove the answer is right or that an outside action happened.\nAny AI client label shown here was reported by the caller and is not independently verified.",
+          "handovers": [
+            {
+              "acceptance_status": "pending",
+              "decided_at": null,
+              "goal": "Organize the Downloads folder: find duplicate files, show the owner the duplicate groups, and archive the extra copies after confirmation, with every step on a checkable record.",
+              "id": "7eb3d6dd-30f3-4e5d-b23e-ddcbd203fa4d",
+              "status": "open",
+              "url": "https://zambo.dev/handover/7eb3d6dd-30f3-4e5d-b23e-ddcbd203fa4d?owner_token=a2ae9231e7d4429969fdbffd1fb956d398158f95ec7140ca93c4b9ab78d560aa",
+              "visibility": "public",
+              "visibility_note": "Public link: anyone with the page link can view the work. Only the separate client link can Accept or Flag. Not listed on the sender's public track record."
+            }
+          ],
+          "has_more": true,
+          "latest_handover": null,
+          "next_cursor": "eyJ2IjoxLCJ0cyI6IjIwMjYtMTEtMTZUMTk6NTk6MTYuODYwMzEyWiIsImlkIjoiZDI2YzViZjktZjc5YS00MWYyLWIxNWItZmNmMDZiMjcyYzgxIiwic2luY2UiOm51bGx9",
+          "next_up": "Your result and receipt are ready. Try a complete workflow: ask your AI to check a public website, summarize what was observed, and prepare a handover; or research a decision and save a brief. Call zambo_home for a private starting point. Free needs no card or signup; pickup is always free.\n\n**Level 2:** Keep every tool available without its daily free-call and shared continuation limits; saved notes follow across AI apps through the pass plus 30 days, and eligible private proof packs are included. [Compare one-time passes](https://zambo.dev/pricing/).",
+          "privacy": {
+            "capture_enabled": true,
+            "global_capture_enabled": true,
+            "note": "New anonymous sessions start with capture off. A verified Pass starts with capture on. These settings only control future private timeline entries. Public receipts remain available.",
+            "per_ai": []
+          },
+          "receipt_url": "https://zambo.dev/run/bbc2dad0-79a4-41ff-9ced-75f3999d78e0",
+          "saved_memory": [],
+          "status": "ok",
+          "today_url": "https://zambo.dev/today/k/zQJsEO2__To3U51i9s4rCoBxcQj4E_aVsmKQOD3CxszXAOEkaV3bvJ1U447Hcb25WhO6Y8BojypZGK5KkhyoH-mt4DPu1mHbM6VJ5EN_X5l13KJs6NgPx8Yh_nLQ"
+        },
+        "saved_memory": [],
+        "status": "ok",
+        "today_url": "https://zambo.dev/today/k/zQJsEO2__To3U51i9s4rCoBxcQj4E_aVsmKQOD3CxszXAOEkaV3bvJ1U447Hcb25WhO6Y8BojypZGK5KkhyoH-mt4DPu1mHbM6VJ5EN_X5l13KJs6NgPx8Yh_nLQ",
+        "urls": {
+          "receipt": "https://zambo.dev/run/bbc2dad0-79a4-41ff-9ced-75f3999d78e0",
+          "receipt_url": "https://zambo.dev/run/bbc2dad0-79a4-41ff-9ced-75f3999d78e0",
+          "today_url": "https://zambo.dev/today/k/zQJsEO2__To3U51i9s4rCoBxcQj4E_aVsmKQOD3CxszXAOEkaV3bvJ1U447Hcb25WhO6Y8BojypZGK5KkhyoH-mt4DPu1mHbM6VJ5EN_X5l13KJs6NgPx8Yh_nLQ"
+        }
+      },
+      "today_url": "https://zambo.dev/today/k/zQJsEO2__To3U51i9s4rCoBxcQj4E_aVsmKQOD3CxszXAOEkaV3bvJ1U447Hcb25WhO6Y8BojypZGK5KkhyoH-mt4DPu1mHbM6VJ5EN_X5l13KJs6NgPx8Yh_nLQ"
+    }
+  },
+  "dropped": false,
+  "receipt_ids": [
+    "3e95a364-e96a-4115-b6a4-3a4c13e56211",
+    "5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7",
+    "92fda13a-249f-4bce-a169-1ccf0f3397f3",
+    "0c555b90-97fc-4763-a3c6-daa9fe1765dd",
+    "bbc2dad0-79a4-41ff-9ced-75f3999d78e0",
+    "eff82c14-9717-47de-b268-8991f8980467",
+    "1fb3a09e-1029-464c-9872-fb02fcc35a65",
+    "2352011e-2b2f-433f-9a3c-0b24730cd351",
+    "6b7d958a-f31b-47d1-8aef-09a868e2e865",
+    "dcf37960-64f2-4474-b53c-326647f573f3",
+    "16a73c19-c199-4822-8304-ed40b7e064d1",
+    "4eddd952-5360-48b3-882d-2bc435ede79a",
+    "e8c793c3-5891-49d5-afaf-73fe28f25804",
+    "688a4981-0103-460e-b42b-b80f874bcdec",
+    "4561ebc6-174e-4ec7-84bf-98b0fd50c503",
+    "4b895f0f-a304-4276-b58f-cff970df8868",
+    "5588cd70-f083-40f0-8b25-3b79ee4ad9f4",
+    "93f9fde0-c382-45d3-b5ef-13296f6e4c29",
+    "4c580706-541f-4837-98d3-c18a915f44f2",
+    "6e51ca36-a22f-4144-a59d-cb07af4c86bd",
+    "58bfe84c-1606-4760-b854-4800a9388aa5",
+    "example"
+  ],
+  "response_class": "success",
+  "transport": {
+    "content_length_header": "52352",
+    "elapsed_ms": 3253,
+    "http_status": 200,
+    "jsonrpc_id": "7b49dba482c9486785433eace6b960e4",
+    "received_at": "2026-11-16T20:33:31.457635Z",
+    "response_bytes": 52352,
+    "sent_at": "2026-11-16T20:33:28.204486Z"
+  }
+}

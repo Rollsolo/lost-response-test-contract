@@ -1,8 +1,10 @@
 # Lost-response harness
 
 A small, documented Python harness that runs assertions A1 to A5 of
-the contract in ../../CONTRACT.md against a configurable MCP endpoint.
-It uses only the Python standard library plus `requests`.
+the contract in ../../CONTRACT.md. The driver owns the scoring; a
+per-system adapter owns execution, the external effect counter, and
+recovery on the system under test. It uses only the Python standard
+library plus `requests`.
 
 ## Run it
 
@@ -18,11 +20,35 @@ as served), plus `summary.json` and a `RESULTS-snippet.md` formatted
 for pasting into ../../RESULTS.md. Both parties publish raw outputs,
 not summaries, per the contract's common setup.
 
-To run it against a different MCP endpoint, copy the config and change
-`endpoint`, `public_base`, `tool`, and `args_template`. The template
-uses two placeholders: `{K}` for the stable operation identity the
-caller supplies, and `{SESSION}` for the fresh run-scoped session
-identity used to attribute records to the run.
+The config selects the adapter and carries its settings:
+
+```json
+{
+  "adapter": "zambo",
+  "system_name": "Zambo production",
+  "a5_delay_hours": 24,
+  "adapter_config": { "endpoint": "...", "public_base": "...",
+                      "tool": "...", "args_template": { } }
+}
+```
+
+The driver reads only the top-level keys; everything under
+`adapter_config` belongs to the named adapter. For the Zambo adapter
+the knobs are `endpoint`, `public_base`, `tool`, and `args_template`.
+The template uses two placeholders: `{K}` for the stable operation
+identity the caller supplies, and `{SESSION}` for the fresh
+run-scoped session identity used to attribute records to the run.
+
+## Adapters
+
+To run the contract against a different system, write an adapter:
+five operations (initialize, execute, count the external effect
+counter, resolve a record by id, recover holding only K) behind the
+contract in adapters/base.py. adapters/zambo.py is the reference
+implementation; adapters/stub.py is a copyable template that
+implements nothing. The full guide, including what to publish back,
+is adapters/README.md (also linked from the repository README's
+"Run it against your system" section).
 
 ## How the fault is injected
 

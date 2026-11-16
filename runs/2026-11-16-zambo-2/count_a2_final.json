@@ -1,0 +1,63 @@
+{
+  "at": "2026-11-16T20:33:22.430124Z",
+  "attributed_children": [
+    {
+      "counted_as_target_execution": true,
+      "output_hash": "sha256:f5cb520321d98985b06c63a6c9e487a6edaac22643371dec333467139989e453",
+      "receipt_id": "0c555b90-97fc-4763-a3c6-daa9fe1765dd",
+      "resolves_in_public_record": true,
+      "step_status": "success",
+      "tools": [
+        "journal_log"
+      ]
+    },
+    {
+      "counted_as_target_execution": false,
+      "output_hash": "sha256:e34ad096e47321a18fed3909d28493cbd4cd8d0a3dae2e5a520bb6c1825fd218",
+      "receipt_id": "92fda13a-249f-4bce-a169-1ccf0f3397f3",
+      "resolves_in_public_record": true,
+      "step_status": "success",
+      "tools": [
+        "workflow_close"
+      ]
+    },
+    {
+      "counted_as_target_execution": true,
+      "output_hash": "sha256:ac89614f41064b20018864ecfc32d4cce076f2c30f40c47daa7302337fd56210",
+      "receipt_id": "5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7",
+      "resolves_in_public_record": true,
+      "step_status": "success",
+      "tools": [
+        "journal_log"
+      ]
+    }
+  ],
+  "execution_record_ids": [
+    "0c555b90-97fc-4763-a3c6-daa9fe1765dd",
+    "5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7"
+  ],
+  "external_effect_count": 2,
+  "label": "a2_final",
+  "method": "workflow_close snapshot children, each attributed through its public /api/v2/receipt/<id>/verify record",
+  "session_id": "lr-f63fe15895-a2",
+  "snapshot_children": [
+    {
+      "output_hash_in_snapshot": "f5cb520321d98985b06c63a6c9e487a6edaac22643371dec333467139989e453",
+      "receipt_id": "0c555b90-97fc-4763-a3c6-daa9fe1765dd"
+    },
+    {
+      "output_hash_in_snapshot": "e34ad096e47321a18fed3909d28493cbd4cd8d0a3dae2e5a520bb6c1825fd218",
+      "receipt_id": "92fda13a-249f-4bce-a169-1ccf0f3397f3"
+    },
+    {
+      "output_hash_in_snapshot": "ac89614f41064b20018864ecfc32d4cce076f2c30f40c47daa7302337fd56210",
+      "receipt_id": "5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7"
+    }
+  ],
+  "snapshot_count_field": 3,
+  "snapshot_response_class": "success",
+  "target_tool_execution_receipt_ids": [
+    "0c555b90-97fc-4763-a3c6-daa9fe1765dd",
+    "5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7"
+  ]
+}

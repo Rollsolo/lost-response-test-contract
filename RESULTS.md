@@ -19,3 +19,25 @@ outputs.
 | A3 | Zambo | fail | K-only leg failed: recovery holding only K (lr-op-498c01b299-a1) returned no committed outcome; the public record lookup by K returned 404 receipt_not_found and the K-keyed tool lookup returned no outcome or digest. Run-id leg passed separately: holding receipt id b49c66f5-5386-4bda-8bd6-2726bdfee7d1, resolution returned the unaltered record and recomputation matched (SHA-256 of the decoded canonical bytes equals the served output_hash sha256:d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970). Raw: runs/2026-11-16-zambo-1/a3_summary.json, runs/2026-11-16-zambo-1/a3_runid_leg_receipt.json, runs/2026-11-16-zambo-1/a3_konly_run_lookup.json | 2026-11-16 |
 | A4 | Zambo | pass | Recorded retry response classes: A1 retry success, corresponding to a committed record (the retry's own second receipt, counted in A1), not a generic success with no record; A2 retry payment_required, an explicit non-success state naming the situation. Raw: runs/2026-11-16-zambo-1/summary.json | 2026-11-16 |
 | A5 | Zambo | unproven | The 24 hour delayed leg cannot complete on the planting day. The A1 operation is planted with its commit timestamp recorded in runs/2026-11-16-zambo-1/a5_plant.json (due 2026-11-17T15:49:33Z); the delayed leg runs later with: python3 fixtures/harness/lost_response.py --delayed-leg runs/2026-11-16-zambo-1/a5_plant.json | 2026-11-16 |
+
+Run of 2026-11-16 (adapter refactor reproduction): Zambo production
+(https://zambo.dev/mcp), target tool journal_log, raw outputs in
+runs/2026-11-16-zambo-2/. This run was executed through the adapter
+interface in fixtures/harness/adapters/ (the harness refactor that
+separates the scoring driver from the per-system adapter; the Zambo
+adapter is the original harness behavior, moved unchanged) to prove
+the refactor before any other system is run through it. A1, A3, and
+A4 reproduce the first run exactly. A2 differs, and the difference
+is in the observation, not the code: in the first run the mismatched
+retry was refused at the metering layer before it could execute, so
+the binding check was never exercised and A2 was unproven; in this
+run the mismatched retry executed, so A2 is scored on the exercised
+behavior and recorded as observed.
+
+| Assertion | System | Outcome | Evidence | Date |
+|---|---|---|---|---|
+| A1 | Zambo | fail | External effect count 2, not 1: attempt 1 (response dropped) produced public receipt 6b7d958a-f31b-47d1-8aef-09a868e2e865 and the identical retry produced a second distinct public receipt 1fb3a09e-1029-464c-9872-fb02fcc35a65, each counted from the job's workflow snapshot and attributed through its public record. Raw: runs/2026-11-16-zambo-2/count_a1_final.json, runs/2026-11-16-zambo-2/a1_retry_identical.json | 2026-11-16 |
+| A2 | Zambo | fail | Attempt 1 committed (effect count 1, receipt 0c555b90-97fc-4763-a3c6-daa9fe1765dd). The mismatched retry (one parameter changed: action) executed as a normal new call: the effect count rose to 2 (second receipt 5ab9b4c5-3ec4-4598-81c9-8e9f428a17a7), the response class was success, and no binding rejection was returned. This exercises the check the first run could not reach (there the retry was refused with payment_required before executing, and A2 was recorded unproven). Raw: runs/2026-11-16-zambo-2/a2_retry_mismatched.json, runs/2026-11-16-zambo-2/count_a2_final.json | 2026-11-16 |
+| A3 | Zambo | fail | K-only leg failed: recovery holding only K (lr-op-f63fe15895-a1) returned no committed outcome; the public record lookup by K returned 404 receipt_not_found and the K-keyed tool lookup returned no outcome or digest. Run-id leg passed separately: holding receipt id 6b7d958a-f31b-47d1-8aef-09a868e2e865, resolution returned the unaltered record and recomputation matched (SHA-256 of the decoded canonical bytes equals the served output_hash sha256:70a8dacb73738cf7e9d62f90e17d40191f42f7360fcb344d78a65753a2cd7fc1). Raw: runs/2026-11-16-zambo-2/a3_summary.json, runs/2026-11-16-zambo-2/a3_runid_leg_receipt.json, runs/2026-11-16-zambo-2/a3_konly_run_lookup.json | 2026-11-16 |
+| A4 | Zambo | pass | Recorded retry response classes: A1 retry success, corresponding to a committed record (the retry's own second receipt, counted in A1); A2 retry success, corresponding to a committed record (the mismatched retry's own second execution, counted in A2). Neither is a generic success with no committed record. Raw: runs/2026-11-16-zambo-2/summary.json | 2026-11-16 |
+| A5 | Zambo | unproven | The 24 hour delayed leg cannot complete on the planting day. The A1 operation is planted with its commit timestamp recorded in runs/2026-11-16-zambo-2/a5_plant.json (due 2026-11-17T20:33:31Z); the delayed leg runs later with: python3 fixtures/harness/lost_response.py --delayed-leg runs/2026-11-16-zambo-2/a5_plant.json | 2026-11-16 |

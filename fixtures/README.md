@@ -79,7 +79,12 @@ records by the outcome recorded in each receipt.
 
 ## The harness
 
-The runnable harness lives in harness/ in this directory. See
-harness/README.md for how to run it against any MCP endpoint, the
-configuration knobs, the target tool choice for Zambo, and how each
-assertion A1 to A5 is executed and scored.
+The runnable harness lives in harness/ in this directory. The
+driver owns the scoring; each system under test is reached through
+an adapter in harness/adapters/ (the Zambo adapter is the reference
+implementation, and a stub adapter is the template for a new
+system). See harness/README.md for how to run it, the configuration
+knobs, the target tool choice for Zambo, and how each assertion
+A1 to A5 is executed and scored, and harness/adapters/README.md
+for the adapter contract and how to run the contract against a
+different system.

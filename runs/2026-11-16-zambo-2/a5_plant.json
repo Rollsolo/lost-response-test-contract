@@ -1,0 +1,51 @@
+{
+  "K": "lr-op-f63fe15895-a1",
+  "adapter": "zambo",
+  "adapter_config": {
+    "args_template": {
+      "_session_id": "{SESSION}",
+      "action": "lost_response_probe",
+      "executor_identity": "lost-response-harness",
+      "inputs": {
+        "operation": "{K}"
+      },
+      "job_id": "{K}"
+    },
+    "endpoint": "https://zambo.dev/mcp",
+    "enumerate_tools": [
+      {
+        "arguments": {
+          "_session_id": "{SESSION}"
+        },
+        "name": "workflow_close"
+      }
+    ],
+    "konly_lookup_tools": [
+      {
+        "arguments": {
+          "_session_id": "{K}"
+        },
+        "name": "continuity_get_recent"
+      }
+    ],
+    "mismatch": {
+      "altered_value": "lost_response_probe_altered",
+      "field": "action"
+    },
+    "public_base": "https://zambo.dev",
+    "tool": "journal_log"
+  },
+  "assertion": "A5",
+  "committed_digest": "sha256:70a8dacb73738cf7e9d62f90e17d40191f42f7360fcb344d78a65753a2cd7fc1",
+  "delay_hours": 24,
+  "due_at": "2026-11-17T20:33:31.461569Z",
+  "endpoint": "https://zambo.dev/mcp",
+  "execution_receipt_ids": [
+    "6b7d958a-f31b-47d1-8aef-09a868e2e865",
+    "1fb3a09e-1029-464c-9872-fb02fcc35a65"
+  ],
+  "note": "Delayed leg: run this harness with --delayed-leg on this file at or after due_at. The delay is measured from the original commit time (planted_at approximates it within the run; the exact attempt 1 send time is in a1_attempt1_dropped.json).",
+  "planted_at": "2026-11-16T20:33:31.461551Z",
+  "session_id": "lr-f63fe15895-a1",
+  "system_name": "Zambo production"
+}
