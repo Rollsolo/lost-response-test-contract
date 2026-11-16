@@ -40,6 +40,37 @@ Draft, under joint review. The assertion set in CONTRACT.md is the
 starting text, open for joint revision before any run counts. Results go
 in RESULTS.md.
 
+## Run the harness
+
+The runnable fixture harness lives in fixtures/harness/. It runs
+assertions A1 to A5 against any MCP endpoint, with the fault injector,
+the shared external effect counter defined in fixtures/README.md, and
+raw outputs per run.
+
+```bash
+cd fixtures/harness
+pip install -r requirements.txt
+python3 lost_response.py --config config.zambo.json --out ../../runs/my-run
+```
+
+Configuration knobs (in the config JSON): `endpoint` (the MCP endpoint
+to test), `public_base` (where the system's durable public record
+lives), `tool` (the target mutating tool), `args_template` (the
+arguments A, with `{K}` for the stable operation identity and
+`{SESSION}` for the fresh run-scoped session identity), `mismatch`
+(the one parameter A2 changes, and its altered value), and
+`a5_delay_hours` (the A5 delay, 24 by default). The delayed A5 leg
+runs later against a planted run:
+
+```bash
+python3 lost_response.py --delayed-leg ../../runs/my-run/a5_plant.json
+```
+
+Full harness documentation, including the target tool choice for
+Zambo and how each assertion is executed and scored, is in
+fixtures/harness/README.md. Recorded runs and their raw outputs are
+in runs/, scored in RESULTS.md.
+
 ## Changelog
 
 - 2026-11-16: Yared Mengistu reviewed assertions A1 to A5 and agreed
