@@ -1,0 +1,143 @@
+{
+  "assertions": {
+    "A1": {
+      "K": "lr-op-498c01b299-a1",
+      "count_after_attempt1": 1,
+      "execution_receipt_ids": [
+        "b49c66f5-5386-4bda-8bd6-2726bdfee7d1",
+        "2b8cefc9-72c0-415c-9525-71f6000679f9"
+      ],
+      "final_external_effect_count": 2,
+      "reason": "external effect count for the logical operation is 2, not 1: attempt 1 and the identical retry each produced a distinct public receipt for the operation",
+      "retry_response_class": "success",
+      "score": "fail",
+      "session_id": "lr-498c01b299-a1"
+    },
+    "A2": {
+      "K": "lr-op-498c01b299-a2",
+      "count_after_attempt1": 1,
+      "execution_receipt_ids": [
+        "e8f9f9b8-af48-45cb-8df0-5ce944346e05"
+      ],
+      "final_external_effect_count": 1,
+      "mismatched_field": "action",
+      "reason": "attempt 1 committed (effect count 1), and the mismatched retry was refused at the metering layer (payment_required) before it could execute, so the binding check was never exercised; no new effect occurred, and neither a binding rejection nor a silent execution was observed",
+      "retry_response_class": "payment_required",
+      "score": "unproven",
+      "session_id": "lr-498c01b299-a2"
+    },
+    "A3": {
+      "committed_digest": "sha256:d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+      "legs": {
+        "k_only": {
+          "K": "lr-op-498c01b299-a1",
+          "attempts": [
+            {
+              "http_status": 404,
+              "page_http_status": 200,
+              "page_title_not_found": true,
+              "path": "GET /api/v2/receipt/<K>/verify and GET /run/<K>",
+              "response_class": "not_found"
+            },
+            {
+              "note": "as recorded during the original run; the call returned no committed outcome for K",
+              "path": "tools/call continuity_get_recent with K as the only identifier",
+              "response_class": "payment_required"
+            }
+          ],
+          "reason": "K-only recovery did not return the original committed outcome: the public record lookup by K returned 404 receipt_not_found (the /run/<K> page answers HTTP 200 with a Receipt not found title), and the K-keyed tool lookup returned no committed outcome or digest",
+          "score": "fail"
+        },
+        "run_id": {
+          "digests_served": {
+            "input_hash": "sha256:e1135cc801f1d6fda86d36774eee91826a42fbcc8d15c35d4380adc18714d228",
+            "output_hash": "sha256:d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970"
+          },
+          "http_status": 200,
+          "note": "Section 9 resolution returned the unaltered record from the public JSON record; Section 6 recomputation is the harness's own SHA-256 over the decoded canonical bytes compared with the served output_hash.",
+          "page_http_status": 200,
+          "receipt_id": "b49c66f5-5386-4bda-8bd6-2726bdfee7d1",
+          "recomputation": {
+            "checks_served": {
+              "canonical_payload_matches": {
+                "detail": "The stored output and known call context reconstruct the exact canonical bytes.",
+                "label": "Canonical payload reconstruction",
+                "passed": true,
+                "status": "pass"
+              },
+              "chain": {
+                "detail": "This endpoint does not verify an append-only receipt chain.",
+                "status": "not_checked"
+              },
+              "commitment_matches": {
+                "computed_hash": "sha256:d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+                "detail": "SHA-256 of the exact decoded canonical bytes matches output_hash.",
+                "expected_hash": "sha256:d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+                "passed": true,
+                "status": "pass"
+              },
+              "issuer_authentication": {
+                "detail": "A zambo.dev receipt URL does not authenticate the issuer; no pinned signature or trusted issuer key was checked.",
+                "label": "Issuer authentication",
+                "passed": false,
+                "status": "not_checked"
+              },
+              "metadata_binding": {
+                "detail": "metadata_hash matches the canonical metadata block.",
+                "label": "AER-1 metadata hash",
+                "passed": true,
+                "status": "pass"
+              },
+              "provenance_binding": {
+                "detail": "The metadata claim is consistent with the verified receipt bytes; issuer is not authenticated.",
+                "label": "Provenance claim binding",
+                "passed": true,
+                "status": "pass"
+              },
+              "schema": {
+                "detail": "Schema conformance is left to the client using the linked hosted-profile schema.",
+                "status": "not_checked"
+              },
+              "signature": {
+                "detail": "No Ed25519 signature or pinned signing key is supplied.",
+                "status": "not_checked"
+              }
+            },
+            "computed_sha256_of_decoded_canonical_bytes": "d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+            "output_hash_served": "d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+            "status": "matched",
+            "verification_status_served": "verified"
+          },
+          "score": "pass"
+        }
+      },
+      "reason": "contract pass condition is the K-only leg: K-only recovery did not return the original committed outcome: the public record lookup by K returned 404 receipt_not_found (the /run/<K> page answers HTTP 200 with a Receipt not found title), and the K-keyed tool lookup returned no committed outcome or digest; run-id leg scored pass separately in the evidence",
+      "score": "fail"
+    },
+    "A4": {
+      "reason": "every recorded retry resolved to the original outcome, a digest-verifiable record of it, or an explicit non-success state",
+      "response_classes": {
+        "A1_retry": "success",
+        "A2_retry": "payment_required"
+      },
+      "score": "pass",
+      "verdicts": {
+        "A1_retry": "success corresponding to a committed record (the retry's own second receipt, counted in A1); not a generic success with no committed record",
+        "A2_retry": "explicit non-success state naming the situation (payment_required)"
+      }
+    },
+    "A5": {
+      "due_at": "2026-11-17T15:49:33.708808Z",
+      "plant_file": "a5_plant.json",
+      "reason": "the 24 hour delayed leg cannot complete on the planting day; attempt 1 is planted with its commit timestamp recorded and the delayed leg is runnable later by run id and by K",
+      "score": "unproven"
+    }
+  },
+  "endpoint": "https://zambo.dev/mcp",
+  "finished_at": "2026-11-16T15:49:33.709102Z",
+  "rescore_note": "Scores recomputed from the run's raw outputs with the corrected counter; see RESCORE-NOTE.md",
+  "rescored_at": "2026-11-16T15:52:13.393402Z",
+  "run_tag": "498c01b299",
+  "started_at": "2026-11-16T15:48:16.148119Z",
+  "tool": "journal_log"
+}

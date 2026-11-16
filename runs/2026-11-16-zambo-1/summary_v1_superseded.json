@@ -1,0 +1,101 @@
+{
+  "assertions": {
+    "A1": {
+      "K": "lr-op-498c01b299-a1",
+      "count_after_attempt1": 10,
+      "execution_receipt_ids": [
+        "0592cc9b-948d-471f-a23a-d44d7d26eea2",
+        "06d28fe7-6529-4cbb-b1e7-30a649c5de15",
+        "0836229c-0efa-4af2-8cf4-4226b80ffc35",
+        "2b8cefc9-72c0-415c-9525-71f6000679f9",
+        "3046f474-46ec-46e7-b2f9-f0291930830c",
+        "b0b54bf3-0e84-419f-a00a-f93f97138183",
+        "b49c66f5-5386-4bda-8bd6-2726bdfee7d1",
+        "c8e223d7-0518-4dc3-b625-ba053f0c76aa",
+        "ec54b958-0580-45fb-a1ec-ab8474b6c8bf",
+        "f7ff0d22-da6b-4cc0-833a-a642a923189f"
+      ],
+      "final_external_effect_count": 10,
+      "reason": "external effect count for the logical operation is 10, not 1",
+      "retry_response_class": "success",
+      "score": "fail",
+      "session_id": "lr-498c01b299-a1"
+    },
+    "A2": {
+      "K": "lr-op-498c01b299-a2",
+      "count_after_attempt1": 0,
+      "execution_receipt_ids": [],
+      "final_external_effect_count": 0,
+      "mismatched_field": "action",
+      "reason": "attempt 1 did not commit visibly in the public record, so the mismatched-retry precondition is not established",
+      "retry_response_class": "payment_required",
+      "score": "unproven",
+      "session_id": "lr-498c01b299-a2"
+    },
+    "A3": {
+      "committed_digest": null,
+      "legs": {
+        "k_only": {
+          "K": "lr-op-498c01b299-a1",
+          "attempts": [
+            {
+              "http_status": 200,
+              "path": "GET /run/<K>",
+              "response_class": "found"
+            },
+            {
+              "path": "tools/call continuity_get_recent with K as the only identifier",
+              "receipt_ids_returned": [
+                "example",
+                "d12cf91f-2760-4a65-ab4b-cc327479a394"
+              ],
+              "response_class": "payment_required"
+            }
+          ],
+          "reason": "no committed digest exists, so K-only recovery cannot be scored",
+          "score": "unproven"
+        },
+        "run_id": {
+          "digests_served": {},
+          "http_status": 200,
+          "note": "Section 9 resolution returned the record; digest evidence is the served digest plus the recomputation outcome recorded here. A not_computable recomputation means the public record at this URL does not expose the canonical inputs, and that limit is recorded rather than rounded into a pass on recomputation itself.",
+          "receipt_id": "0592cc9b-948d-471f-a23a-d44d7d26eea2",
+          "recomputation": {
+            "reason": "public record is not a JSON document at this URL; digest fields were extracted as served instead",
+            "status": "not_computable"
+          },
+          "score": "fail"
+        }
+      },
+      "reason": "contract pass condition is the K-only leg: no committed digest exists, so K-only recovery cannot be scored; run-id leg scored fail separately in the evidence",
+      "score": "unproven"
+    },
+    "A4": {
+      "reason": "every recorded retry resolved to the original outcome, a digest-verifiable record of it, or an explicit non-success state",
+      "response_classes": {
+        "A1_retry": "success",
+        "A2_retry": "payment_required"
+      },
+      "score": "pass",
+      "verdicts": {
+        "A1_retry": "success corresponding to a committed record (see the A1/A2 counts); not a generic success with no record",
+        "A2_retry": "explicit non-success state naming the situation (payment_required)"
+      }
+    },
+    "A5": {
+      "due_at": "2026-11-17T15:49:33.708808Z",
+      "plant_file": "a5_plant.json",
+      "reason": "the 24 hour delayed leg cannot complete on the planting day; attempt 1 is planted with its commit timestamp recorded and the delayed leg is runnable later by run id and by K",
+      "score": "unproven"
+    }
+  },
+  "endpoint": "https://zambo.dev/mcp",
+  "finished_at": "2026-11-16T15:49:33.709102Z",
+  "initialize": {
+    "caller_handle_issued": true,
+    "http_status": 200
+  },
+  "run_tag": "498c01b299",
+  "started_at": "2026-11-16T15:48:16.148119Z",
+  "tool": "journal_log"
+}

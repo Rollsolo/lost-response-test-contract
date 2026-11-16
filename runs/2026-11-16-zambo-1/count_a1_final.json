@@ -1,0 +1,53 @@
+{
+  "attributed_children": [
+    {
+      "counted_as_target_execution": true,
+      "output_hash": "sha256:d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+      "receipt_id": "b49c66f5-5386-4bda-8bd6-2726bdfee7d1",
+      "step_status": "success",
+      "tools": [
+        "journal_log"
+      ]
+    },
+    {
+      "counted_as_target_execution": false,
+      "output_hash": "sha256:1479000e01e6426afdfe3ccd71bdb3c4f7ea731e4307c2e2b7b1bb0ade227f86",
+      "receipt_id": "7f91f3db-ac63-4139-b680-517613e3f919",
+      "step_status": "success",
+      "tools": [
+        "workflow_close"
+      ]
+    },
+    {
+      "counted_as_target_execution": false,
+      "output_hash": "sha256:a1ad82b831c28d8cca8e056c6695c6c16e68b09648867d27b830cd7c0f10cd8c",
+      "receipt_id": "99c69da1-09e3-4bf9-a99d-52c084a1a226",
+      "step_status": "success",
+      "tools": [
+        "continuity_get_recent"
+      ]
+    },
+    {
+      "counted_as_target_execution": true,
+      "output_hash": "sha256:dcd1e2ce44fc1dab7fbe5824239442e224637a8fc0d34b0dcc228460e8860599",
+      "receipt_id": "2b8cefc9-72c0-415c-9525-71f6000679f9",
+      "step_status": "success",
+      "tools": [
+        "journal_log"
+      ]
+    }
+  ],
+  "children": [
+    "b49c66f5-5386-4bda-8bd6-2726bdfee7d1",
+    "7f91f3db-ac63-4139-b680-517613e3f919",
+    "99c69da1-09e3-4bf9-a99d-52c084a1a226",
+    "2b8cefc9-72c0-415c-9525-71f6000679f9"
+  ],
+  "external_effect_count": 2,
+  "snapshot_count_field": 4,
+  "snapshot_file": "enum_a1_final_workflow_close.json",
+  "target_tool_execution_receipt_ids": [
+    "b49c66f5-5386-4bda-8bd6-2726bdfee7d1",
+    "2b8cefc9-72c0-415c-9525-71f6000679f9"
+  ]
+}

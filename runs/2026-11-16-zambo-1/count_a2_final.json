@@ -1,0 +1,32 @@
+{
+  "attributed_children": [
+    {
+      "counted_as_target_execution": true,
+      "output_hash": "sha256:7bd4d8d22d167a8a579fed425957f091479190b85784a2ecd0478e1cd5ccb77a",
+      "receipt_id": "e8f9f9b8-af48-45cb-8df0-5ce944346e05",
+      "step_status": "success",
+      "tools": [
+        "journal_log"
+      ]
+    },
+    {
+      "counted_as_target_execution": false,
+      "output_hash": "sha256:95c231d7d31ee3c585b1c8ad81f7d36b9567f3046833d9e10a554ea2f90dd5cf",
+      "receipt_id": "da8b8a4f-9940-4851-9cd9-2617eeaf2abb",
+      "step_status": "success",
+      "tools": [
+        "workflow_close"
+      ]
+    }
+  ],
+  "children": [
+    "e8f9f9b8-af48-45cb-8df0-5ce944346e05",
+    "da8b8a4f-9940-4851-9cd9-2617eeaf2abb"
+  ],
+  "external_effect_count": 1,
+  "snapshot_count_field": 2,
+  "snapshot_file": "enum_a2_final_workflow_close.json",
+  "target_tool_execution_receipt_ids": [
+    "e8f9f9b8-af48-45cb-8df0-5ce944346e05"
+  ]
+}

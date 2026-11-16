@@ -1,0 +1,22 @@
+{
+  "attributed_children": [
+    {
+      "counted_as_target_execution": true,
+      "output_hash": "sha256:7bd4d8d22d167a8a579fed425957f091479190b85784a2ecd0478e1cd5ccb77a",
+      "receipt_id": "e8f9f9b8-af48-45cb-8df0-5ce944346e05",
+      "step_status": "success",
+      "tools": [
+        "journal_log"
+      ]
+    }
+  ],
+  "children": [
+    "e8f9f9b8-af48-45cb-8df0-5ce944346e05"
+  ],
+  "external_effect_count": 1,
+  "snapshot_count_field": 1,
+  "snapshot_file": "enum_a2_after_attempt1_workflow_close.json",
+  "target_tool_execution_receipt_ids": [
+    "e8f9f9b8-af48-45cb-8df0-5ce944346e05"
+  ]
+}

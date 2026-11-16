@@ -1,0 +1,88 @@
+{
+  "committed_digest": "sha256:d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+  "legs": {
+    "k_only": {
+      "K": "lr-op-498c01b299-a1",
+      "attempts": [
+        {
+          "http_status": 404,
+          "page_http_status": 200,
+          "page_title_not_found": true,
+          "path": "GET /api/v2/receipt/<K>/verify and GET /run/<K>",
+          "response_class": "not_found"
+        },
+        {
+          "note": "as recorded during the original run; the call returned no committed outcome for K",
+          "path": "tools/call continuity_get_recent with K as the only identifier",
+          "response_class": "payment_required"
+        }
+      ],
+      "reason": "K-only recovery did not return the original committed outcome: the public record lookup by K returned 404 receipt_not_found (the /run/<K> page answers HTTP 200 with a Receipt not found title), and the K-keyed tool lookup returned no committed outcome or digest",
+      "score": "fail"
+    },
+    "run_id": {
+      "digests_served": {
+        "input_hash": "sha256:e1135cc801f1d6fda86d36774eee91826a42fbcc8d15c35d4380adc18714d228",
+        "output_hash": "sha256:d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970"
+      },
+      "http_status": 200,
+      "note": "Section 9 resolution returned the unaltered record from the public JSON record; Section 6 recomputation is the harness's own SHA-256 over the decoded canonical bytes compared with the served output_hash.",
+      "page_http_status": 200,
+      "receipt_id": "b49c66f5-5386-4bda-8bd6-2726bdfee7d1",
+      "recomputation": {
+        "checks_served": {
+          "canonical_payload_matches": {
+            "detail": "The stored output and known call context reconstruct the exact canonical bytes.",
+            "label": "Canonical payload reconstruction",
+            "passed": true,
+            "status": "pass"
+          },
+          "chain": {
+            "detail": "This endpoint does not verify an append-only receipt chain.",
+            "status": "not_checked"
+          },
+          "commitment_matches": {
+            "computed_hash": "sha256:d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+            "detail": "SHA-256 of the exact decoded canonical bytes matches output_hash.",
+            "expected_hash": "sha256:d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+            "passed": true,
+            "status": "pass"
+          },
+          "issuer_authentication": {
+            "detail": "A zambo.dev receipt URL does not authenticate the issuer; no pinned signature or trusted issuer key was checked.",
+            "label": "Issuer authentication",
+            "passed": false,
+            "status": "not_checked"
+          },
+          "metadata_binding": {
+            "detail": "metadata_hash matches the canonical metadata block.",
+            "label": "AER-1 metadata hash",
+            "passed": true,
+            "status": "pass"
+          },
+          "provenance_binding": {
+            "detail": "The metadata claim is consistent with the verified receipt bytes; issuer is not authenticated.",
+            "label": "Provenance claim binding",
+            "passed": true,
+            "status": "pass"
+          },
+          "schema": {
+            "detail": "Schema conformance is left to the client using the linked hosted-profile schema.",
+            "status": "not_checked"
+          },
+          "signature": {
+            "detail": "No Ed25519 signature or pinned signing key is supplied.",
+            "status": "not_checked"
+          }
+        },
+        "computed_sha256_of_decoded_canonical_bytes": "d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+        "output_hash_served": "d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+        "status": "matched",
+        "verification_status_served": "verified"
+      },
+      "score": "pass"
+    }
+  },
+  "reason": "contract pass condition is the K-only leg: K-only recovery did not return the original committed outcome: the public record lookup by K returned 404 receipt_not_found (the /run/<K> page answers HTTP 200 with a Receipt not found title), and the K-keyed tool lookup returned no committed outcome or digest; run-id leg scored pass separately in the evidence",
+  "score": "fail"
+}

@@ -1,0 +1,3 @@
+# Rescore note
+
+The first scoring pass used a generic response walker as the counter. That walker over-collected: it counted receipt identifiers mentioned anywhere in enumeration responses, including other tools' receipts visible in a caller-scoped recent-work read, and it missed the workflow snapshot's child identifiers. The raw outputs of the run were not changed. This rescore recomputes every count from the run's own raw workflow snapshot files, attributing each child receipt through its public JSON record, and recomputes the A3 legs from the public record. The superseded summary is preserved as summary_v1_superseded.json.
