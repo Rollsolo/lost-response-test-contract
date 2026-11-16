@@ -50,12 +50,20 @@ operation as follows:
    The operation identity K is the `job_id` argument of the target
    tool (see the harness README for the tool choice and the mapping).
 2. After the attempts, the harness enumerates the receipt-backed
-   record for that session using free read paths (the job ledger and
-   a workflow snapshot of every persisted receipt from the job), and
-   collects the receipt identifiers for the target tool.
-3. Each collected receipt identifier is then checked directly against
-   the public record at https://zambo.dev/run/<receipt_id>. Only
-   identifiers that resolve to a public receipt page count.
+   record for that session through a free read path: a workflow
+   snapshot of every persisted receipt from the job, which lists the
+   job's receipt identifiers (its children) and excludes the snapshot
+   call's own receipt. A caller-scoped recent-work read is not a
+   valid enumerator for this counter, because it is not scoped to
+   the job; the 2026-11-16 run confirmed that first-hand and the
+   harness does not use it for counting.
+3. Each enumerated receipt identifier is then attributed and checked
+   directly against the public record: the JSON record at
+   https://zambo.dev/api/v2/receipt/<receipt_id>/verify names the
+   tool and step status for that receipt, and the human-readable
+   record lives at https://zambo.dev/run/<receipt_id>. Only
+   identifiers whose public record shows the target tool with a
+   successful step count as executions of the operation.
 4. The external effect count for the operation is the number of
    distinct resolving receipt identifiers attributed to (session, K).
 

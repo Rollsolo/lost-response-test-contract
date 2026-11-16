@@ -42,11 +42,15 @@ count of distinct committed executions visible in the system's durable
 public record after all attempts, attributed by the run-scoped session
 identity and by K, with every counted identifier checked directly
 against the public record. For Zambo the harness enumerates the
-receipt-backed record for the session through free read paths (a
-workflow snapshot of every persisted receipt from the job, and the
-job's receipt-backed recent-work read), collects candidate receipt
-identifiers, and counts only identifiers that resolve at
-https://zambo.dev/run/<receipt_id>.
+receipt-backed record for the session through a free read path (a
+workflow snapshot of every persisted receipt from the job), then
+attributes each enumerated receipt identifier through its public
+JSON record at https://zambo.dev/api/v2/receipt/<id>/verify, which
+names the tool and step status, and counts only executions of the
+target tool with a successful step. The human-readable record for
+each counted receipt is at https://zambo.dev/run/<receipt_id>. A
+caller-scoped recent-work read is not used for counting: the
+2026-11-16 run showed it is not scoped to the job.
 
 Receipt count alone is not treated as evidence of anything else: the
 count is reported with the identifier list it was counted from, so a
@@ -91,12 +95,13 @@ assume the catalog.
 - A3, both legs, reusing the A1 operation, whose attempt 1 already
   committed with its response lost:
   - Run-id leg: the caller holds a server-issued run id (a receipt id
-    from the public record), resolves the record at
-    https://zambo.dev/run/<id> (AER-1 Section 9 resolution), and
-    checks the digest: the served digest is recorded and a Section 6
-    style recomputation over the canonical result is attempted and
-    recorded exactly as it comes out, including when the public
-    record at that URL does not expose the canonical inputs.
+    from the public record), resolves the record through the public
+    JSON record at https://zambo.dev/api/v2/receipt/<id>/verify
+    (AER-1 Section 9 resolution; the human-readable page is
+    https://zambo.dev/run/<id>), and checks the digest: the harness
+    recomputes SHA-256 over the exact decoded canonical bytes in the
+    record and compares it with the served output_hash (AER-1
+    Section 6), recording the outcome exactly as it comes out.
   - K-only leg: a recovery caller that holds only K. It tries the
     direct record lookup by K and the configured K-keyed lookup
     tools, possessing no run id, response, result, or digest from
