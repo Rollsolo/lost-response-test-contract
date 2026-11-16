@@ -19,12 +19,17 @@ outputs, not summaries.
 - Action: attempt 1 with (K, A), response dropped; retry with (K, A).
 - Pass condition, shared observable: the external effect count for the
   logical operation is exactly 1.
+- Both implementations are measured against the same independently
+  observable external effect counter (for example, one durable ledger row
+  or one public record per actual execution). The concrete counter is
+  defined in the fixtures, so both sides measure the same thing.
 - APC column: the retry MUST NOT execute; it resolves against the
   committed effect.
 - AER-1 / Zambo column: every execution MUST carry exactly one durable
-  receipt, so the observed count is the receipt count; the run reports the
-  observed count as the result (a count of 2 is a recorded fail, not a
-  rounding).
+  receipt, and the receipts remain part of the evidence; the receipt count
+  alone does not substitute for the shared external effect count. The run
+  reports the observed external count as the result (a count of 2 is a
+  recorded fail, not a rounding).
 - Current published baseline: APC claims 1 (local test evidence); Zambo
   production observed 2.
 
@@ -48,12 +53,14 @@ outputs, not summaries.
 ## A3. Outcome recovery by operation identity, with digest equality
 
 - Action: after attempt 1 (K, A) commits with its response lost, the
-  caller attempts recovery using only K, with no content from attempt 1's
-  response.
+  caller attempts recovery using only K. The recovery caller holds only
+  K: it must not possess the original run ID, response, result, or digest
+  from attempt 1.
 - Pass condition: the caller obtains the original committed outcome, and
-  the recovered result's digest equals attempt 1's committed digest.
-  Digest equality is the pass evidence: it proves the lookup path was
-  taken rather than a re-execution returning fresh output.
+  the recovered outcome is independently checked against the original
+  committed result digest; the digests must be equal. Digest equality is
+  the pass evidence: it proves the lookup path was taken rather than a
+  re-execution returning fresh output.
 - APC column: recovery completes instead of stopping at an in-progress
   state.
 - AER-1 / Zambo column: where the caller holds the server-issued run id,
@@ -79,11 +86,23 @@ outputs, not summaries.
 ## A5. Recognition outlives the retry window
 
 - Action: repeat A3 after an agreed delay (proposed: 24 hours, stated in
-  the contract before running).
+  the contract before running). The delay is measured from the original
+  commit time.
 - Pass condition: recovery still succeeds and the digest still confirms;
   a lookup miss inside the window is a fail, not a fresh operation.
+  During the delay period the operation identity remains protected
+  against fresh execution, including when a delayed retry uses modified
+  parameters.
 - Basis: a record store pruning faster than clients can retry recreates
   the ambiguity this contract tests.
+
+## Historical baselines
+
+Baseline observations published before the contract is frozen are
+preserved as historical evidence. They are kept separate from the
+official jointly executed results recorded in RESULTS.md, and they do
+not count as runs of this contract. Both implementations are evaluated
+under the same frozen contract and equivalent conditions.
 
 ## Scoring and publication
 

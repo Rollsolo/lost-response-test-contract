@@ -39,3 +39,13 @@ There is no aggregate score.
 Draft, under joint review. The assertion set in CONTRACT.md is the
 starting text, open for joint revision before any run counts. Results go
 in RESULTS.md.
+
+## Changelog
+
+- 2026-11-16: Yared Mengistu reviewed assertions A1 to A5 and agreed
+  with the assertions and the scoring model. Four clarifications from
+  that review are incorporated in CONTRACT.md: a common external effect
+  counter for A1, K-only recovery for A3, retention semantics for A5,
+  and historical baselines preserved separately from jointly executed
+  results. The contract is ready to freeze on both parties'
+  confirmation.
