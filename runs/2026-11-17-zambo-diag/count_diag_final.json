@@ -1,0 +1,75 @@
+{
+  "at": "2026-11-17T16:29:58.334011Z",
+  "attributed_children": [
+    {
+      "counted_as_target_execution": true,
+      "output_hash": "sha256:826aa323ddac9788a7387e1b3f22f5be2139e2b88b8ed4ae3012806df4625f0d",
+      "receipt_id": "141f1588-f277-48fc-999a-ac6814d760d2",
+      "resolves_in_public_record": true,
+      "step_status": "success",
+      "tools": [
+        "journal_log"
+      ]
+    },
+    {
+      "counted_as_target_execution": false,
+      "output_hash": "sha256:d1a40921269ec30bc3249ed22de5d755e543e53ef954957ecda725e6eef49af9",
+      "receipt_id": "31d272b8-b2d1-48bf-84bd-7a8fbb602d8b",
+      "resolves_in_public_record": true,
+      "step_status": "success",
+      "tools": [
+        "workflow_close"
+      ]
+    },
+    {
+      "counted_as_target_execution": false,
+      "output_hash": "sha256:5a63956ec12507aa44b969ab09afb2d458537daf0c66dcd2fd71c25ea7ae99fa",
+      "receipt_id": "3095bb29-6738-45d6-8c07-da009efcbbab",
+      "resolves_in_public_record": true,
+      "step_status": "success",
+      "tools": [
+        "continuity_get_recent"
+      ]
+    },
+    {
+      "counted_as_target_execution": false,
+      "output_hash": "sha256:7b437ffd07f5f89b0a58c41c353d61150205fd0e6ca57c078aebc6c5e55b3897",
+      "receipt_id": "ce783626-bf1c-46a6-9e2e-c1c0d8fcaa60",
+      "resolves_in_public_record": true,
+      "step_status": "success",
+      "tools": [
+        "workflow_close"
+      ]
+    }
+  ],
+  "execution_record_ids": [
+    "141f1588-f277-48fc-999a-ac6814d760d2"
+  ],
+  "external_effect_count": 1,
+  "label": "diag_final",
+  "method": "workflow_close snapshot children, each attributed through its public /api/v2/receipt/<id>/verify record",
+  "session_id": "lr-a3f246d1fb-diag",
+  "snapshot_children": [
+    {
+      "output_hash_in_snapshot": "826aa323ddac9788a7387e1b3f22f5be2139e2b88b8ed4ae3012806df4625f0d",
+      "receipt_id": "141f1588-f277-48fc-999a-ac6814d760d2"
+    },
+    {
+      "output_hash_in_snapshot": "d1a40921269ec30bc3249ed22de5d755e543e53ef954957ecda725e6eef49af9",
+      "receipt_id": "31d272b8-b2d1-48bf-84bd-7a8fbb602d8b"
+    },
+    {
+      "output_hash_in_snapshot": "5a63956ec12507aa44b969ab09afb2d458537daf0c66dcd2fd71c25ea7ae99fa",
+      "receipt_id": "3095bb29-6738-45d6-8c07-da009efcbbab"
+    },
+    {
+      "output_hash_in_snapshot": "7b437ffd07f5f89b0a58c41c353d61150205fd0e6ca57c078aebc6c5e55b3897",
+      "receipt_id": "ce783626-bf1c-46a6-9e2e-c1c0d8fcaa60"
+    }
+  ],
+  "snapshot_count_field": 4,
+  "snapshot_response_class": "success",
+  "target_tool_execution_receipt_ids": [
+    "141f1588-f277-48fc-999a-ac6814d760d2"
+  ]
+}

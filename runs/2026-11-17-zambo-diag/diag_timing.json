@@ -1,0 +1,48 @@
+{
+  "K": "lr-op-a3f246d1fb-diag",
+  "planted_at": "2026-11-17T16:29:01.243535Z",
+  "probes": [
+    {
+      "at": "2026-11-17T16:28:58.661727Z",
+      "step": "initialize"
+    },
+    {
+      "at": "2026-11-17T16:29:01.243556Z",
+      "step": "attempt1_plant"
+    },
+    {
+      "at": "2026-11-17T16:29:20.089061Z",
+      "step": "enumerate_after_attempt1"
+    },
+    {
+      "at": "2026-11-17T16:29:22.925386Z",
+      "step": "runid_record_and_inspection"
+    },
+    {
+      "at": "2026-11-17T16:29:45.218165Z",
+      "step": "konly_recovery_short_range"
+    },
+    {
+      "at": "2026-11-17T16:29:47.900084Z",
+      "step": "session_scoped_read"
+    },
+    {
+      "at": "2026-11-17T16:29:49.252288Z",
+      "step": "retry_identical"
+    },
+    {
+      "at": "2026-11-17T16:29:57.197699Z",
+      "step": "enumerate_after_identical"
+    },
+    {
+      "at": "2026-11-17T16:29:58.333992Z",
+      "step": "retry_mismatched"
+    },
+    {
+      "at": "2026-11-17T16:30:06.332480Z",
+      "step": "enumerate_final"
+    }
+  ],
+  "session_id": "lr-a3f246d1fb-diag",
+  "tag": "a3f246d1fb"
+}

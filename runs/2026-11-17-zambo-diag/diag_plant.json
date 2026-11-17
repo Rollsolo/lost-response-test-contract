@@ -1,0 +1,48 @@
+{
+  "K": "lr-op-a3f246d1fb-diag",
+  "adapter": "zambo",
+  "adapter_config": {
+    "args_template": {
+      "_session_id": "{SESSION}",
+      "action": "lost_response_probe",
+      "executor_identity": "lost-response-harness",
+      "inputs": {
+        "operation": "{K}"
+      },
+      "job_id": "{K}"
+    },
+    "endpoint": "https://zambo.dev/mcp",
+    "enumerate_tools": [
+      {
+        "arguments": {
+          "_session_id": "{SESSION}"
+        },
+        "name": "workflow_close"
+      }
+    ],
+    "konly_lookup_tools": [
+      {
+        "arguments": {
+          "_session_id": "{K}"
+        },
+        "name": "continuity_get_recent"
+      }
+    ],
+    "mismatch": {
+      "altered_value": "lost_response_probe_altered",
+      "field": "action"
+    },
+    "public_base": "https://zambo.dev",
+    "tool": "journal_log"
+  },
+  "assertion": "A5 (diagnosis plant)",
+  "committed_digest": "sha256:826aa323ddac9788a7387e1b3f22f5be2139e2b88b8ed4ae3012806df4625f0d",
+  "delay_hours": 24,
+  "endpoint": "https://zambo.dev/mcp",
+  "execution_receipt_ids": [
+    "141f1588-f277-48fc-999a-ac6814d760d2"
+  ],
+  "note": "Diagnosis plant planted 2026-11-17. The harness delayed leg (fixtures/harness/lost_response.py --delayed-leg) accepts an a5_plant.json shape; this file carries the same fields for the first planted operation only (execution_receipt_ids lists every execution observed for the operation, retries included).",
+  "planted_at": "2026-11-17T16:29:01.243535Z",
+  "session_id": "lr-a3f246d1fb-diag"
+}

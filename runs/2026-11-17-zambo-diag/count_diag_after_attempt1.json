@@ -1,0 +1,33 @@
+{
+  "at": "2026-11-17T16:29:01.243565Z",
+  "attributed_children": [
+    {
+      "counted_as_target_execution": true,
+      "output_hash": "sha256:826aa323ddac9788a7387e1b3f22f5be2139e2b88b8ed4ae3012806df4625f0d",
+      "receipt_id": "141f1588-f277-48fc-999a-ac6814d760d2",
+      "resolves_in_public_record": true,
+      "step_status": "success",
+      "tools": [
+        "journal_log"
+      ]
+    }
+  ],
+  "execution_record_ids": [
+    "141f1588-f277-48fc-999a-ac6814d760d2"
+  ],
+  "external_effect_count": 1,
+  "label": "diag_after_attempt1",
+  "method": "workflow_close snapshot children, each attributed through its public /api/v2/receipt/<id>/verify record",
+  "session_id": "lr-a3f246d1fb-diag",
+  "snapshot_children": [
+    {
+      "output_hash_in_snapshot": "826aa323ddac9788a7387e1b3f22f5be2139e2b88b8ed4ae3012806df4625f0d",
+      "receipt_id": "141f1588-f277-48fc-999a-ac6814d760d2"
+    }
+  ],
+  "snapshot_count_field": 1,
+  "snapshot_response_class": "success",
+  "target_tool_execution_receipt_ids": [
+    "141f1588-f277-48fc-999a-ac6814d760d2"
+  ]
+}

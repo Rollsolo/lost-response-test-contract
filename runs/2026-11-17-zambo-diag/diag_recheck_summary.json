@@ -1,0 +1,47 @@
+{
+  "K": "lr-op-a3f246d1fb-diag",
+  "attempts": [
+    {
+      "http_status": 404,
+      "page_http_status": 200,
+      "page_title_not_found": true,
+      "path": "GET /api/v2/receipt/<K>/verify and GET /run/<K>",
+      "response_class": "not_found"
+    },
+    {
+      "path": "tools/call continuity_get_recent with K as the only identifier",
+      "receipt_ids_returned": [
+        "ec4b8c0e-0ce9-4897-848d-be9312fe1812",
+        "ce783626-bf1c-46a6-9e2e-c1c0d8fcaa60",
+        "31d272b8-b2d1-48bf-84bd-7a8fbb602d8b",
+        "141f1588-f277-48fc-999a-ac6814d760d2",
+        "19a63c2b-0308-47b5-9c66-6e8501a1aac2",
+        "35fc90de-a502-464d-af8b-4490b807b726",
+        "388b8cb7-30c9-4f84-a02f-145e92b17f59",
+        "9eec3d97-ec95-4dfd-a56a-2726e52ff9c3",
+        "12e30aad-1279-4e97-8686-85fe0e133c44",
+        "0f88bf30-3859-4208-bedc-8e75af4bc6a8",
+        "27df1016-4201-4f79-910f-c5768ac9379c",
+        "8a04695b-4fcd-412c-bbfc-e9a8faa4c550",
+        "af8ac2d6-4454-451a-95d8-69b2b548d953",
+        "fe0770f9-299a-426c-9abc-775ea964873e",
+        "d47a39ce-73d4-4c6a-9c80-72e1918be9dc",
+        "b8388802-f8f0-49bd-a68a-d55221de7a6c",
+        "163027f0-9479-4b40-85cf-6fe6a965b88d",
+        "3f0c4444-7b55-410a-a87e-7b36d4f53ad1",
+        "b60709d4-a3ef-4c14-b7c6-d0d79f40cdf3",
+        "cc4f0930-44bd-42cb-908a-06dfa130503e",
+        "0492647d-394f-4e2a-9795-4c329a51b8a9",
+        "76e0f74f-76dc-4e42-8bdc-13d16b3bf8ac",
+        "277c864a-30aa-40f5-9084-a4c47837e415",
+        "example"
+      ],
+      "response_class": "success"
+    }
+  ],
+  "committed_digest_in_konly_stream": false,
+  "elapsed_seconds_since_plant": 169,
+  "note": "Lower-bound probe only: the plant's 24h point is 2026-11-18T16:29:01Z and is not claimed by this recheck.",
+  "planted_receipt_in_konly_stream": true,
+  "rechecked_at": "2026-11-17T16:31:50.147338Z"
+}
