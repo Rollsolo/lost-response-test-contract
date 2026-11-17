@@ -1,0 +1,203 @@
+{
+  "K": "lr-op-a026e944d8-fv",
+  "R1_attempts": [
+    {
+      "http_status": 200,
+      "page_http_status": 200,
+      "page_title_not_found": true,
+      "path": "GET /api/v2/receipt/<K>/verify and GET /run/<K>",
+      "response_class": "found"
+    },
+    {
+      "path": "tools/call continuity_get_recent with K as the only identifier",
+      "receipt_ids_returned": [
+        "054a52cd-9e70-4b2b-8b62-8eab9ed0e92d",
+        "1005ed7d-c070-412c-82d3-24dcf70473c7",
+        "example"
+      ],
+      "response_class": "success"
+    }
+  ],
+  "R1_continuity_class": "success",
+  "R1_continuity_has_digest": true,
+  "R1_continuity_has_receipt_id": true,
+  "R1_direct_lookup_digests": {
+    "input_hash": "sha256:a860762c4080164c644c72cbcb9429f718890918f9e86316b24b2fcfae222142",
+    "output_hash": "sha256:4fab4e75ac1d85f9e55a4e62fbe9c1bb460a06f36f3933019bb41ce582f145d2"
+  },
+  "R1_direct_lookup_http_status": 200,
+  "R2_http_status": 200,
+  "R2_output_hash": "sha256:4fab4e75ac1d85f9e55a4e62fbe9c1bb460a06f36f3933019bb41ce582f145d2",
+  "R2_receipt_id": "1005ed7d-c070-412c-82d3-24dcf70473c7",
+  "R2_verification_status": "verified",
+  "R3_digests": {
+    "input_hash": "sha256:a860762c4080164c644c72cbcb9429f718890918f9e86316b24b2fcfae222142",
+    "output_hash": "sha256:4fab4e75ac1d85f9e55a4e62fbe9c1bb460a06f36f3933019bb41ce582f145d2"
+  },
+  "R3_http_status": 200,
+  "R3_receipt_id_read": "1005ed7d-c070-412c-82d3-24dcf70473c7",
+  "R3_recomputation": "matched",
+  "committed_digest": "sha256:4fab4e75ac1d85f9e55a4e62fbe9c1bb460a06f36f3933019bb41ce582f145d2",
+  "committed_receipt_ids": [
+    "1005ed7d-c070-412c-82d3-24dcf70473c7"
+  ],
+  "count_after_attempt1": 1,
+  "count_after_identical_C1": 1,
+  "count_after_identical_C2_stream_ids": [
+    "571da08e-396a-4ab9-8aa9-fe12d484598f",
+    "5980ba37-5ad1-4984-bc39-138ccd3f1ab7",
+    "1005ed7d-c070-412c-82d3-24dcf70473c7",
+    "ec4b8c0e-0ce9-4897-848d-be9312fe1812",
+    "1c69b927-fe2f-4b66-9678-c32060b850bb",
+    "ce783626-bf1c-46a6-9e2e-c1c0d8fcaa60",
+    "31d272b8-b2d1-48bf-84bd-7a8fbb602d8b",
+    "141f1588-f277-48fc-999a-ac6814d760d2",
+    "35fc90de-a502-464d-af8b-4490b807b726",
+    "388b8cb7-30c9-4f84-a02f-145e92b17f59",
+    "9eec3d97-ec95-4dfd-a56a-2726e52ff9c3",
+    "12e30aad-1279-4e97-8686-85fe0e133c44",
+    "0f88bf30-3859-4208-bedc-8e75af4bc6a8",
+    "27df1016-4201-4f79-910f-c5768ac9379c",
+    "8a04695b-4fcd-412c-bbfc-e9a8faa4c550",
+    "af8ac2d6-4454-451a-95d8-69b2b548d953",
+    "fe0770f9-299a-426c-9abc-775ea964873e",
+    "d47a39ce-73d4-4c6a-9c80-72e1918be9dc",
+    "b8388802-f8f0-49bd-a68a-d55221de7a6c",
+    "163027f0-9479-4b40-85cf-6fe6a965b88d",
+    "3f0c4444-7b55-410a-a87e-7b36d4f53ad1",
+    "76e0f74f-76dc-4e42-8bdc-13d16b3bf8ac",
+    "277c864a-30aa-40f5-9084-a4c47837e415",
+    "example"
+  ],
+  "count_final_C1": 1,
+  "final_execution_receipt_ids": [
+    "1005ed7d-c070-412c-82d3-24dcf70473c7"
+  ],
+  "final_snapshot_children": [
+    "1005ed7d-c070-412c-82d3-24dcf70473c7",
+    "5980ba37-5ad1-4984-bc39-138ccd3f1ab7",
+    "c7515e53-871b-426c-b0b2-b9eb8a548b1c",
+    "571da08e-396a-4ab9-8aa9-fe12d484598f",
+    "1c69b927-fe2f-4b66-9678-c32060b850bb",
+    "8b0b9095-f8a7-46fd-9639-e0a743d035ba"
+  ],
+  "final_snapshot_non_execution_children": [
+    "5980ba37-5ad1-4984-bc39-138ccd3f1ab7",
+    "c7515e53-871b-426c-b0b2-b9eb8a548b1c",
+    "571da08e-396a-4ab9-8aa9-fe12d484598f",
+    "1c69b927-fe2f-4b66-9678-c32060b850bb",
+    "8b0b9095-f8a7-46fd-9639-e0a743d035ba"
+  ],
+  "finished_at": "2026-11-17T17:08:43.705024Z",
+  "initialize_http_status": 200,
+  "ordinary_receipt_http_status": 200,
+  "ordinary_receipt_ids": [
+    "c669c976-aa7e-4735-aaf2-76cc0b34e71d"
+  ],
+  "ordinary_response_class": "tool_error:invalid_tool_arguments",
+  "pathC_has_digest": false,
+  "pathC_has_receipt_id": true,
+  "pathC_receipt_ids": [
+    "5980ba37-5ad1-4984-bc39-138ccd3f1ab7",
+    "1005ed7d-c070-412c-82d3-24dcf70473c7",
+    "ec4b8c0e-0ce9-4897-848d-be9312fe1812",
+    "ce783626-bf1c-46a6-9e2e-c1c0d8fcaa60",
+    "c7515e53-871b-426c-b0b2-b9eb8a548b1c",
+    "31d272b8-b2d1-48bf-84bd-7a8fbb602d8b",
+    "141f1588-f277-48fc-999a-ac6814d760d2",
+    "35fc90de-a502-464d-af8b-4490b807b726",
+    "388b8cb7-30c9-4f84-a02f-145e92b17f59",
+    "9eec3d97-ec95-4dfd-a56a-2726e52ff9c3",
+    "12e30aad-1279-4e97-8686-85fe0e133c44",
+    "0f88bf30-3859-4208-bedc-8e75af4bc6a8",
+    "27df1016-4201-4f79-910f-c5768ac9379c",
+    "8a04695b-4fcd-412c-bbfc-e9a8faa4c550",
+    "af8ac2d6-4454-451a-95d8-69b2b548d953",
+    "fe0770f9-299a-426c-9abc-775ea964873e",
+    "d47a39ce-73d4-4c6a-9c80-72e1918be9dc",
+    "b8388802-f8f0-49bd-a68a-d55221de7a6c",
+    "163027f0-9479-4b40-85cf-6fe6a965b88d",
+    "3f0c4444-7b55-410a-a87e-7b36d4f53ad1",
+    "b60709d4-a3ef-4c14-b7c6-d0d79f40cdf3",
+    "76e0f74f-76dc-4e42-8bdc-13d16b3bf8ac",
+    "277c864a-30aa-40f5-9084-a4c47837e415",
+    "example"
+  ],
+  "pathC_response_class": "success",
+  "plant_receipt_ids_in_body": [
+    "1005ed7d-c070-412c-82d3-24dcf70473c7"
+  ],
+  "plant_response_class": "success",
+  "refusal_receipt_candidates": [
+    "8b0b9095-f8a7-46fd-9639-e0a743d035ba"
+  ],
+  "retry_identical_class": "success",
+  "retry_identical_receipt_ids": [
+    "1005ed7d-c070-412c-82d3-24dcf70473c7"
+  ],
+  "retry_mismatched_body_has_409": false,
+  "retry_mismatched_body_has_conflict": true,
+  "retry_mismatched_class": "tool_error:idempotency_conflict",
+  "retry_mismatched_http_status": 409,
+  "retry_mismatched_receipt_ids": [
+    "8b0b9095-f8a7-46fd-9639-e0a743d035ba"
+  ],
+  "runid_recomputation": "matched",
+  "session_id": "lr-a026e944d8-fv",
+  "started_at": "2026-11-17T17:07:12.965196Z",
+  "stream_after_identical_receipt_ids": [
+    "571da08e-396a-4ab9-8aa9-fe12d484598f",
+    "5980ba37-5ad1-4984-bc39-138ccd3f1ab7",
+    "1005ed7d-c070-412c-82d3-24dcf70473c7",
+    "ec4b8c0e-0ce9-4897-848d-be9312fe1812",
+    "1c69b927-fe2f-4b66-9678-c32060b850bb",
+    "ce783626-bf1c-46a6-9e2e-c1c0d8fcaa60",
+    "31d272b8-b2d1-48bf-84bd-7a8fbb602d8b",
+    "141f1588-f277-48fc-999a-ac6814d760d2",
+    "35fc90de-a502-464d-af8b-4490b807b726",
+    "388b8cb7-30c9-4f84-a02f-145e92b17f59",
+    "9eec3d97-ec95-4dfd-a56a-2726e52ff9c3",
+    "12e30aad-1279-4e97-8686-85fe0e133c44",
+    "0f88bf30-3859-4208-bedc-8e75af4bc6a8",
+    "27df1016-4201-4f79-910f-c5768ac9379c",
+    "8a04695b-4fcd-412c-bbfc-e9a8faa4c550",
+    "af8ac2d6-4454-451a-95d8-69b2b548d953",
+    "fe0770f9-299a-426c-9abc-775ea964873e",
+    "d47a39ce-73d4-4c6a-9c80-72e1918be9dc",
+    "b8388802-f8f0-49bd-a68a-d55221de7a6c",
+    "163027f0-9479-4b40-85cf-6fe6a965b88d",
+    "3f0c4444-7b55-410a-a87e-7b36d4f53ad1",
+    "76e0f74f-76dc-4e42-8bdc-13d16b3bf8ac",
+    "277c864a-30aa-40f5-9084-a4c47837e415",
+    "example"
+  ],
+  "stream_after_mismatched_receipt_ids": [
+    "a536b0eb-12c7-43aa-a18f-607c36f0a058",
+    "571da08e-396a-4ab9-8aa9-fe12d484598f",
+    "5980ba37-5ad1-4984-bc39-138ccd3f1ab7",
+    "1005ed7d-c070-412c-82d3-24dcf70473c7",
+    "2d8c4b96-8bca-4ade-a6bb-6a8313ccdf6f",
+    "ec4b8c0e-0ce9-4897-848d-be9312fe1812",
+    "ce783626-bf1c-46a6-9e2e-c1c0d8fcaa60",
+    "31d272b8-b2d1-48bf-84bd-7a8fbb602d8b",
+    "141f1588-f277-48fc-999a-ac6814d760d2",
+    "35fc90de-a502-464d-af8b-4490b807b726",
+    "388b8cb7-30c9-4f84-a02f-145e92b17f59",
+    "9eec3d97-ec95-4dfd-a56a-2726e52ff9c3",
+    "12e30aad-1279-4e97-8686-85fe0e133c44",
+    "0f88bf30-3859-4208-bedc-8e75af4bc6a8",
+    "27df1016-4201-4f79-910f-c5768ac9379c",
+    "8a04695b-4fcd-412c-bbfc-e9a8faa4c550",
+    "af8ac2d6-4454-451a-95d8-69b2b548d953",
+    "fe0770f9-299a-426c-9abc-775ea964873e",
+    "d47a39ce-73d4-4c6a-9c80-72e1918be9dc",
+    "b8388802-f8f0-49bd-a68a-d55221de7a6c",
+    "163027f0-9479-4b40-85cf-6fe6a965b88d",
+    "76e0f74f-76dc-4e42-8bdc-13d16b3bf8ac",
+    "277c864a-30aa-40f5-9084-a4c47837e415",
+    "example"
+  ],
+  "tag": "a026e944d8",
+  "tools_list_count": 37,
+  "tools_list_http_status": 200
+}

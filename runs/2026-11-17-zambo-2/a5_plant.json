@@ -1,0 +1,50 @@
+{
+  "K": "lr-op-13118ee094-a1",
+  "adapter": "zambo",
+  "adapter_config": {
+    "args_template": {
+      "_session_id": "{SESSION}",
+      "action": "lost_response_probe",
+      "executor_identity": "lost-response-harness",
+      "inputs": {
+        "operation": "{K}"
+      },
+      "job_id": "{K}"
+    },
+    "endpoint": "https://zambo.dev/mcp",
+    "enumerate_tools": [
+      {
+        "arguments": {
+          "_session_id": "{SESSION}"
+        },
+        "name": "workflow_close"
+      }
+    ],
+    "konly_lookup_tools": [
+      {
+        "arguments": {
+          "_session_id": "{K}"
+        },
+        "name": "continuity_get_recent"
+      }
+    ],
+    "mismatch": {
+      "altered_value": "lost_response_probe_altered",
+      "field": "action"
+    },
+    "public_base": "https://zambo.dev",
+    "tool": "journal_log"
+  },
+  "assertion": "A5",
+  "committed_digest": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+  "delay_hours": 24,
+  "due_at": "2026-11-18T17:12:46.716430Z",
+  "endpoint": "https://zambo.dev/mcp",
+  "execution_receipt_ids": [
+    "e3af210e-182f-4c48-9da1-dd954be4ccda"
+  ],
+  "note": "Delayed leg: run the harness with --delayed-leg on this file at or after due_at. Planted 2026-11-17 after the production recovery fix (response kept; the drop in the contract setup is client-side only and the delayed leg holds only K by construction). Short-range verification in runs/2026-11-17-zambo-fix-verify/. The first plant attempt this run (a5_plant_uncommitted.json, K lr-op-d2945b2c6e-a1) never committed: its journal is empty, refused before commit at the metering layer as observed via the empty journal record.",
+  "planted_at": "2026-11-17T17:12:46.716418Z",
+  "session_id": "lr-13118ee094-a1",
+  "system_name": "Zambo production"
+}

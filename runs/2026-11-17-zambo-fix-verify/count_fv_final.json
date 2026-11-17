@@ -1,0 +1,103 @@
+{
+  "at": "2026-11-17T17:08:01.056255Z",
+  "attributed_children": [
+    {
+      "counted_as_target_execution": true,
+      "output_hash": "sha256:4fab4e75ac1d85f9e55a4e62fbe9c1bb460a06f36f3933019bb41ce582f145d2",
+      "receipt_id": "1005ed7d-c070-412c-82d3-24dcf70473c7",
+      "resolves_in_public_record": true,
+      "step_status": "success",
+      "tools": [
+        "journal_log"
+      ]
+    },
+    {
+      "counted_as_target_execution": false,
+      "output_hash": "sha256:ea49ab4262435806ee24cbfb22c05b4edf16f927525eb571bc0ecb2386ef851c",
+      "receipt_id": "5980ba37-5ad1-4984-bc39-138ccd3f1ab7",
+      "resolves_in_public_record": true,
+      "step_status": "success",
+      "tools": [
+        "workflow_close"
+      ]
+    },
+    {
+      "counted_as_target_execution": false,
+      "output_hash": "sha256:5a63956ec12507aa44b969ab09afb2d458537daf0c66dcd2fd71c25ea7ae99fa",
+      "receipt_id": "c7515e53-871b-426c-b0b2-b9eb8a548b1c",
+      "resolves_in_public_record": true,
+      "step_status": "success",
+      "tools": [
+        "continuity_get_recent"
+      ]
+    },
+    {
+      "counted_as_target_execution": false,
+      "output_hash": "sha256:b9c8a8940f6b8d740a17451df3159761c86be486e2aa796a68ced5e57f9d7a37",
+      "receipt_id": "571da08e-396a-4ab9-8aa9-fe12d484598f",
+      "resolves_in_public_record": true,
+      "step_status": "success",
+      "tools": [
+        "workflow_close"
+      ]
+    },
+    {
+      "counted_as_target_execution": false,
+      "output_hash": "sha256:5a63956ec12507aa44b969ab09afb2d458537daf0c66dcd2fd71c25ea7ae99fa",
+      "receipt_id": "1c69b927-fe2f-4b66-9678-c32060b850bb",
+      "resolves_in_public_record": true,
+      "step_status": "success",
+      "tools": [
+        "continuity_get_recent"
+      ]
+    },
+    {
+      "counted_as_target_execution": false,
+      "output_hash": "sha256:22ba1ed7a1159777df7f18ee7ac8afca7c3e6dbf2f368d23afd0cb22478932d8",
+      "receipt_id": "8b0b9095-f8a7-46fd-9639-e0a743d035ba",
+      "resolves_in_public_record": true,
+      "step_status": "rejected_before_execution",
+      "tools": [
+        "journal_log"
+      ]
+    }
+  ],
+  "execution_record_ids": [
+    "1005ed7d-c070-412c-82d3-24dcf70473c7"
+  ],
+  "external_effect_count": 1,
+  "label": "fv_final",
+  "method": "workflow_close snapshot children, each attributed through its public /api/v2/receipt/<id>/verify record",
+  "session_id": "lr-a026e944d8-fv",
+  "snapshot_children": [
+    {
+      "output_hash_in_snapshot": "4fab4e75ac1d85f9e55a4e62fbe9c1bb460a06f36f3933019bb41ce582f145d2",
+      "receipt_id": "1005ed7d-c070-412c-82d3-24dcf70473c7"
+    },
+    {
+      "output_hash_in_snapshot": "ea49ab4262435806ee24cbfb22c05b4edf16f927525eb571bc0ecb2386ef851c",
+      "receipt_id": "5980ba37-5ad1-4984-bc39-138ccd3f1ab7"
+    },
+    {
+      "output_hash_in_snapshot": "5a63956ec12507aa44b969ab09afb2d458537daf0c66dcd2fd71c25ea7ae99fa",
+      "receipt_id": "c7515e53-871b-426c-b0b2-b9eb8a548b1c"
+    },
+    {
+      "output_hash_in_snapshot": "b9c8a8940f6b8d740a17451df3159761c86be486e2aa796a68ced5e57f9d7a37",
+      "receipt_id": "571da08e-396a-4ab9-8aa9-fe12d484598f"
+    },
+    {
+      "output_hash_in_snapshot": "5a63956ec12507aa44b969ab09afb2d458537daf0c66dcd2fd71c25ea7ae99fa",
+      "receipt_id": "1c69b927-fe2f-4b66-9678-c32060b850bb"
+    },
+    {
+      "output_hash_in_snapshot": "22ba1ed7a1159777df7f18ee7ac8afca7c3e6dbf2f368d23afd0cb22478932d8",
+      "receipt_id": "8b0b9095-f8a7-46fd-9639-e0a743d035ba"
+    }
+  ],
+  "snapshot_count_field": 6,
+  "snapshot_response_class": "success",
+  "target_tool_execution_receipt_ids": [
+    "1005ed7d-c070-412c-82d3-24dcf70473c7"
+  ]
+}

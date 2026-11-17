@@ -1,0 +1,10 @@
+{
+  "body": {
+    "error": "receipt_not_found",
+    "hint": "Use a receipt UUID or the original journal_log operation key.",
+    "message": "Receipt not found",
+    "next": "https://zambo.dev/verify/"
+  },
+  "http_status": 404,
+  "url": "https://zambo.dev/api/v2/receipt/lr-op-498c01b299-a1/verify"
+}

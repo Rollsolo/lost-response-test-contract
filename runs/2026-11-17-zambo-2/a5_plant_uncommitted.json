@@ -1,0 +1,48 @@
+{
+  "K": "lr-op-d2945b2c6e-a1",
+  "adapter": "zambo",
+  "adapter_config": {
+    "args_template": {
+      "_session_id": "{SESSION}",
+      "action": "lost_response_probe",
+      "executor_identity": "lost-response-harness",
+      "inputs": {
+        "operation": "{K}"
+      },
+      "job_id": "{K}"
+    },
+    "endpoint": "https://zambo.dev/mcp",
+    "enumerate_tools": [
+      {
+        "arguments": {
+          "_session_id": "{SESSION}"
+        },
+        "name": "workflow_close"
+      }
+    ],
+    "konly_lookup_tools": [
+      {
+        "arguments": {
+          "_session_id": "{K}"
+        },
+        "name": "continuity_get_recent"
+      }
+    ],
+    "mismatch": {
+      "altered_value": "lost_response_probe_altered",
+      "field": "action"
+    },
+    "public_base": "https://zambo.dev",
+    "tool": "journal_log"
+  },
+  "assertion": "A5",
+  "committed_digest": null,
+  "delay_hours": 24,
+  "due_at": "2026-11-18T17:10:56.982169Z",
+  "endpoint": "https://zambo.dev/mcp",
+  "execution_receipt_ids": [],
+  "note": "Delayed leg: run the harness with --delayed-leg on this file at or after due_at. Planted 2026-11-17 after the production recovery fix; short-range verification in runs/2026-11-17-zambo-fix-verify/.",
+  "planted_at": "2026-11-17T17:10:55.889553Z",
+  "session_id": "lr-d2945b2c6e-a1",
+  "system_name": "Zambo production"
+}

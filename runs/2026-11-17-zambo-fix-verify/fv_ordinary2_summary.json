@@ -1,0 +1,13 @@
+{
+  "call1_class": "success",
+  "call1_idempotent_replay": null,
+  "call1_receipt_ids": [
+    "3cecd089-946c-4d0a-ac93-b1ed20bf3928"
+  ],
+  "call1_status": "logged",
+  "call2_class": "success",
+  "call2_receipt_ids": [
+    "eb3b1ec2-8034-4761-9ab1-e9a3c525f37c"
+  ],
+  "job_id": "ordinary-job-add90dbe87"
+}

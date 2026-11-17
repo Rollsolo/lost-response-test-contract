@@ -1,0 +1,30 @@
+{
+  "api_url": "https://zambo.dev/api/v2/receipt/lr-op-a3f246d1fb-diag/verify",
+  "body_text": "{\"error\":\"receipt_not_found\",\"message\":\"Receipt not found\",\"next\":\"https://zambo.dev/verify/\",\"hint\":\"Use a receipt UUID or the original journal_log operation key.\"}",
+  "content_type": "application/json; charset=utf-8",
+  "digests": {},
+  "digests_found": {},
+  "elapsed_ms": 1711,
+  "fetched_at": "2026-11-17T17:09:52.342194Z",
+  "http_status": 404,
+  "page_http_status": 200,
+  "page_title_not_found": true,
+  "page_url": "https://zambo.dev/run/lr-op-a3f246d1fb-diag",
+  "receipt_id": "lr-op-a3f246d1fb-diag",
+  "recomputation": {
+    "reason": "record does not carry a receipt object",
+    "record_keys": [
+      "error",
+      "hint",
+      "message",
+      "next"
+    ],
+    "status": "not_computable"
+  },
+  "record_json": {
+    "error": "receipt_not_found",
+    "hint": "Use a receipt UUID or the original journal_log operation key.",
+    "message": "Receipt not found",
+    "next": "https://zambo.dev/verify/"
+  }
+}
