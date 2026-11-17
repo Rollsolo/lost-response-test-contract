@@ -1,0 +1,28 @@
+{
+  "K": "lr-op-d99166563b-a2",
+  "arguments_sent": {
+    "_session_id": "lr-d99166563b-a2",
+    "action": "lost_response_probe",
+    "executor_identity": "lost-response-harness",
+    "inputs": {
+      "operation": "lr-op-d99166563b-a2"
+    },
+    "job_id": "lr-op-d99166563b-a2"
+  },
+  "at": "2026-11-17T20:58:01.093096Z",
+  "call": {
+    "dropped": true,
+    "note": "Response body discarded client-side by the fault injector. No result, receipt id, or digest from this attempt is available to the caller.",
+    "transport": {
+      "content_length_header": "15324",
+      "elapsed_ms": 2067,
+      "http_status": 200,
+      "jsonrpc_id": "4316d8e68434461daf00ed8f9664a9ea",
+      "received_at": "2026-11-17T20:58:01.092855Z",
+      "response_bytes": 15324,
+      "sent_at": "2026-11-17T20:57:59.026209Z"
+    }
+  },
+  "label": "a2_attempt1_dropped",
+  "session_id": "lr-d99166563b-a2"
+}

@@ -1,0 +1,170 @@
+{
+  "K": "lr-op-d99166563b-a2",
+  "arguments_sent": {
+    "_session_id": "lr-d99166563b-a2",
+    "action": "lost_response_probe_altered",
+    "executor_identity": "lost-response-harness",
+    "inputs": {
+      "operation": "lr-op-d99166563b-a2"
+    },
+    "job_id": "lr-op-d99166563b-a2"
+  },
+  "at": "2026-11-17T20:58:09.647499Z",
+  "call": {
+    "body": {
+      "id": "24ac0af809444c2e882a73af92444110",
+      "jsonrpc": "2.0",
+      "result": {
+        "_meta": {
+          "dev.zambo/receipt": {
+            "id": "2757da21-edd2-427c-a61b-61a23e1273fc",
+            "output_hash": "sha256:5d805a5f715750b6d4c9db9ead262a097e5d37c507dcfa56c67fc90a034439b9",
+            "run_url": "https://zambo.dev/run/2757da21-edd2-427c-a61b-61a23e1273fc"
+          }
+        },
+        "_receipt": {
+          "anchor": {
+            "envelope": {
+              "anchored_at": "2026-11-17T20:58:09.883Z",
+              "evidence_byte_length": null,
+              "evidence_sha256": null,
+              "evidence_url": null,
+              "output_sha256": "sha256:5d805a5f715750b6d4c9db9ead262a097e5d37c507dcfa56c67fc90a034439b9",
+              "receipt_uuid": "2757da21-edd2-427c-a61b-61a23e1273fc",
+              "schema_version": "zambo-receipt-anchor/1"
+            },
+            "envelope_bytes": "{\"anchored_at\":\"2026-11-17T20:58:09.883Z\",\"evidence_byte_length\":null,\"evidence_sha256\":null,\"evidence_url\":null,\"output_sha256\":\"sha256:5d805a5f715750b6d4c9db9ead262a097e5d37c507dcfa56c67fc90a034439b9\",\"receipt_uuid\":\"2757da21-edd2-427c-a61b-61a23e1273fc\",\"schema_version\":\"zambo-receipt-anchor/1\"}",
+            "event_id": "a10022a0f35b7e61e75a1ddba38a98f720bc1ee78ff6df260a5ccbdf13c77809",
+            "pubkey": "e13475107d30c918ec664adf2ab1141024a22fb35190f82c9e933704fa49af41",
+            "relays": [
+              "wss://relay.primal.net"
+            ],
+            "schema_version": "zambo-receipt-anchor/1",
+            "status": "pending"
+          },
+          "audit": "https://zambo.dev/run/2757da21-edd2-427c-a61b-61a23e1273fc",
+          "auth_scope": "public",
+          "caller": {
+            "id": "sha256:a270d03d67788a4ad9966edb5a855a507fb4844574e4c12e2c4182ca7d6dab42",
+            "type": "session"
+          },
+          "canonical_byte_length": 1114,
+          "canonical_bytes": "eyJjYWxsZXIiOnsiaWQiOiJzaGEyNTY6YTI3MGQwM2Q2Nzc4OGE0YWQ5OTY2ZWRiNWE4NTVhNTA3ZmI0ODQ0NTc0ZTRjMTJlMmM0MTgyY2E3ZDZkYWI0MiIsInR5cGUiOiJzZXNzaW9uIn0sImlzc3Vlcl9jbGFpbXMiOnsicHJvdmVuYW5jZV9jbGFzcyI6Ik9CU0VSVkVEIFZJQSBHQVRFV0FZIn0sIm91dHB1dCI6eyJhcmd1bWVudHNfcmVjZWl2ZWQiOnsiX2NhbGxlcl9oYW5kbGUiOiJ6Y2hfbnlrUmd0Nm00S0ZVdHhmVmNuWW1BSy5wQWdqVkprSFlTdFdvZk83b0R3Nm9VIiwiYWN0aW9uIjoibG9zdF9yZXNwb25zZV9wcm9iZV9hbHRlcmVkIiwiZXhlY3V0b3JfaWRlbnRpdHkiOiJsb3N0LXJlc3BvbnNlLWhhcm5lc3MiLCJpbnB1dHMiOnsib3BlcmF0aW9uIjoiW3ByaXZhdGVdIn19LCJlcnJvciI6eyJjb2RlIjoiaWRlbXBvdGVuY3lfY29uZmxpY3QiLCJtZXNzYWdlIjoiVGhpcyBvcGVyYXRpb24ga2V5IGlzIGFscmVhZHkgYm91bmQgdG8gZGlmZmVyZW50IHBhcmFtZXRlcnMuIE5vIGpvdXJuYWwgZW50cnkgd2FzIGFkZGVkOyB1c2UgYSBuZXcgam9iX2lkIGZvciBhIGRpZmZlcmVudCBvcGVyYXRpb24uIn0sImV4ZWN1dGVkIjpmYWxzZSwiaW5wdXRfaGFzaCI6InNoYTI1NjowZDU1OWMzYTVlYmY2NzFmOTYxN2MyYzdjNmFiM2QzNTA4Y2NhZTU0ZWQyYjc0ODc0YmJkNjQxMjA4MjA5MDAxIiwiaW5wdXRfaGFzaF9sYXlvdXQiOiJ6YW1iby1qc29uLXNvcnRlZC1rZXlzLXV0ZjgtdjEiLCJvdXRjb21lIjoicmVqZWN0ZWRfYmVmb3JlX2V4ZWN1dGlvbiIsInJlY2VpcHRfdHlwZSI6InByZV9leGVjdXRpb25fcmVqZWN0aW9uIiwicmVxdWVzdGVkX3Rvb2wiOiJqb3VybmFsX2xvZyJ9LCJyZWNlaXB0X3NjaGVtYV92ZXJzaW9uIjoiMC40Iiwic2lkZV9lZmZlY3RzIjp7ImRlY2xhcmF0aW9uX2hhc2giOiJzaGEyNTY6ZGZiNDQxMmFhNDI5ZDNhYzYzN2EwNTY2OGM0MzViY2M5MGEyNTEzNjNmY2RkNDlmN2I4NWFlNGFiNTViNWJjOSIsImRlY2xhcmVkIjpbInN0YXRlX3dyaXRlIl0sInNjaGVtYV92ZXJzaW9uIjoiemFtYm8tc2lkZS1lZmZlY3RzLzEifSwidG9vbCI6eyJuYW1lIjoiam91cm5hbF9sb2ciLCJzY29wZSI6InB1YmxpYyIsInZlcnNpb24iOiI0LjEuNCJ9fQ==",
+          "execution_status": "observed_via_gateway",
+          "free_limit": 0,
+          "free_remaining": 0,
+          "free_used": 0,
+          "hash_algorithm": "sha256",
+          "id": "2757da21-edd2-427c-a61b-61a23e1273fc",
+          "input_hash": "sha256:0d559c3a5ebf671f9617c2c7c6ab3d3508ccae54ed2b74874bbd641208209001",
+          "input_hash_layout": "zambo-json-sorted-keys-utf8-v1",
+          "metadata_hash": "sha256:2dc575ef900f0a03b6a05d3a80219801d7de0e2d8c1c637536c73ecdb57d157a",
+          "metered_bucket": "free_20",
+          "metered_limit": 0,
+          "metered_remaining": 0,
+          "metered_used": 0,
+          "output_hash": "sha256:5d805a5f715750b6d4c9db9ead262a097e5d37c507dcfa56c67fc90a034439b9",
+          "persistence": "stored",
+          "price": {
+            "burn_status": "not_attempted",
+            "program": "Token-2022",
+            "treasury": "GuGoJPgF2wufK5U983oTwW5mXJb3GN9KNyj9S5gyffkH",
+            "zambo_burned": 0
+          },
+          "provenance_class": "OBSERVED VIA GATEWAY",
+          "receipt_schema_version": "0.4",
+          "receipt_type": "pre_execution_rejection",
+          "result_status": "failed",
+          "server": "zambo.dev/mcp",
+          "side_effects": {
+            "declaration_hash": "sha256:dfb4412aa429d3ac637a05668c435bcc90a251363fcdd49f7b85ae4ab55b5bc9",
+            "declared": [
+              "state_write"
+            ],
+            "schema_version": "zambo-side-effects/1"
+          },
+          "status": "error",
+          "timestamp": "2026-11-17T20:58:09.883Z",
+          "tool": "journal_log",
+          "tool_context": {
+            "name": "journal_log",
+            "scope": "public",
+            "version": "4.1.4"
+          },
+          "verification_status": "not_verified",
+          "workflow_index_status": "stored"
+        },
+        "content": [
+          {
+            "text": "Call rejected before execution: This operation key is already bound to different parameters. No journal entry was added; use a new job_id for a different operation.\n\nhttps://zambo.dev/run/2757da21-edd2-427c-a61b-61a23e1273fc\n\nCorrect the request and retry.",
+            "type": "text"
+          },
+          {
+            "mimeType": "text/html",
+            "name": "Zambo execution receipt",
+            "type": "resource_link",
+            "uri": "https://zambo.dev/run/2757da21-edd2-427c-a61b-61a23e1273fc"
+          }
+        ],
+        "isError": true,
+        "resultType": "complete",
+        "structuredContent": {
+          "caller_handle": "zch_nykRgt6m4KFUtxfVcnYmAK.pAgjVJkHYStWofO7oDw6oU",
+          "caller_handle_instruction": "Persist the initialize caller_handle in private durable agent state scoped to this user or tenant. Reuse it as _caller_handle on every call, including after reconnects and restarts; never share it across unrelated users. Keep _session_id separate and stable only while resuming the same job. This handle can retrieve facts the user chose to save, so keep it private; it is not authentication or payment authorization. If you cannot retain it safely, do not promise cross-session continuity. Keep the handle private; it is not payment authorization.",
+          "error": {
+            "code": "idempotency_conflict",
+            "message": "This operation key is already bound to different parameters. No journal entry was added; use a new job_id for a different operation.",
+            "next_step": "Correct the request and retry.",
+            "next_url": "https://zambo.dev/mcp"
+          },
+          "executed": false,
+          "human_line": "This operation key is already bound to different parameters. No journal entry was added; use a new job_id for a different operation.",
+          "ids": {
+            "receipt_id": "2757da21-edd2-427c-a61b-61a23e1273fc"
+          },
+          "next": "Correct the request and retry.",
+          "next_steps": [
+            "Correct the request and retry."
+          ],
+          "ok": false,
+          "quota_handle": "zch_zTkx68mxR-DYqYbZ7fjfQt.6PuUF2YtcQZn3UizvJ-teE",
+          "quota_handle_instruction": "Reuse the issued caller_handle and quota_handle together, or keep reusing quota_handle if caller_handle is unavailable. Their paired values preserve one daily bucket; a different explicit caller_handle selects a separate bucket. Neither is payment authorization or private-memory ownership.",
+          "receipt_standard": "Every call returns an AER-1 receipt (IETF Internet-Draft draft-zambo-aer1-26, current revision) that anyone can verify offline at https://zambo.dev/verify/.",
+          "receipt_url": "https://zambo.dev/run/2757da21-edd2-427c-a61b-61a23e1273fc",
+          "rejection": true,
+          "result": {
+            "error": {
+              "code": "idempotency_conflict",
+              "message": "This operation key is already bound to different parameters. No journal entry was added; use a new job_id for a different operation.",
+              "next_step": "Correct the request and retry.",
+              "next_url": "https://zambo.dev/mcp"
+            },
+            "executed": false,
+            "receipt_url": "https://zambo.dev/run/2757da21-edd2-427c-a61b-61a23e1273fc",
+            "rejection": true
+          },
+          "urls": {
+            "receipt": "https://zambo.dev/run/2757da21-edd2-427c-a61b-61a23e1273fc",
+            "receipt_url": "https://zambo.dev/run/2757da21-edd2-427c-a61b-61a23e1273fc"
+          }
+        }
+      }
+    },
+    "dropped": false,
+    "receipt_ids": [
+      "2757da21-edd2-427c-a61b-61a23e1273fc"
+    ],
+    "response_class": "tool_error:idempotency_conflict",
+    "transport": {
+      "content_length_header": "7190",
+      "elapsed_ms": 1660,
+      "http_status": 409,
+      "jsonrpc_id": "24ac0af809444c2e882a73af92444110",
+      "received_at": "2026-11-17T20:58:09.647241Z",
+      "response_bytes": 7190,
+      "sent_at": "2026-11-17T20:58:07.987697Z"
+    }
+  },
+  "label": "a2_retry_mismatched",
+  "session_id": "lr-d99166563b-a2"
+}

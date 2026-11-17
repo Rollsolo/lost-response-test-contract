@@ -1,0 +1,392 @@
+{
+  "K": "lr-op-ef631377b2-mwsa",
+  "arguments_sent": {
+    "_session_id": "lr-ef631377b2-mwsa",
+    "action": "lost_response_probe",
+    "executor_identity": "lost-response-harness",
+    "inputs": {
+      "operation": "lr-op-ef631377b2-mwsa"
+    },
+    "job_id": "lr-op-ef631377b2-mwsa"
+  },
+  "count_evidence": {
+    "at": "2026-11-17T20:59:10.719262Z",
+    "attributed_children": [
+      {
+        "counted_as_target_execution": true,
+        "output_hash": "sha256:919f5b8b108018e54c4471a85bceef8b05902e9e1fe1537383c815561280632c",
+        "receipt_id": "767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+        "resolves_in_public_record": true,
+        "step_status": "success",
+        "tools": [
+          "journal_log"
+        ]
+      }
+    ],
+    "execution_record_ids": [
+      "767bd78f-d41b-4c2c-aee9-22d7aa6001fb"
+    ],
+    "external_effect_count": 1,
+    "label": "mwsa_final",
+    "method": "workflow_close snapshot children, each attributed through its public /api/v2/receipt/<id>/verify record",
+    "session_id": "lr-ef631377b2-mwsa",
+    "snapshot_children": [
+      {
+        "output_hash_in_snapshot": "919f5b8b108018e54c4471a85bceef8b05902e9e1fe1537383c815561280632c",
+        "receipt_id": "767bd78f-d41b-4c2c-aee9-22d7aa6001fb"
+      }
+    ],
+    "snapshot_count_field": 1,
+    "snapshot_response_class": "success",
+    "target_tool_execution_receipt_ids": [
+      "767bd78f-d41b-4c2c-aee9-22d7aa6001fb"
+    ]
+  },
+  "first_call": {
+    "body": {
+      "id": "3c21ab262f8844a187d1708807ec7e4e",
+      "jsonrpc": "2.0",
+      "result": {
+        "_meta": {
+          "dev.zambo/receipt": {
+            "id": "767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+            "output_hash": "sha256:919f5b8b108018e54c4471a85bceef8b05902e9e1fe1537383c815561280632c",
+            "run_url": "https://zambo.dev/run/767bd78f-d41b-4c2c-aee9-22d7aa6001fb"
+          }
+        },
+        "_receipt": {
+          "anchor": {
+            "envelope": {
+              "anchored_at": "2026-11-17T20:59:10.352Z",
+              "evidence_byte_length": null,
+              "evidence_sha256": null,
+              "evidence_url": null,
+              "output_sha256": "sha256:919f5b8b108018e54c4471a85bceef8b05902e9e1fe1537383c815561280632c",
+              "receipt_uuid": "767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+              "schema_version": "zambo-receipt-anchor/1"
+            },
+            "envelope_bytes": "{\"anchored_at\":\"2026-11-17T20:59:10.352Z\",\"evidence_byte_length\":null,\"evidence_sha256\":null,\"evidence_url\":null,\"output_sha256\":\"sha256:919f5b8b108018e54c4471a85bceef8b05902e9e1fe1537383c815561280632c\",\"receipt_uuid\":\"767bd78f-d41b-4c2c-aee9-22d7aa6001fb\",\"schema_version\":\"zambo-receipt-anchor/1\"}",
+            "event_id": "65337e55e88c32a55cffd0b5b2156c51df1207e6c281373901fd0632e1d0b8d0",
+            "pubkey": "e13475107d30c918ec664adf2ab1141024a22fb35190f82c9e933704fa49af41",
+            "relays": [
+              "wss://relay.primal.net"
+            ],
+            "schema_version": "zambo-receipt-anchor/1",
+            "status": "pending"
+          },
+          "audit": "https://zambo.dev/run/767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+          "auth_scope": "public",
+          "bonus_calls_remaining": 0,
+          "caller": {
+            "id": "sha256:ac167689ad0191555beaa4c0bc30082e33a884c5ed5b6dba9c5732f40c419591",
+            "type": "session"
+          },
+          "canonical_byte_length": 1269,
+          "canonical_bytes": "eyJjYWxsZXIiOnsiaWQiOiJzaGEyNTY6YWMxNjc2ODlhZDAxOTE1NTViZWFhNGMwYmMzMDA4MmUzM2E4ODRjNWVkNWI2ZGJhOWM1NzMyZjQwYzQxOTU5MSIsInR5cGUiOiJzZXNzaW9uIn0sImlzc3Vlcl9jbGFpbXMiOnsicHJvdmVuYW5jZV9jbGFzcyI6IkxPR0dFRCBCWSBBR0VOVCJ9LCJvdXRwdXQiOnsiYXR0ZXN0cyI6IlphbWJvIGF0dGVzdHMgdGhhdCB0aGlzIHJlY29yZCB3YXMgcmVjZWl2ZWQsIHJlZGFjdGVkLCB0aW1lc3RhbXBlZCwgYW5kIGNoYWluZWQuIiwiZG9lc19ub3RfYXR0ZXN0IjoiWmFtYm8gZGlkIG5vdCBydW4gb3Igb2JzZXJ2ZSB0aGUgcmVwb3J0ZWQgYWN0aW9uLiIsImVudHJ5Ijp7ImNvbXBsZXRlZF9hdCI6IjIwMjYtMTEtMTdUMjA6NTk6MTAuMTIyWiIsImRlbGV0ZWQiOmZhbHNlLCJkdXJhdGlvbl9tcyI6MCwiZW50cnlfaGFzaCI6InNoYTI1Njo2ZDU2NzA5OGQ5MGY4ZTFkYjM2Y2E1MWYzMzljZDhmZTc0MjUxZjNiM2UxZjQ1OTU2MzE1MjhkN2MyZGVkMjU1IiwiZW50cnlfaWQiOiI2NWIwOTI3YS0xY2JmLTQ3MmQtYTZkZC04NmE5Nzg5MTU5YzQiLCJleGVjdXRvcl9pZGVudGl0eSI6Imxvc3QtcmVzcG9uc2UtaGFybmVzcyIsImV4dGVybmFsX2V4ZWN1dG9yIjpudWxsLCJtZXRhZGF0YSI6e30sInByZXZfaGFzaCI6bnVsbCwicHJvdmVuYW5jZV9jbGFzcyI6IkxPR0dFRCBCWSBBR0VOVCIsInJlZGFjdGVkX2lucHV0c19oYXNoIjoic2hhMjU2OjNhOTEzMDk0ZjY1OWJkNDkzNzc5ZDg0N2Y4ZTI0NzU0MWY1YTI2NTZmZWMxMTIyZGZiOWIyNjJhN2MyYTRlMTkiLCJzZXF1ZW5jZSI6MSwic3RhcnRlZF9hdCI6IjIwMjYtMTEtMTdUMjA6NTk6MTAuMTIyWiIsInRvb2xfbmFtZSI6Imxvc3RfcmVzcG9uc2VfcHJvYmUifSwicHJvdmVuYW5jZV9jbGFzcyI6IkxPR0dFRCBCWSBBR0VOVCIsInN0YXR1cyI6ImxvZ2dlZCIsInZlcmlmeV91cmwiOiJodHRwczovL3phbWJvLmRldi9hcGkvam91cm5hbC9bcHJpdmF0ZV0vdmVyaWZ5In0sInJlY2VpcHRfc2NoZW1hX3ZlcnNpb24iOiIwLjQiLCJzaWRlX2VmZmVjdHMiOnsiZGVjbGFyYXRpb25faGFzaCI6InNoYTI1NjpkZmI0NDEyYWE0MjlkM2FjNjM3YTA1NjY4YzQzNWJjYzkwYTI1MTM2M2ZjZGQ0OWY3Yjg1YWU0YWI1NWI1YmM5IiwiZGVjbGFyZWQiOlsic3RhdGVfd3JpdGUiXSwic2NoZW1hX3ZlcnNpb24iOiJ6YW1iby1zaWRlLWVmZmVjdHMvMSJ9LCJ0b29sIjp7Im5hbWUiOiJqb3VybmFsX2xvZyIsInNjb3BlIjoicHVibGljIiwidmVyc2lvbiI6IjQuMS40In19",
+          "evidence_byte_length": null,
+          "evidence_content_type": null,
+          "evidence_sha256": null,
+          "evidence_source": null,
+          "evidence_source_url": null,
+          "evidence_status": "empty",
+          "evidence_url": null,
+          "execution_context": {
+            "environment": "zambo.dev hosted MCP",
+            "quota_identity": {
+              "meter_key": "sha256:c14de32ee1a39377be234109c035290b4ec62bc5903f851dc807513590781343",
+              "stable_handle_hash": "sha256:ac167689ad0191555beaa4c0bc30082e33a884c5ed5b6dba9c5732f40c419591"
+            }
+          },
+          "execution_status": "logged_by_agent",
+          "external_evidence": [],
+          "free_limit": 3,
+          "free_remaining": 2,
+          "free_used": 1,
+          "hash_algorithm": "sha256",
+          "id": "767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+          "input_hash": "sha256:82f0cb252e3eeef9ea6d4417bffd0ecd75f0a58542e5871f165b42534f8096ab",
+          "input_hash_layout": "zambo-json-sorted-keys-utf8-v1",
+          "lifecycle_status": "executed",
+          "metadata_hash": "sha256:16871c6b67eeb8059c720454ff32b3c7372bef6c7137c96aab0cd987a17f62b6",
+          "metered_bucket": "free_20",
+          "metered_limit": 3,
+          "metered_remaining": 2,
+          "metered_used": 1,
+          "output_hash": "sha256:919f5b8b108018e54c4471a85bceef8b05902e9e1fe1537383c815561280632c",
+          "persistence": "stored",
+          "price": {
+            "burn_status": "not_attempted",
+            "program": "Token-2022",
+            "treasury": "GuGoJPgF2wufK5U983oTwW5mXJb3GN9KNyj9S5gyffkH",
+            "zambo_burned": 0
+          },
+          "provenance": {
+            "evidence_captures": [],
+            "evidence_source": null,
+            "evidence_status": "empty",
+            "result_source": null
+          },
+          "provenance_class": "LOGGED BY AGENT",
+          "receipt_schema_version": "0.4",
+          "receipt_type": "execution",
+          "result_source": null,
+          "result_status": "logged",
+          "server": "zambo.dev/mcp",
+          "side_effects": {
+            "declaration_hash": "sha256:dfb4412aa429d3ac637a05668c435bcc90a251363fcdd49f7b85ae4ab55b5bc9",
+            "declared": [
+              "state_write"
+            ],
+            "schema_version": "zambo-side-effects/1"
+          },
+          "signal_handle": null,
+          "state_hash": null,
+          "status": "success",
+          "timestamp": "2026-11-17T20:59:10.352Z",
+          "today_url": "https://zambo.dev/today/k/m8wABnhYBQji2rNF5UI8LlQ1lUdXNkP4XlRav0P4d54Ztozky7qFRtNIDCBqDd57KJBgSrVVo_OhCDqDeKTWqM0eBYDrrOt_gwgCHEtbfTwivAEOemfpNSNL0cYx",
+          "tool": "journal_log",
+          "tool_context": {
+            "name": "journal_log",
+            "scope": "public",
+            "version": "4.1.4"
+          },
+          "verification_status": "not_verified",
+          "workflow": {
+            "id": "f349a20f-e74d-4e66-9a0c-089ec3dffbbb",
+            "step_index": 0,
+            "url": "https://zambo.dev/workflow/f349a20f-e74d-4e66-9a0c-089ec3dffbbb"
+          },
+          "workflow_index_status": "stored"
+        },
+        "_session_depth": 0,
+        "_session_id": "scoped:7522c5a326e8b347c6bbac743aa533fd669e4da8",
+        "_workflow": {
+          "next_action": "The host AI should integrate this result, continue any remaining steps, verify the requested outcome, and then summarize what is complete.",
+          "protocol": "zambo-collaborative-v4",
+          "session_depth": 0,
+          "session_id": "scoped:7522c5a326e8b347c6bbac743aa533fd669e4da8",
+          "status": "step_completed",
+          "tool": "journal_log"
+        },
+        "content": [
+          {
+            "text": "status: logged\nprovenance class: LOGGED BY AGENT\nentry / job id: lr-op-ef631377b2-mwsa\nentry / entry id: 65b0927a-1cbf-472d-a6dd-86a9789159c4\nentry / sequence: 1\nentry / provenance class: LOGGED BY AGENT\nentry / tool name: lost_response_probe\nentry / redacted inputs hash: sha256:3a913094f659bd493779d847f8e247541f5a2656fec1122dfb9b262a7c2a4e19\nentry / started at: 2026-11-17T20:59:10.122Z\nentry / completed at: 2026-11-17T20:59:10.122Z\nentry / duration ms: 0\nentry / executor identity: lost-response-harness\nentry / entry hash: sha256:6d567098d90f8e1db36ca51f339cd8fe74251f3b3e1f4595631528d7c2ded255\nentry / deleted: false\nattests: Zambo attests that this record was received, redacted, timestamped, and chained.\ndoes not attest: Zambo did not run or observe the reported action.\nverify url: https://zambo.dev/api/journal/lr-op-ef631377b2-mwsa/verify\nfirst workflow / next call / tool: zambo_home\nfirst workflow / next call / arguments /  session id: scoped:7522c5a326e8b347c6bbac743aa533fd669e4da8\nfirst workflow / examples 1: Check this public website and prepare a handover with receipts.\nfirst workflow / examples 2: Research this decision and save a brief I can continue in another AI.\nfirst workflow / consent: Run only the workflow the user chooses. Do not add calls just to demonstrate features.\n\nReceipt: https://zambo.dev/run/767bd78f-d41b-4c2c-aee9-22d7aa6001fb\ntoday history: https://zambo.dev/today/k/m8wABnhYBQji2rNF5UI8LlQ1lUdXNkP4XlRav0P4d54Ztozky7qFRtNIDCBqDd57KJBgSrVVo_OhCDqDeKTWqM0eBYDrrOt_gwgCHEtbfTwivAEOemfpNSNL0cYx\nEvery tool is free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free. The Day Pass makes every tool unlimited for 24 hours for $0.99. [Get Day Pass](https://zambo.dev/day-pass/?chat_checkout=50IF4vzQWnS0yV1tKFlVafMU&quota_handle=zch_zTkx68mxR-DYqYbZ7fjfQt.6PuUF2YtcQZn3UizvJ-teE#checkout)\ntry a workflow: hand this job to another AI and pick it up there free: https://zambo.dev/workflows/cross-ai-relay-long-job\nall workflows: https://zambo.dev/workflows",
+            "type": "text"
+          },
+          {
+            "mimeType": "text/html",
+            "name": "Zambo execution receipt",
+            "type": "resource_link",
+            "uri": "https://zambo.dev/run/767bd78f-d41b-4c2c-aee9-22d7aa6001fb"
+          }
+        ],
+        "continuity_status": "persisted",
+        "isError": false,
+        "resultType": "complete",
+        "structuredContent": {
+          "attests": "Zambo attests that this record was received, redacted, timestamped, and chained.",
+          "caller_handle": "zch_nykRgt6m4KFUtxfVcnYmAK.pAgjVJkHYStWofO7oDw6oU",
+          "caller_handle_instruction": "Persist the initialize caller_handle in private durable agent state scoped to this user or tenant. Reuse it as _caller_handle on every call, including after reconnects and restarts; never share it across unrelated users. Keep _session_id separate and stable only while resuming the same job. This handle can retrieve facts the user chose to save, so keep it private; it is not authentication or payment authorization. If you cannot retain it safely, do not promise cross-session continuity. Keep the handle private; it is not payment authorization.",
+          "does_not_attest": "Zambo did not run or observe the reported action.",
+          "entry": {
+            "completed_at": "2026-11-17T20:59:10.122Z",
+            "deleted": false,
+            "duration_ms": 0,
+            "entry_hash": "sha256:6d567098d90f8e1db36ca51f339cd8fe74251f3b3e1f4595631528d7c2ded255",
+            "entry_id": "65b0927a-1cbf-472d-a6dd-86a9789159c4",
+            "executor_identity": "lost-response-harness",
+            "external_executor": null,
+            "job_id": "lr-op-ef631377b2-mwsa",
+            "metadata": {},
+            "prev_hash": null,
+            "provenance_class": "LOGGED BY AGENT",
+            "redacted_inputs_hash": "sha256:3a913094f659bd493779d847f8e247541f5a2656fec1122dfb9b262a7c2a4e19",
+            "sequence": 1,
+            "started_at": "2026-11-17T20:59:10.122Z",
+            "tool_name": "lost_response_probe"
+          },
+          "first_workflow": {
+            "consent": "Run only the workflow the user chooses. Do not add calls just to demonstrate features.",
+            "examples": [
+              "Check this public website and prepare a handover with receipts.",
+              "Research this decision and save a brief I can continue in another AI."
+            ],
+            "next_call": {
+              "arguments": {
+                "_session_id": "scoped:7522c5a326e8b347c6bbac743aa533fd669e4da8"
+              },
+              "tool": "zambo_home"
+            }
+          },
+          "human_line": "status: logged",
+          "ids": {
+            "receipt_id": "767bd78f-d41b-4c2c-aee9-22d7aa6001fb"
+          },
+          "next": "Your result and receipt are ready. Try a complete workflow: ask your AI to check a public website, summarize what was observed, and prepare a handover; or research a decision and save a brief. Call zambo_home for a private starting point. Free needs no card or signup; pickup is always free.\n\n**Level 2:** Keep every tool available without its daily free-call and shared continuation limits; saved notes follow across AI apps through the pass plus 30 days, and eligible private proof packs are included. [Compare one-time passes](https://zambo.dev/pricing/).",
+          "next_steps": [
+            "Your result and receipt are ready. Try a complete workflow: ask your AI to check a public website, summarize what was observed, and prepare a handover; or research a decision and save a brief. Call zambo_home for a private starting point. Free needs no card or signup; pickup is always free.\n\n**Level 2:** Keep every tool available without its daily free-call and shared continuation limits; saved notes follow across AI apps through the pass plus 30 days, and eligible private proof packs are included. [Compare one-time passes](https://zambo.dev/pricing/)."
+          ],
+          "next_up": "Your result and receipt are ready. Try a complete workflow: ask your AI to check a public website, summarize what was observed, and prepare a handover; or research a decision and save a brief. Call zambo_home for a private starting point. Free needs no card or signup; pickup is always free.\n\n**Level 2:** Keep every tool available without its daily free-call and shared continuation limits; saved notes follow across AI apps through the pass plus 30 days, and eligible private proof packs are included. [Compare one-time passes](https://zambo.dev/pricing/).",
+          "ok": true,
+          "provenance_class": "LOGGED BY AGENT",
+          "quota_handle": "zch_zTkx68mxR-DYqYbZ7fjfQt.6PuUF2YtcQZn3UizvJ-teE",
+          "quota_handle_instruction": "Reuse the issued caller_handle and quota_handle together, or keep reusing quota_handle if caller_handle is unavailable. Their paired values preserve one daily bucket; a different explicit caller_handle selects a separate bucket. Neither is payment authorization or private-memory ownership.",
+          "receipt_standard": "Every call returns an AER-1 receipt (IETF Internet-Draft draft-zambo-aer1-26, current revision) that anyone can verify offline at https://zambo.dev/verify/.",
+          "receipt_url": "https://zambo.dev/run/767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+          "result": {
+            "attests": "Zambo attests that this record was received, redacted, timestamped, and chained.",
+            "does_not_attest": "Zambo did not run or observe the reported action.",
+            "entry": {
+              "completed_at": "2026-11-17T20:59:10.122Z",
+              "deleted": false,
+              "duration_ms": 0,
+              "entry_hash": "sha256:6d567098d90f8e1db36ca51f339cd8fe74251f3b3e1f4595631528d7c2ded255",
+              "entry_id": "65b0927a-1cbf-472d-a6dd-86a9789159c4",
+              "executor_identity": "lost-response-harness",
+              "external_executor": null,
+              "job_id": "lr-op-ef631377b2-mwsa",
+              "metadata": {},
+              "prev_hash": null,
+              "provenance_class": "LOGGED BY AGENT",
+              "redacted_inputs_hash": "sha256:3a913094f659bd493779d847f8e247541f5a2656fec1122dfb9b262a7c2a4e19",
+              "sequence": 1,
+              "started_at": "2026-11-17T20:59:10.122Z",
+              "tool_name": "lost_response_probe"
+            },
+            "first_workflow": {
+              "consent": "Run only the workflow the user chooses. Do not add calls just to demonstrate features.",
+              "examples": [
+                "Check this public website and prepare a handover with receipts.",
+                "Research this decision and save a brief I can continue in another AI."
+              ],
+              "next_call": {
+                "arguments": {
+                  "_session_id": "scoped:7522c5a326e8b347c6bbac743aa533fd669e4da8"
+                },
+                "tool": "zambo_home"
+              }
+            },
+            "next_up": "Your result and receipt are ready. Try a complete workflow: ask your AI to check a public website, summarize what was observed, and prepare a handover; or research a decision and save a brief. Call zambo_home for a private starting point. Free needs no card or signup; pickup is always free.\n\n**Level 2:** Keep every tool available without its daily free-call and shared continuation limits; saved notes follow across AI apps through the pass plus 30 days, and eligible private proof packs are included. [Compare one-time passes](https://zambo.dev/pricing/).",
+            "provenance_class": "LOGGED BY AGENT",
+            "receipt_url": "https://zambo.dev/run/767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+            "status": "logged",
+            "today_url": "https://zambo.dev/today/k/m8wABnhYBQji2rNF5UI8LlQ1lUdXNkP4XlRav0P4d54Ztozky7qFRtNIDCBqDd57KJBgSrVVo_OhCDqDeKTWqM0eBYDrrOt_gwgCHEtbfTwivAEOemfpNSNL0cYx",
+            "verify_url": "https://zambo.dev/api/journal/lr-op-ef631377b2-mwsa/verify"
+          },
+          "status": "logged",
+          "today_url": "https://zambo.dev/today/k/m8wABnhYBQji2rNF5UI8LlQ1lUdXNkP4XlRav0P4d54Ztozky7qFRtNIDCBqDd57KJBgSrVVo_OhCDqDeKTWqM0eBYDrrOt_gwgCHEtbfTwivAEOemfpNSNL0cYx",
+          "urls": {
+            "receipt": "https://zambo.dev/run/767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+            "receipt_url": "https://zambo.dev/run/767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+            "today_url": "https://zambo.dev/today/k/m8wABnhYBQji2rNF5UI8LlQ1lUdXNkP4XlRav0P4d54Ztozky7qFRtNIDCBqDd57KJBgSrVVo_OhCDqDeKTWqM0eBYDrrOt_gwgCHEtbfTwivAEOemfpNSNL0cYx",
+            "verify_url": "https://zambo.dev/api/journal/lr-op-ef631377b2-mwsa/verify"
+          },
+          "verify_url": "https://zambo.dev/api/journal/lr-op-ef631377b2-mwsa/verify"
+        },
+        "today_url": "https://zambo.dev/today/k/m8wABnhYBQji2rNF5UI8LlQ1lUdXNkP4XlRav0P4d54Ztozky7qFRtNIDCBqDd57KJBgSrVVo_OhCDqDeKTWqM0eBYDrrOt_gwgCHEtbfTwivAEOemfpNSNL0cYx"
+      }
+    },
+    "dropped": false,
+    "receipt_ids": [
+      "767bd78f-d41b-4c2c-aee9-22d7aa6001fb"
+    ],
+    "response_class": "success",
+    "transport": {
+      "content_length_header": "15338",
+      "elapsed_ms": 1719,
+      "http_status": 200,
+      "jsonrpc_id": "3c21ab262f8844a187d1708807ec7e4e",
+      "received_at": "2026-11-17T20:59:10.301463Z",
+      "response_bytes": 15338,
+      "sent_at": "2026-11-17T20:59:08.582027Z"
+    }
+  },
+  "repeat_call": {
+    "body": {
+      "id": "2cea3afeb2b9443e9563bd21f0de6565",
+      "jsonrpc": "2.0",
+      "result": {
+        "_meta": {
+          "dev.zambo/receipt": {
+            "id": "767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+            "output_hash": "sha256:919f5b8b108018e54c4471a85bceef8b05902e9e1fe1537383c815561280632c",
+            "run_url": "https://zambo.dev/run/767bd78f-d41b-4c2c-aee9-22d7aa6001fb"
+          }
+        },
+        "_receipt": {
+          "audit": "https://zambo.dev/run/767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+          "id": "767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+          "output_hash": "sha256:919f5b8b108018e54c4471a85bceef8b05902e9e1fe1537383c815561280632c",
+          "persistence": "stored",
+          "receipt_type": "execution",
+          "receipt_url": "https://zambo.dev/run/767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+          "tool": "journal_log"
+        },
+        "content": [
+          {
+            "text": "{\"status\":\"logged\",\"provenance_class\":\"LOGGED BY AGENT\",\"entry\":{\"job_id\":\"lr-op-ef631377b2-mwsa\",\"entry_id\":\"65b0927a-1cbf-472d-a6dd-86a9789159c4\",\"sequence\":1,\"provenance_class\":\"LOGGED BY AGENT\",\"tool_name\":\"lost_response_probe\",\"redacted_inputs_hash\":\"sha256:3a913094f659bd493779d847f8e247541f5a2656fec1122dfb9b262a7c2a4e19\",\"started_at\":\"2026-11-17T20:59:10.122Z\",\"completed_at\":\"2026-11-17T20:59:10.122Z\",\"duration_ms\":0,\"executor_identity\":\"lost-response-harness\",\"external_executor\":null,\"metadata\":{},\"prev_hash\":null,\"entry_hash\":\"sha256:6d567098d90f8e1db36ca51f339cd8fe74251f3b3e1f4595631528d7c2ded255\",\"deleted\":false},\"attests\":\"Zambo attests that this record was received, redacted, timestamped, and chained.\",\"does_not_attest\":\"Zambo did not run or observe the reported action.\",\"verify_url\":\"https://zambo.dev/api/journal/lr-op-ef631377b2-mwsa/verify\"}\n\nOriginal receipt: https://zambo.dev/run/767bd78f-d41b-4c2c-aee9-22d7aa6001fb\nOutput digest: sha256:919f5b8b108018e54c4471a85bceef8b05902e9e1fe1537383c815561280632c",
+            "type": "text"
+          },
+          {
+            "mimeType": "text/html",
+            "name": "Original execution receipt",
+            "type": "resource_link",
+            "uri": "https://zambo.dev/run/767bd78f-d41b-4c2c-aee9-22d7aa6001fb"
+          }
+        ],
+        "isError": false,
+        "receipt_id": "767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+        "receipt_url": "https://zambo.dev/run/767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+        "resultType": "complete",
+        "structuredContent": {
+          "idempotent_replay": true,
+          "original_outcome": {
+            "attests": "Zambo attests that this record was received, redacted, timestamped, and chained.",
+            "does_not_attest": "Zambo did not run or observe the reported action.",
+            "entry": {
+              "completed_at": "2026-11-17T20:59:10.122Z",
+              "deleted": false,
+              "duration_ms": 0,
+              "entry_hash": "sha256:6d567098d90f8e1db36ca51f339cd8fe74251f3b3e1f4595631528d7c2ded255",
+              "entry_id": "65b0927a-1cbf-472d-a6dd-86a9789159c4",
+              "executor_identity": "lost-response-harness",
+              "external_executor": null,
+              "job_id": "lr-op-ef631377b2-mwsa",
+              "metadata": {},
+              "prev_hash": null,
+              "provenance_class": "LOGGED BY AGENT",
+              "redacted_inputs_hash": "sha256:3a913094f659bd493779d847f8e247541f5a2656fec1122dfb9b262a7c2a4e19",
+              "sequence": 1,
+              "started_at": "2026-11-17T20:59:10.122Z",
+              "tool_name": "lost_response_probe"
+            },
+            "provenance_class": "LOGGED BY AGENT",
+            "status": "logged",
+            "verify_url": "https://zambo.dev/api/journal/lr-op-ef631377b2-mwsa/verify"
+          },
+          "original_outcome_text": "{\"status\":\"logged\",\"provenance_class\":\"LOGGED BY AGENT\",\"entry\":{\"job_id\":\"lr-op-ef631377b2-mwsa\",\"entry_id\":\"65b0927a-1cbf-472d-a6dd-86a9789159c4\",\"sequence\":1,\"provenance_class\":\"LOGGED BY AGENT\",\"tool_name\":\"lost_response_probe\",\"redacted_inputs_hash\":\"sha256:3a913094f659bd493779d847f8e247541f5a2656fec1122dfb9b262a7c2a4e19\",\"started_at\":\"2026-11-17T20:59:10.122Z\",\"completed_at\":\"2026-11-17T20:59:10.122Z\",\"duration_ms\":0,\"executor_identity\":\"lost-response-harness\",\"external_executor\":null,\"metadata\":{},\"prev_hash\":null,\"entry_hash\":\"sha256:6d567098d90f8e1db36ca51f339cd8fe74251f3b3e1f4595631528d7c2ded255\",\"deleted\":false},\"attests\":\"Zambo attests that this record was received, redacted, timestamped, and chained.\",\"does_not_attest\":\"Zambo did not run or observe the reported action.\",\"verify_url\":\"https://zambo.dev/api/journal/lr-op-ef631377b2-mwsa/verify\"}",
+          "output_digest": "sha256:919f5b8b108018e54c4471a85bceef8b05902e9e1fe1537383c815561280632c",
+          "receipt_id": "767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+          "receipt_url": "https://zambo.dev/run/767bd78f-d41b-4c2c-aee9-22d7aa6001fb",
+          "status": "replayed"
+        }
+      }
+    },
+    "dropped": false,
+    "receipt_ids": [
+      "767bd78f-d41b-4c2c-aee9-22d7aa6001fb"
+    ],
+    "response_class": "success",
+    "transport": {
+      "content_length_header": "4262",
+      "elapsed_ms": 417,
+      "http_status": 200,
+      "jsonrpc_id": "2cea3afeb2b9443e9563bd21f0de6565",
+      "received_at": "2026-11-17T20:59:10.719023Z",
+      "response_bytes": 4262,
+      "sent_at": "2026-11-17T20:59:10.302176Z"
+    }
+  },
+  "session_id": "lr-ef631377b2-mwsa",
+  "step": "a (black-box)"
+}

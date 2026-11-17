@@ -1,0 +1,92 @@
+{
+  "committed_digest": "sha256:b57197d5333af492c73260784de351c587545b6837ddab98500386714d931b87",
+  "legs": {
+    "k_only": {
+      "K": "lr-op-d99166563b-a1",
+      "attempts": [
+        {
+          "http_status": 200,
+          "page_http_status": 200,
+          "page_title_not_found": true,
+          "path": "GET /api/v2/receipt/<K>/verify and GET /run/<K>",
+          "response_class": "found"
+        },
+        {
+          "path": "tools/call continuity_get_recent with K as the only identifier",
+          "receipt_ids_returned": [
+            "415fbe5f-e216-4d89-b8f1-79d64ec7bce2",
+            "2e9ebf1f-5743-48de-a34b-5b3584c4c102",
+            "example"
+          ],
+          "response_class": "success"
+        }
+      ],
+      "reason": "recovered digest equals committed digest using only K",
+      "score": "pass"
+    },
+    "run_id": {
+      "digests_served": {
+        "input_hash": "sha256:5dd57fc7f38955c23fa83ae2652308adb944f19519fbf8c2f39b53208243cb4e",
+        "output_hash": "sha256:b57197d5333af492c73260784de351c587545b6837ddab98500386714d931b87"
+      },
+      "http_status": 200,
+      "note": "Section 9 resolution returned the unaltered record from the public JSON record; Section 6 recomputation is the harness's own SHA-256 over the decoded canonical bytes compared with the served output_hash, recorded in the recomputation block.",
+      "page_http_status": 200,
+      "receipt_id": "2e9ebf1f-5743-48de-a34b-5b3584c4c102",
+      "recomputation": {
+        "checks_served": {
+          "canonical_payload_matches": {
+            "detail": "The stored output and known call context reconstruct the exact canonical bytes.",
+            "label": "Canonical payload reconstruction",
+            "passed": true,
+            "status": "pass"
+          },
+          "chain": {
+            "detail": "This endpoint does not verify an append-only receipt chain.",
+            "status": "not_checked"
+          },
+          "commitment_matches": {
+            "computed_hash": "sha256:b57197d5333af492c73260784de351c587545b6837ddab98500386714d931b87",
+            "detail": "SHA-256 of the exact decoded canonical bytes matches output_hash.",
+            "expected_hash": "sha256:b57197d5333af492c73260784de351c587545b6837ddab98500386714d931b87",
+            "passed": true,
+            "status": "pass"
+          },
+          "issuer_authentication": {
+            "detail": "A zambo.dev receipt URL does not authenticate the issuer; no pinned signature or trusted issuer key was checked.",
+            "label": "Issuer authentication",
+            "passed": false,
+            "status": "not_checked"
+          },
+          "metadata_binding": {
+            "detail": "metadata_hash matches the canonical metadata block.",
+            "label": "AER-1 metadata hash",
+            "passed": true,
+            "status": "pass"
+          },
+          "provenance_binding": {
+            "detail": "The metadata claim is consistent with the verified receipt bytes; issuer is not authenticated.",
+            "label": "Provenance claim binding",
+            "passed": true,
+            "status": "pass"
+          },
+          "schema": {
+            "detail": "Schema conformance is left to the client using the linked hosted-profile schema.",
+            "status": "not_checked"
+          },
+          "signature": {
+            "detail": "No Ed25519 signature or pinned signing key is supplied.",
+            "status": "not_checked"
+          }
+        },
+        "computed_sha256_of_decoded_canonical_bytes": "b57197d5333af492c73260784de351c587545b6837ddab98500386714d931b87",
+        "output_hash_served": "b57197d5333af492c73260784de351c587545b6837ddab98500386714d931b87",
+        "status": "matched",
+        "verification_status_served": "verified"
+      },
+      "score": "pass"
+    }
+  },
+  "reason": "contract pass condition is the K-only leg: recovered digest equals committed digest using only K; run-id leg scored pass separately in the evidence",
+  "score": "pass"
+}

@@ -89,3 +89,36 @@ runs/2026-11-17-tiny-tracker-ignores-args-1/:
 | A3 | tiny-tracker (idempotency-key-ignores-args) | unproven | The read by K and a same-key replay with the caller's own arguments both returned T-1 (replayed: true, count 1 before and after; on this build the replay answer comes from the key-only cache); no digest is carried, so digest equality cannot be shown. Raw: runs/2026-11-17-tiny-tracker-ignores-args-1/a3_summary.json, runs/2026-11-17-tiny-tracker-ignores-args-1/a3_konly_replay_create_ticket.json | 2026-11-17 |
 | A4 | tiny-tracker (idempotency-key-ignores-args) | pass | Scored by the driver from the classes success (A1 retry, replay of T-1) and success (A2 retry). Recorded for joint review, not resolved: the A2 retry's success names T-2, a committed record of (K, A), not of the (K, A') it was asked for. Raw: runs/2026-11-17-tiny-tracker-ignores-args-1/summary.json, runs/2026-11-17-tiny-tracker-ignores-args-1/a2_retry_mismatched.json | 2026-11-17 |
 | A5 | tiny-tracker (idempotency-key-ignores-args) | unproven | Not run: the build was stopped after A1 to A4, and tiny-tracker keeps its record in memory. A5 runs on the correct build only. | 2026-11-17 |
+
+Run of 2026-11-17 (MWS-RETRY-2 reciprocal run): Zambo production
+(https://zambo.dev/mcp), target tool journal_log, raw outputs in
+runs/2026-11-17-mws-retry-2-zambo-1/ (summary.json is the scored
+record for A1 to A5; MWS-SCORECARD.md scores the MWS-RETRY-2 steps
+from the same raw outputs). This is the reciprocal run offered on
+MCP issue 3394 (zambodotdev comment 6934532293, accepted by
+rafe-walker comment 6935542605): the MWS-RETRY-2 test method run
+against Zambo, with the contract harness run beside it on the same
+operations. The operation key K is carried as the journal_log job_id
+and inputs.operation marker, scoped by the run-scoped session id;
+that binding was introduced by the production recovery fix published
+earlier the same day (runs/2026-11-17-zambo-fix-verify/), after the
+write-tool manifest posted on the thread (comment 6942229307) had
+recorded that no tool on the surface accepted a caller-supplied key.
+The MWS verdicts, each from the step's own record in
+MWS-SCORECARD.md: black-box steps (a), (b) and (c) held (one shared
+record); the proxy-assisted step held, run in the contract's
+client-side-drop form and recorded as such; step (d), simultaneous
+repeat, not observed (10 pairs stated, all overlapped, no pair
+applied the write more than once); step (e) and its crash form not
+tested (the declaration gives no means to stop and start the hosted
+server). The MWS scope is journal_log only; the other write tools
+still accept no caller key, so the requirement does not apply to
+them and they were not tested.
+
+| Assertion | System | Outcome | Evidence | Date |
+|---|---|---|---|---|
+| A1 | Zambo | pass | External effect count exactly 1: attempt 1 (response dropped) produced public receipt 2e9ebf1f-5743-48de-a34b-5b3584c4c102 and the identical retry answered as a replay of that same receipt (idempotent_replay: true), counted from the job's workflow snapshot and attributed through its public record. Raw: runs/2026-11-17-mws-retry-2-zambo-1/count_a1_final.json, runs/2026-11-17-mws-retry-2-zambo-1/a1_retry_identical.json | 2026-11-17 |
+| A2 | Zambo | pass | Attempt 1 committed (effect count 1). The mismatched retry (one parameter changed: action) was refused as a binding mismatch: tool_error:idempotency_conflict, no new effect, the count stayed 1. Raw: runs/2026-11-17-mws-retry-2-zambo-1/a2_retry_mismatched.json, runs/2026-11-17-mws-retry-2-zambo-1/count_a2_final.json | 2026-11-17 |
+| A3 | Zambo | pass | K-only leg passed: recovery holding only K (lr-op-d99166563b-a1) returned the original committed outcome, and the recovered digest equals the committed digest sha256:b57197d5333af492c73260784de351c587545b6837ddab98500386714d931b87. Run-id leg also passed: holding receipt id 2e9ebf1f-5743-48de-a34b-5b3584c4c102, resolution returned the unaltered record and recomputation matched. Raw: runs/2026-11-17-mws-retry-2-zambo-1/a3_summary.json, runs/2026-11-17-mws-retry-2-zambo-1/a3_runid_leg_receipt.json, runs/2026-11-17-mws-retry-2-zambo-1/a3_konly_run_lookup.json | 2026-11-17 |
+| A4 | Zambo | pass | Recorded retry response classes: A1 retry success, a replay naming the committed record (receipt 2e9ebf1f-5743-48de-a34b-5b3584c4c102), not a generic success with no record; A2 retry tool_error:idempotency_conflict, an explicit non-success state naming the situation. Raw: runs/2026-11-17-mws-retry-2-zambo-1/summary.json | 2026-11-17 |
+| A5 | Zambo | unproven | The 24 hour delayed leg cannot complete on the planting day. The A1 operation is planted with its commit timestamp recorded in runs/2026-11-17-mws-retry-2-zambo-1/a5_plant.json (due 2026-11-18T20:58:24Z); the delayed leg runs later with: python3 fixtures/harness/lost_response.py --delayed-leg runs/2026-11-17-mws-retry-2-zambo-1/a5_plant.json | 2026-11-17 |

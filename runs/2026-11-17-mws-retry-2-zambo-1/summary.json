@@ -1,0 +1,150 @@
+{
+  "adapter": "zambo",
+  "assertions": {
+    "A1": {
+      "K": "lr-op-d99166563b-a1",
+      "count_after_attempt1": 1,
+      "execution_receipt_ids": [
+        "2e9ebf1f-5743-48de-a34b-5b3584c4c102"
+      ],
+      "final_external_effect_count": 1,
+      "reason": "external effect count for the logical operation is exactly 1",
+      "retry_response_class": "success",
+      "score": "pass",
+      "session_id": "lr-d99166563b-a1"
+    },
+    "A2": {
+      "K": "lr-op-d99166563b-a2",
+      "count_after_attempt1": 1,
+      "execution_receipt_ids": [
+        "29c6eaa1-b173-4dd5-8219-bac0608eca7f"
+      ],
+      "final_external_effect_count": 1,
+      "mismatched_field": "action",
+      "reason": "mismatched retry produced no new effect and was explicitly refused",
+      "retry_response_class": "tool_error:idempotency_conflict",
+      "score": "pass",
+      "session_id": "lr-d99166563b-a2"
+    },
+    "A3": {
+      "committed_digest": "sha256:b57197d5333af492c73260784de351c587545b6837ddab98500386714d931b87",
+      "legs": {
+        "k_only": {
+          "K": "lr-op-d99166563b-a1",
+          "attempts": [
+            {
+              "http_status": 200,
+              "page_http_status": 200,
+              "page_title_not_found": true,
+              "path": "GET /api/v2/receipt/<K>/verify and GET /run/<K>",
+              "response_class": "found"
+            },
+            {
+              "path": "tools/call continuity_get_recent with K as the only identifier",
+              "receipt_ids_returned": [
+                "415fbe5f-e216-4d89-b8f1-79d64ec7bce2",
+                "2e9ebf1f-5743-48de-a34b-5b3584c4c102",
+                "example"
+              ],
+              "response_class": "success"
+            }
+          ],
+          "reason": "recovered digest equals committed digest using only K",
+          "score": "pass"
+        },
+        "run_id": {
+          "digests_served": {
+            "input_hash": "sha256:5dd57fc7f38955c23fa83ae2652308adb944f19519fbf8c2f39b53208243cb4e",
+            "output_hash": "sha256:b57197d5333af492c73260784de351c587545b6837ddab98500386714d931b87"
+          },
+          "http_status": 200,
+          "note": "Section 9 resolution returned the unaltered record from the public JSON record; Section 6 recomputation is the harness's own SHA-256 over the decoded canonical bytes compared with the served output_hash, recorded in the recomputation block.",
+          "page_http_status": 200,
+          "receipt_id": "2e9ebf1f-5743-48de-a34b-5b3584c4c102",
+          "recomputation": {
+            "checks_served": {
+              "canonical_payload_matches": {
+                "detail": "The stored output and known call context reconstruct the exact canonical bytes.",
+                "label": "Canonical payload reconstruction",
+                "passed": true,
+                "status": "pass"
+              },
+              "chain": {
+                "detail": "This endpoint does not verify an append-only receipt chain.",
+                "status": "not_checked"
+              },
+              "commitment_matches": {
+                "computed_hash": "sha256:b57197d5333af492c73260784de351c587545b6837ddab98500386714d931b87",
+                "detail": "SHA-256 of the exact decoded canonical bytes matches output_hash.",
+                "expected_hash": "sha256:b57197d5333af492c73260784de351c587545b6837ddab98500386714d931b87",
+                "passed": true,
+                "status": "pass"
+              },
+              "issuer_authentication": {
+                "detail": "A zambo.dev receipt URL does not authenticate the issuer; no pinned signature or trusted issuer key was checked.",
+                "label": "Issuer authentication",
+                "passed": false,
+                "status": "not_checked"
+              },
+              "metadata_binding": {
+                "detail": "metadata_hash matches the canonical metadata block.",
+                "label": "AER-1 metadata hash",
+                "passed": true,
+                "status": "pass"
+              },
+              "provenance_binding": {
+                "detail": "The metadata claim is consistent with the verified receipt bytes; issuer is not authenticated.",
+                "label": "Provenance claim binding",
+                "passed": true,
+                "status": "pass"
+              },
+              "schema": {
+                "detail": "Schema conformance is left to the client using the linked hosted-profile schema.",
+                "status": "not_checked"
+              },
+              "signature": {
+                "detail": "No Ed25519 signature or pinned signing key is supplied.",
+                "status": "not_checked"
+              }
+            },
+            "computed_sha256_of_decoded_canonical_bytes": "b57197d5333af492c73260784de351c587545b6837ddab98500386714d931b87",
+            "output_hash_served": "b57197d5333af492c73260784de351c587545b6837ddab98500386714d931b87",
+            "status": "matched",
+            "verification_status_served": "verified"
+          },
+          "score": "pass"
+        }
+      },
+      "reason": "contract pass condition is the K-only leg: recovered digest equals committed digest using only K; run-id leg scored pass separately in the evidence",
+      "score": "pass"
+    },
+    "A4": {
+      "reason": "every recorded retry resolved to the original outcome, a digest-verifiable record of it, or an explicit non-success state",
+      "response_classes": {
+        "A1_retry": "success",
+        "A2_retry": "tool_error:idempotency_conflict"
+      },
+      "score": "pass",
+      "verdicts": {
+        "A1_retry": "success corresponding to a committed record (see the A1/A2 counts); not a generic success with no record",
+        "A2_retry": "explicit non-success state"
+      }
+    },
+    "A5": {
+      "due_at": "2026-11-18T20:58:24.102801Z",
+      "plant_file": "a5_plant.json",
+      "reason": "the 24 hour delayed leg cannot complete on the planting day; attempt 1 is planted with its commit timestamp recorded and the delayed leg is runnable later by run id and by K",
+      "score": "unproven"
+    }
+  },
+  "endpoint": "https://zambo.dev/mcp",
+  "finished_at": "2026-11-17T20:58:24.103082Z",
+  "initialize": {
+    "caller_handle_issued": true,
+    "http_status": 200
+  },
+  "run_tag": "d99166563b",
+  "started_at": "2026-11-17T20:57:17.152021Z",
+  "system_name": "Zambo production",
+  "tool": "journal_log"
+}

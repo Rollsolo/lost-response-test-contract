@@ -1,0 +1,43 @@
+{
+  "at": "2026-11-17T21:00:50.469049Z",
+  "attributed_children": [
+    {
+      "counted_as_target_execution": false,
+      "output_hash": "sha256:d851a1e77117326808747ce424ef539a9cc3ae60e2237b0738a5f7a84f4272b7",
+      "receipt_id": "eeed9bc5-9b81-4651-ba1e-ea1f4f8a5051",
+      "resolves_in_public_record": true,
+      "step_status": "payment_required",
+      "tools": [
+        "journal_log"
+      ]
+    },
+    {
+      "counted_as_target_execution": false,
+      "output_hash": "sha256:d851a1e77117326808747ce424ef539a9cc3ae60e2237b0738a5f7a84f4272b7",
+      "receipt_id": "e3970149-c8c7-40af-a905-43bd5866e96a",
+      "resolves_in_public_record": true,
+      "step_status": "payment_required",
+      "tools": [
+        "journal_log"
+      ]
+    }
+  ],
+  "execution_record_ids": [],
+  "external_effect_count": 0,
+  "label": "mwsd6_final",
+  "method": "workflow_close snapshot children, each attributed through its public /api/v2/receipt/<id>/verify record",
+  "session_id": "lr-ef631377b2-mwsd6",
+  "snapshot_children": [
+    {
+      "output_hash_in_snapshot": "d851a1e77117326808747ce424ef539a9cc3ae60e2237b0738a5f7a84f4272b7",
+      "receipt_id": "eeed9bc5-9b81-4651-ba1e-ea1f4f8a5051"
+    },
+    {
+      "output_hash_in_snapshot": "d851a1e77117326808747ce424ef539a9cc3ae60e2237b0738a5f7a84f4272b7",
+      "receipt_id": "e3970149-c8c7-40af-a905-43bd5866e96a"
+    }
+  ],
+  "snapshot_count_field": 2,
+  "snapshot_response_class": "success",
+  "target_tool_execution_receipt_ids": []
+}
