@@ -7,8 +7,9 @@ runs; system under test npm @mcp-write-safety/tiny-tracker 0.1.0, run
 locally with `tiny-tracker all`, bound to 127.0.0.1 only; Python 3.11,
 requests 2.34.2.
 
-Every file in this directory except this note was written by the driver
-(lost_response.py) and the adapter, unedited.
+Every file in this directory except this note and a5-supplementary.py was
+written by the driver (lost_response.py) and the adapter, unedited.
+a5-supplementary.py is included for transparency; its output, when run at +24 h, is not driver output and not a score.
 
 Build: correct (no defect). Start command:
 `TRACKER_BACKEND_TOKEN=<fresh local test token> npx -y -p @mcp-write-safety/tiny-tracker@0.1.0 tiny-tracker all --port 47310 --backend-port 47311`
@@ -23,8 +24,9 @@ A1 pass, A2 pass, A3 unproven, A4 pass, A5 unproven (pending).
 - A2: K lr-op-409891e807-a2, priority 3 changed to 4 on the retry. Count
   stayed 1 (T-2). The retry was refused: isError, code
   `idempotency_key_reused`, outcome `not_applied`.
-- A3: both K-only paths returned T-1 (the replay with `replayed: true`,
-  count 1 before and after). Neither carries a digest.
+- A3: the read by K and the same-key replay returned T-1 (the replay
+  with `replayed: true`, count 1 before and after). Neither carries a
+  digest.
 - A4: retry classes `success` (a replay of the committed T-1) and
   `tool_error:idempotency_key_reused`.
 
@@ -75,9 +77,12 @@ A5 cannot be run on this plant.
   "record not found". The run-id leg's `note` text is the driver's fixed
   text written for Zambo (AER-1 Sections 6 and 9) and does not describe
   this system.
-- K-only recovery paths (a3_konly_*.json): list_tickets by title prefix
-  K (works only because the caller put K in the title; tiny-tracker has
-  no lookup keyed by the idempotency key), then the same-key replay with
-  the caller's own arguments, with the counter read before and after.
+- Recovery paths (files named a3_konly_*.json by the adapter):
+  list_tickets by title prefix K (works only because the caller put K in
+  the title; tiny-tracker has no lookup keyed by the idempotency key),
+  then the same-key replay with the caller's own original arguments (K
+  plus A; a write call), with the counter read before and after. No
+  direct lookup by K (GET /tickets/<K>) was tried; it is a 404 by design
+  and would make the driver score A3 fail.
 - tiny-tracker keeps its data and its idempotency-key record in memory:
   a restart loses both.

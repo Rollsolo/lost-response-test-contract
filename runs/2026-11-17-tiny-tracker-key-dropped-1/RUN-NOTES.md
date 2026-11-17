@@ -60,9 +60,12 @@ the planted operation. A5 is run on the correct build only.
   "record not found". The run-id leg's `note` text is the driver's fixed
   text written for Zambo (AER-1 Sections 6 and 9) and does not describe
   this system.
-- K-only recovery paths (a3_konly_*.json): list_tickets by title prefix
-  K (works only because the caller put K in the title; tiny-tracker has
-  no lookup keyed by the idempotency key), then the same-key replay with
-  the caller's own arguments, with the counter read before and after.
+- Recovery paths (files named a3_konly_*.json by the adapter):
+  list_tickets by title prefix K (works only because the caller put K in
+  the title; tiny-tracker has no lookup keyed by the idempotency key),
+  then the same-key replay with the caller's own original arguments (K
+  plus A; a write call), with the counter read before and after. No
+  direct lookup by K (GET /tickets/<K>) was tried; it is a 404 by design
+  and would make the driver score A3 fail.
 - tiny-tracker keeps its data and its idempotency-key record in memory:
   a restart loses both.

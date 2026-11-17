@@ -26,8 +26,8 @@ A1 pass, A2 fail, A3 unproven, A4 pass, A5 unproven (not run).
   (T-2, priority 3). The retry was not refused: it answered success with
   `replayed: true`, ticket T-2, and the first call's text "Created ticket
   T-2 in project inbox (version 1)". No ticket with priority 4 exists.
-- A3: both K-only paths returned T-1 (replay `replayed: true`, count 1
-  before and after); no digest.
+- A3: the read by K and the same-key replay returned T-1 (replay
+  `replayed: true`, count 1 before and after); no digest.
 - A4: retry classes `success` and `success`. Scoring note for joint
   review: the A2 retry's success points at T-2, a committed record of
   (K, A), not of the (K, A') the retry asked for. The driver records it
@@ -65,9 +65,12 @@ memory; a restart loses it). A5 is run on the correct build only.
   "record not found". The run-id leg's `note` text is the driver's fixed
   text written for Zambo (AER-1 Sections 6 and 9) and does not describe
   this system.
-- K-only recovery paths (a3_konly_*.json): list_tickets by title prefix
-  K (works only because the caller put K in the title; tiny-tracker has
-  no lookup keyed by the idempotency key), then the same-key replay with
-  the caller's own arguments, with the counter read before and after.
+- Recovery paths (files named a3_konly_*.json by the adapter):
+  list_tickets by title prefix K (works only because the caller put K in
+  the title; tiny-tracker has no lookup keyed by the idempotency key),
+  then the same-key replay with the caller's own original arguments (K
+  plus A; a write call), with the counter read before and after. No
+  direct lookup by K (GET /tickets/<K>) was tried; it is a 404 by design
+  and would make the driver score A3 fail.
 - tiny-tracker keeps its data and its idempotency-key record in memory:
   a restart loses both.
