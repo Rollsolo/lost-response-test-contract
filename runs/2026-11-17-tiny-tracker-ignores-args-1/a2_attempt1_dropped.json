@@ -1,0 +1,26 @@
+{
+  "K": "lr-op-78ed264dc1-a2",
+  "arguments_sent": {
+    "description": "lost-response harness, session lr-78ed264dc1-a2",
+    "idempotency_key": "lr-op-78ed264dc1-a2",
+    "priority": 3,
+    "title": "lr-op-78ed264dc1-a2 lost-response probe"
+  },
+  "at": "2026-11-17T02:13:28.819684Z",
+  "call": {
+    "dropped": true,
+    "note": "Response read off the wire in full (the call had finished and committed on the server), then discarded client-side by the fault injector. No result, ticket id, or digest from this attempt is available to the caller.",
+    "transport": {
+      "content_type": "text/event-stream",
+      "elapsed_ms": 2,
+      "http_status": 200,
+      "jsonrpc_id": "502fb086f06a4f05a39317eddd89a356",
+      "mcp_session_id_header": null,
+      "received_at": "2026-11-17T02:13:28.819654Z",
+      "response_bytes": 936,
+      "sent_at": "2026-11-17T02:13:28.817468Z"
+    }
+  },
+  "label": "a2_attempt1_dropped",
+  "session_id": "lr-78ed264dc1-a2"
+}

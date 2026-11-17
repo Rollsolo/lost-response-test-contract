@@ -1,0 +1,52 @@
+{
+  "committed_digest": null,
+  "legs": {
+    "k_only": {
+      "K": "lr-op-626d87b0f2-a1",
+      "attempts": [
+        {
+          "depends_on_caller_convention": true,
+          "digest_returned": null,
+          "note": "finds tickets only because the caller put K at the start of the title; tiny-tracker has no lookup keyed by the idempotency key, and the listing carries no digest",
+          "path": "tools/call list_tickets {title_prefix: K}",
+          "record_ids_returned": [
+            "T-1",
+            "T-2"
+          ],
+          "response_class": "found_multiple:2"
+        },
+        {
+          "digest_returned": null,
+          "effect_count_after": 3,
+          "effect_count_before": 2,
+          "new_effect": true,
+          "note": "a replay answer carries the ticket id and version of the keyed write and replayed: true; it carries no digest, so digest equality with a committed result digest cannot be shown",
+          "path": "tools/call create_ticket with the same K and the same arguments (the caller's own, not response-derived): the replay path",
+          "record_ids_returned": [
+            "T-5"
+          ],
+          "replayed_flag": false,
+          "response_class": "executed_again"
+        }
+      ],
+      "reason": "no committed digest exists, so K-only recovery cannot be scored",
+      "score": "unproven"
+    },
+    "run_id": {
+      "digests_served": {},
+      "http_status": 200,
+      "note": "Section 9 resolution returned the unaltered record from the public JSON record; Section 6 recomputation is the harness's own SHA-256 over the decoded canonical bytes compared with the served output_hash, recorded in the recomputation block.",
+      "page_http_status": null,
+      "receipt_id": "T-1",
+      "recomputation": {
+        "informational_note": "the harness's own SHA-256 of the bytes served now; not a digest committed by the system at commit time",
+        "informational_sha256_of_served_body": "7c0dad3aa958cd15871c8b8f2fddacb795b844cae1e1cd4b2a01d6220abaeb84",
+        "reason": "the record carries no committed result digest to recompute against; tiny-tracker issues no receipts",
+        "status": "not_computable"
+      },
+      "score": "fail"
+    }
+  },
+  "reason": "contract pass condition is the K-only leg: no committed digest exists, so K-only recovery cannot be scored; run-id leg scored fail separately in the evidence",
+  "score": "unproven"
+}

@@ -1,0 +1,58 @@
+{
+  "K": "lr-op-409891e807-a2",
+  "arguments_sent": {
+    "description": "lost-response harness, session lr-409891e807-a2",
+    "idempotency_key": "lr-op-409891e807-a2",
+    "priority": 4,
+    "title": "lr-op-409891e807-a2 lost-response probe"
+  },
+  "at": "2026-11-17T02:13:28.559360Z",
+  "call": {
+    "body": {
+      "id": "5442476bf60a49fc9ba469115676412d",
+      "jsonrpc": "2.0",
+      "result": {
+        "content": [
+          {
+            "text": "This idempotency_key was already used with different arguments; nothing was written. If you are retrying the same create, send exactly the same arguments as the first call; list your tickets before using a new key, or you may create a duplicate.",
+            "type": "text"
+          },
+          {
+            "text": "{\"written\":false,\"error\":\"idempotency_key_reused\",\"mws\":{\"shape\":\"write-result/0.1\",\"outcome\":\"not_applied\",\"operation\":\"create\",\"repeat\":\"no\",\"code\":\"idempotency_key_reused\",\"argument\":\"/idempotency_key\"}}",
+            "type": "text"
+          }
+        ],
+        "isError": true,
+        "structuredContent": {
+          "error": "idempotency_key_reused",
+          "mws": {
+            "argument": "/idempotency_key",
+            "code": "idempotency_key_reused",
+            "operation": "create",
+            "outcome": "not_applied",
+            "repeat": "no",
+            "shape": "write-result/0.1"
+          },
+          "written": false
+        }
+      }
+    },
+    "dropped": false,
+    "mws_outcome": "not_applied",
+    "receipt_ids": [],
+    "replayed": null,
+    "response_class": "tool_error:idempotency_key_reused",
+    "transport": {
+      "content_type": "text/event-stream",
+      "elapsed_ms": 2,
+      "http_status": 200,
+      "jsonrpc_id": "5442476bf60a49fc9ba469115676412d",
+      "mcp_session_id_header": null,
+      "received_at": "2026-11-17T02:13:28.559340Z",
+      "response_bytes": 880,
+      "sent_at": "2026-11-17T02:13:28.557613Z"
+    }
+  },
+  "label": "a2_retry_mismatched",
+  "session_id": "lr-409891e807-a2"
+}

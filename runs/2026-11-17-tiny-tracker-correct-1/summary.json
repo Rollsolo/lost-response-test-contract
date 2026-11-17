@@ -1,0 +1,128 @@
+{
+  "adapter": "tiny_tracker",
+  "assertions": {
+    "A1": {
+      "K": "lr-op-409891e807-a1",
+      "count_after_attempt1": 1,
+      "execution_receipt_ids": [
+        "T-1"
+      ],
+      "final_external_effect_count": 1,
+      "reason": "external effect count for the logical operation is exactly 1",
+      "retry_response_class": "success",
+      "score": "pass",
+      "session_id": "lr-409891e807-a1"
+    },
+    "A2": {
+      "K": "lr-op-409891e807-a2",
+      "count_after_attempt1": 1,
+      "execution_receipt_ids": [
+        "T-2"
+      ],
+      "final_external_effect_count": 1,
+      "mismatched_field": "priority",
+      "reason": "mismatched retry produced no new effect and was explicitly refused",
+      "retry_response_class": "tool_error:idempotency_key_reused",
+      "score": "pass",
+      "session_id": "lr-409891e807-a2"
+    },
+    "A3": {
+      "committed_digest": null,
+      "legs": {
+        "k_only": {
+          "K": "lr-op-409891e807-a1",
+          "attempts": [
+            {
+              "depends_on_caller_convention": true,
+              "digest_returned": null,
+              "note": "finds tickets only because the caller put K at the start of the title; tiny-tracker has no lookup keyed by the idempotency key, and the listing carries no digest",
+              "path": "tools/call list_tickets {title_prefix: K}",
+              "record_ids_returned": [
+                "T-1"
+              ],
+              "response_class": "found"
+            },
+            {
+              "digest_returned": null,
+              "effect_count_after": 1,
+              "effect_count_before": 1,
+              "new_effect": false,
+              "note": "a replay answer carries the ticket id and version of the keyed write and replayed: true; it carries no digest, so digest equality with a committed result digest cannot be shown",
+              "path": "tools/call create_ticket with the same K and the same arguments (the caller's own, not response-derived): the replay path",
+              "record_ids_returned": [
+                "T-1"
+              ],
+              "replayed_flag": true,
+              "response_class": "found"
+            }
+          ],
+          "reason": "no committed digest exists, so K-only recovery cannot be scored",
+          "score": "unproven"
+        },
+        "run_id": {
+          "digests_served": {},
+          "http_status": 200,
+          "note": "Section 9 resolution returned the unaltered record from the public JSON record; Section 6 recomputation is the harness's own SHA-256 over the decoded canonical bytes compared with the served output_hash, recorded in the recomputation block.",
+          "page_http_status": null,
+          "receipt_id": "T-1",
+          "recomputation": {
+            "informational_note": "the harness's own SHA-256 of the bytes served now; not a digest committed by the system at commit time",
+            "informational_sha256_of_served_body": "0570ab008473e8c2cd55f87178150a0621d25b594672a586247d9e4707d10201",
+            "reason": "the record carries no committed result digest to recompute against; tiny-tracker issues no receipts",
+            "status": "not_computable"
+          },
+          "score": "fail"
+        }
+      },
+      "reason": "contract pass condition is the K-only leg: no committed digest exists, so K-only recovery cannot be scored; run-id leg scored fail separately in the evidence",
+      "score": "unproven"
+    },
+    "A4": {
+      "reason": "every recorded retry resolved to the original outcome, a digest-verifiable record of it, or an explicit non-success state",
+      "response_classes": {
+        "A1_retry": "success",
+        "A2_retry": "tool_error:idempotency_key_reused"
+      },
+      "score": "pass",
+      "verdicts": {
+        "A1_retry": "success corresponding to a committed record (see the A1/A2 counts); not a generic success with no record",
+        "A2_retry": "explicit non-success state"
+      }
+    },
+    "A5": {
+      "due_at": "2026-11-18T02:13:28.566512Z",
+      "plant_file": "a5_plant.json",
+      "reason": "the 24 hour delayed leg cannot complete on the planting day; attempt 1 is planted with its commit timestamp recorded and the delayed leg is runnable later by run id and by K",
+      "score": "unproven"
+    }
+  },
+  "endpoint": "http://127.0.0.1:47310/mcp",
+  "finished_at": "2026-11-17T02:13:28.566598Z",
+  "initialize": {
+    "build": {
+      "defects": [],
+      "package": "@mcp-write-safety/tiny-tracker@0.1.0",
+      "start_command": "TRACKER_BACKEND_TOKEN=<fresh local test token> npx -y -p @mcp-write-safety/tiny-tracker@0.1.0 tiny-tracker all --port 47310 --backend-port 47311"
+    },
+    "http_status": 200,
+    "mcp_session_id_issued": false,
+    "protocol_version": "2025-11-25",
+    "server_info": {
+      "name": "tiny-tracker",
+      "version": "0.1.0"
+    },
+    "server_instructions": "A small issue tracker. Read a ticket's version with get_ticket and pass it as expected_version when you write.",
+    "target_tool_accepts_idempotency_key": true,
+    "target_tool_annotations": {
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false,
+      "readOnlyHint": false
+    },
+    "target_tool_listed": true
+  },
+  "run_tag": "409891e807",
+  "started_at": "2026-11-17T02:13:28.514342Z",
+  "system_name": "tiny-tracker 0.1.0, correct build (local, 127.0.0.1)",
+  "tool": "create_ticket"
+}

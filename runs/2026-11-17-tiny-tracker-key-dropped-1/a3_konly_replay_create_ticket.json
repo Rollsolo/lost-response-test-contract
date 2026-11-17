@@ -1,0 +1,181 @@
+{
+  "arguments_sent": {
+    "description": "lost-response harness, session lr-626d87b0f2-a1",
+    "idempotency_key": "lr-op-626d87b0f2-a1",
+    "priority": 3,
+    "title": "lr-op-626d87b0f2-a1 lost-response probe"
+  },
+  "call": {
+    "body": {
+      "id": "47081191aa9944f29870729040161862",
+      "jsonrpc": "2.0",
+      "result": {
+        "content": [
+          {
+            "text": "Created ticket T-5 in project inbox (version 1).",
+            "type": "text"
+          }
+        ],
+        "structuredContent": {
+          "changed": [
+            "created"
+          ],
+          "id": "T-5",
+          "project": "inbox",
+          "replayed": false,
+          "version": 1
+        }
+      }
+    },
+    "dropped": false,
+    "mws_outcome": null,
+    "receipt_ids": [
+      "T-5"
+    ],
+    "replayed": false,
+    "response_class": "success",
+    "transport": {
+      "content_type": "text/event-stream",
+      "elapsed_ms": 2,
+      "http_status": 200,
+      "jsonrpc_id": "47081191aa9944f29870729040161862",
+      "mcp_session_id_header": null,
+      "received_at": "2026-11-17T02:13:28.696610Z",
+      "response_bytes": 279,
+      "sent_at": "2026-11-17T02:13:28.694995Z"
+    }
+  },
+  "count_after": {
+    "execution_record_ids": [
+      "T-1",
+      "T-2",
+      "T-5"
+    ],
+    "external_effect_count": 3,
+    "listing": {
+      "body_json": {
+        "tickets": [
+          {
+            "assignee": null,
+            "comments": [],
+            "created_at": "2026-11-17T02:13:28.677Z",
+            "description": "lost-response harness, session lr-626d87b0f2-a1",
+            "details": {
+              "component": null,
+              "severity": null
+            },
+            "id": "T-1",
+            "labels": [],
+            "priority": 3,
+            "project": "inbox",
+            "status": "open",
+            "title": "lr-op-626d87b0f2-a1 lost-response probe",
+            "updated_at": "2026-11-17T02:13:28.677Z",
+            "version": 1
+          },
+          {
+            "assignee": null,
+            "comments": [],
+            "created_at": "2026-11-17T02:13:28.683Z",
+            "description": "lost-response harness, session lr-626d87b0f2-a1",
+            "details": {
+              "component": null,
+              "severity": null
+            },
+            "id": "T-2",
+            "labels": [],
+            "priority": 3,
+            "project": "inbox",
+            "status": "open",
+            "title": "lr-op-626d87b0f2-a1 lost-response probe",
+            "updated_at": "2026-11-17T02:13:28.683Z",
+            "version": 1
+          },
+          {
+            "assignee": null,
+            "comments": [],
+            "created_at": "2026-11-17T02:13:28.696Z",
+            "description": "lost-response harness, session lr-626d87b0f2-a1",
+            "details": {
+              "component": null,
+              "severity": null
+            },
+            "id": "T-5",
+            "labels": [],
+            "priority": 3,
+            "project": "inbox",
+            "status": "open",
+            "title": "lr-op-626d87b0f2-a1 lost-response probe",
+            "updated_at": "2026-11-17T02:13:28.696Z",
+            "version": 1
+          }
+        ]
+      },
+      "body_text": "{\"tickets\":[{\"id\":\"T-1\",\"project\":\"inbox\",\"title\":\"lr-op-626d87b0f2-a1 lost-response probe\",\"status\":\"open\",\"assignee\":null,\"priority\":3,\"description\":\"lost-response harness, session lr-626d87b0f2-a1\",\"details\":{\"component\":null,\"severity\":null},\"labels\":[],\"comments\":[],\"version\":1,\"created_at\":\"2026-11-17T02:13:28.677Z\",\"updated_at\":\"2026-11-17T02:13:28.677Z\"},{\"id\":\"T-2\",\"project\":\"inbox\",\"title\":\"lr-op-626d87b0f2-a1 lost-response probe\",\"status\":\"open\",\"assignee\":null,\"priority\":3,\"description\":\"lost-response harness, session lr-626d87b0f2-a1\",\"details\":{\"component\":null,\"severity\":null},\"labels\":[],\"comments\":[],\"version\":1,\"created_at\":\"2026-11-17T02:13:28.683Z\",\"updated_at\":\"2026-11-17T02:13:28.683Z\"},{\"id\":\"T-5\",\"project\":\"inbox\",\"title\":\"lr-op-626d87b0f2-a1 lost-response probe\",\"status\":\"open\",\"assignee\":null,\"priority\":3,\"description\":\"lost-response harness, session lr-626d87b0f2-a1\",\"details\":{\"component\":null,\"severity\":null},\"labels\":[],\"comments\":[],\"version\":1,\"created_at\":\"2026-11-17T02:13:28.696Z\",\"updated_at\":\"2026-11-17T02:13:28.696Z\"}]}",
+      "content_type": "application/json",
+      "elapsed_ms": 1,
+      "etag": null,
+      "fetched_at": "2026-11-17T02:13:28.697261Z",
+      "http_status": 200,
+      "method": "GET",
+      "url": "http://127.0.0.1:47321/tickets?title_prefix=lr-op-626d87b0f2-a1"
+    }
+  },
+  "count_before": {
+    "execution_record_ids": [
+      "T-1",
+      "T-2"
+    ],
+    "external_effect_count": 2,
+    "listing": {
+      "body_json": {
+        "tickets": [
+          {
+            "assignee": null,
+            "comments": [],
+            "created_at": "2026-11-17T02:13:28.677Z",
+            "description": "lost-response harness, session lr-626d87b0f2-a1",
+            "details": {
+              "component": null,
+              "severity": null
+            },
+            "id": "T-1",
+            "labels": [],
+            "priority": 3,
+            "project": "inbox",
+            "status": "open",
+            "title": "lr-op-626d87b0f2-a1 lost-response probe",
+            "updated_at": "2026-11-17T02:13:28.677Z",
+            "version": 1
+          },
+          {
+            "assignee": null,
+            "comments": [],
+            "created_at": "2026-11-17T02:13:28.683Z",
+            "description": "lost-response harness, session lr-626d87b0f2-a1",
+            "details": {
+              "component": null,
+              "severity": null
+            },
+            "id": "T-2",
+            "labels": [],
+            "priority": 3,
+            "project": "inbox",
+            "status": "open",
+            "title": "lr-op-626d87b0f2-a1 lost-response probe",
+            "updated_at": "2026-11-17T02:13:28.683Z",
+            "version": 1
+          }
+        ]
+      },
+      "body_text": "{\"tickets\":[{\"id\":\"T-1\",\"project\":\"inbox\",\"title\":\"lr-op-626d87b0f2-a1 lost-response probe\",\"status\":\"open\",\"assignee\":null,\"priority\":3,\"description\":\"lost-response harness, session lr-626d87b0f2-a1\",\"details\":{\"component\":null,\"severity\":null},\"labels\":[],\"comments\":[],\"version\":1,\"created_at\":\"2026-11-17T02:13:28.677Z\",\"updated_at\":\"2026-11-17T02:13:28.677Z\"},{\"id\":\"T-2\",\"project\":\"inbox\",\"title\":\"lr-op-626d87b0f2-a1 lost-response probe\",\"status\":\"open\",\"assignee\":null,\"priority\":3,\"description\":\"lost-response harness, session lr-626d87b0f2-a1\",\"details\":{\"component\":null,\"severity\":null},\"labels\":[],\"comments\":[],\"version\":1,\"created_at\":\"2026-11-17T02:13:28.683Z\",\"updated_at\":\"2026-11-17T02:13:28.683Z\"}]}",
+      "content_type": "application/json",
+      "elapsed_ms": 1,
+      "etag": null,
+      "fetched_at": "2026-11-17T02:13:28.694970Z",
+      "http_status": 200,
+      "method": "GET",
+      "url": "http://127.0.0.1:47321/tickets?title_prefix=lr-op-626d87b0f2-a1"
+    }
+  }
+}
