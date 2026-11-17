@@ -47,9 +47,10 @@ Known before the delayed leg runs: the driver's delayed leg scores pass
 only when the record serves a digest equal to the committed digest and
 fetch_record(K) answers 200. tiny-tracker serves no digest and has no
 record addressable by K, so the delayed leg will not score pass whatever
-the process remembers. The K-only replay at +24 h (the adapter's
-recover_by_key) is the observation that shows whether the key is still
-recognized; it will be recorded beside the delayed leg's output. If the
+the process remembers. A same-key replay with the caller's own original
+arguments at +24 h (a5-supplementary.py; not driver output, not a score)
+is the observation that shows whether the key is still recognized; it will
+be recorded beside the delayed leg's output. If the
 process is restarted before then, the key record is gone (in memory), and
 A5 cannot be run on this plant.
 
