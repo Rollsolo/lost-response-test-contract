@@ -1,0 +1,84 @@
+{
+  "assertion": "A5",
+  "delayed_leg_run_at": "2026-11-17T16:17:07.665875Z",
+  "legs": {
+    "k_only_direct_lookup": {
+      "http_status": 404
+    },
+    "run_id": {
+      "committed_digest": "sha256:d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+      "digest_equal": true,
+      "digest_served": "sha256:d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+      "http_status": 200,
+      "recomputation": {
+        "checks_served": {
+          "canonical_payload_matches": {
+            "detail": "The stored output and known call context reconstruct the exact canonical bytes.",
+            "label": "Canonical payload reconstruction",
+            "passed": true,
+            "status": "pass"
+          },
+          "chain": {
+            "detail": "This endpoint does not verify an append-only receipt chain.",
+            "status": "not_checked"
+          },
+          "commitment_matches": {
+            "computed_hash": "sha256:d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+            "detail": "SHA-256 of the exact decoded canonical bytes matches output_hash.",
+            "expected_hash": "sha256:d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+            "passed": true,
+            "status": "pass"
+          },
+          "issuer_authentication": {
+            "detail": "A zambo.dev receipt URL does not authenticate the issuer; no pinned signature or trusted issuer key was checked.",
+            "label": "Issuer authentication",
+            "passed": false,
+            "status": "not_checked"
+          },
+          "metadata_binding": {
+            "detail": "metadata_hash matches the canonical metadata block.",
+            "label": "AER-1 metadata hash",
+            "passed": true,
+            "status": "pass"
+          },
+          "provenance_binding": {
+            "detail": "The metadata claim is consistent with the verified receipt bytes; issuer is not authenticated.",
+            "label": "Provenance claim binding",
+            "passed": true,
+            "status": "pass"
+          },
+          "schema": {
+            "detail": "Schema conformance is left to the client using the linked hosted-profile schema.",
+            "status": "not_checked"
+          },
+          "signature": {
+            "detail": "No Ed25519 signature or pinned signing key is supplied.",
+            "status": "not_checked"
+          }
+        },
+        "computed_sha256_of_decoded_canonical_bytes": "d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+        "output_hash_served": "d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+        "status": "matched",
+        "verification_status_served": "verified"
+      }
+    }
+  },
+  "plant": {
+    "K": "lr-op-498c01b299-a1",
+    "assertion": "A5",
+    "committed_digest": "sha256:d832cc994b22460549e19f3ee8282de128b23103462c76d078adcc8141113970",
+    "delay_hours": 24,
+    "due_at": "2026-11-17T15:49:33.708808Z",
+    "endpoint": "https://zambo.dev/mcp",
+    "execution_receipt_ids": [
+      "b49c66f5-5386-4bda-8bd6-2726bdfee7d1",
+      "2b8cefc9-72c0-415c-9525-71f6000679f9"
+    ],
+    "note": "Delayed leg: run this harness with --delayed-leg on this file at or after due_at. The delay is measured from the original commit time (planted_at approximates it within the run; the exact attempt 1 send time is in a1_attempt1_dropped.json).",
+    "planted_at": "2026-11-16T15:49:33.708788Z",
+    "rescore_note": "receipt ids and digest corrected by the rescore; planted_at and due_at unchanged",
+    "session_id": "lr-498c01b299-a1"
+  },
+  "reason": "scored from the delayed run-id digest equality and the K-only lookup, exactly as observed; see a5_delayed_result.json",
+  "score": "fail"
+}

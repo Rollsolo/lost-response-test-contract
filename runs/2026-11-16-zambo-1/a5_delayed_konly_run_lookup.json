@@ -1,0 +1,30 @@
+{
+  "api_url": "https://zambo.dev/api/v2/receipt/lr-op-498c01b299-a1/verify",
+  "body_text": "{\"error\":\"receipt_not_found\",\"message\":\"Receipt not found\",\"next\":\"https://zambo.dev/verify/\",\"hint\":\"Check the id; receipt ids are UUIDs from _meta[\\\"dev.zambo/receipt\\\"].id\"}",
+  "content_type": "application/json; charset=utf-8",
+  "digests": {},
+  "digests_found": {},
+  "elapsed_ms": 17430,
+  "fetched_at": "2026-11-17T16:18:51.113210Z",
+  "http_status": 404,
+  "page_http_status": 200,
+  "page_title_not_found": true,
+  "page_url": "https://zambo.dev/run/lr-op-498c01b299-a1",
+  "receipt_id": "lr-op-498c01b299-a1",
+  "recomputation": {
+    "reason": "record does not carry a receipt object",
+    "record_keys": [
+      "error",
+      "hint",
+      "message",
+      "next"
+    ],
+    "status": "not_computable"
+  },
+  "record_json": {
+    "error": "receipt_not_found",
+    "hint": "Check the id; receipt ids are UUIDs from _meta[\"dev.zambo/receipt\"].id",
+    "message": "Receipt not found",
+    "next": "https://zambo.dev/verify/"
+  }
+}

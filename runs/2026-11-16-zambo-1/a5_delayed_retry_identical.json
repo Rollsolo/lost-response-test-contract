@@ -1,0 +1,242 @@
+{
+  "K": "lr-op-498c01b299-a1",
+  "arguments_sent": {
+    "_session_id": "lr-498c01b299-a1",
+    "action": "lost_response_probe",
+    "executor_identity": "lost-response-harness",
+    "inputs": {
+      "operation": "lr-op-498c01b299-a1"
+    },
+    "job_id": "lr-op-498c01b299-a1"
+  },
+  "call": {
+    "body": {
+      "id": "bc1f8208be7042c7860be86ed859c25d",
+      "jsonrpc": "2.0",
+      "result": {
+        "_meta": {
+          "dev.zambo/receipt": {
+            "id": "9eec3d97-ec95-4dfd-a56a-2726e52ff9c3",
+            "output_hash": "sha256:7693d76136d4ea683d3e0e14cbbc18753428cf721499e14f30a80a4b91fc6a37",
+            "run_url": "https://zambo.dev/run/9eec3d97-ec95-4dfd-a56a-2726e52ff9c3"
+          }
+        },
+        "_receipt": {
+          "anchor": {
+            "envelope": {
+              "anchored_at": "2026-11-17T16:19:16.596Z",
+              "evidence_byte_length": null,
+              "evidence_sha256": null,
+              "evidence_url": null,
+              "output_sha256": "sha256:7693d76136d4ea683d3e0e14cbbc18753428cf721499e14f30a80a4b91fc6a37",
+              "receipt_uuid": "9eec3d97-ec95-4dfd-a56a-2726e52ff9c3",
+              "schema_version": "zambo-receipt-anchor/1"
+            },
+            "envelope_bytes": "{\"anchored_at\":\"2026-11-17T16:19:16.596Z\",\"evidence_byte_length\":null,\"evidence_sha256\":null,\"evidence_url\":null,\"output_sha256\":\"sha256:7693d76136d4ea683d3e0e14cbbc18753428cf721499e14f30a80a4b91fc6a37\",\"receipt_uuid\":\"9eec3d97-ec95-4dfd-a56a-2726e52ff9c3\",\"schema_version\":\"zambo-receipt-anchor/1\"}",
+            "event_id": "e0ccdd70b4cb3a70b5a70d763a8721aa9f2dc5f9d698274e89bc358091ef690e",
+            "pubkey": "e13475107d30c918ec664adf2ab1141024a22fb35190f82c9e933704fa49af41",
+            "relays": [
+              "wss://relay.primal.net"
+            ],
+            "schema_version": "zambo-receipt-anchor/1",
+            "status": "pending"
+          },
+          "audit": "https://zambo.dev/run/9eec3d97-ec95-4dfd-a56a-2726e52ff9c3",
+          "auth_scope": "public",
+          "bonus_calls_remaining": 0,
+          "caller": {
+            "id": "sha256:ac167689ad0191555beaa4c0bc30082e33a884c5ed5b6dba9c5732f40c419591",
+            "type": "session"
+          },
+          "canonical_byte_length": 1338,
+          "canonical_bytes": "eyJjYWxsZXIiOnsiaWQiOiJzaGEyNTY6YWMxNjc2ODlhZDAxOTE1NTViZWFhNGMwYmMzMDA4MmUzM2E4ODRjNWVkNWI2ZGJhOWM1NzMyZjQwYzQxOTU5MSIsInR5cGUiOiJzZXNzaW9uIn0sImlzc3Vlcl9jbGFpbXMiOnsicHJvdmVuYW5jZV9jbGFzcyI6IkxPR0dFRCBCWSBBR0VOVCJ9LCJvdXRwdXQiOnsiYXR0ZXN0cyI6IlphbWJvIGF0dGVzdHMgdGhhdCB0aGlzIHJlY29yZCB3YXMgcmVjZWl2ZWQsIHJlZGFjdGVkLCB0aW1lc3RhbXBlZCwgYW5kIGNoYWluZWQuIiwiZG9lc19ub3RfYXR0ZXN0IjoiWmFtYm8gZGlkIG5vdCBydW4gb3Igb2JzZXJ2ZSB0aGUgcmVwb3J0ZWQgYWN0aW9uLiIsImVudHJ5Ijp7ImNvbXBsZXRlZF9hdCI6IjIwMjYtMTEtMTdUMTY6MTk6MTYuMzQ2WiIsImRlbGV0ZWQiOmZhbHNlLCJkdXJhdGlvbl9tcyI6MCwiZW50cnlfaGFzaCI6InNoYTI1NjpkZjJlMGQ3N2Y1NGVlZGI4YmE3ZWUwMzU3YWFlNThkMzg1NmQwMjA4ODlkOTJiN2Y4ZGRiMDFlYmZjOTEyNWUxIiwiZW50cnlfaWQiOiIyOTAwYTViZC1lNjZhLTQzMGItYmQ2YS03ZDc1YzBkM2JiNGQiLCJleGVjdXRvcl9pZGVudGl0eSI6Imxvc3QtcmVzcG9uc2UtaGFybmVzcyIsImV4dGVybmFsX2V4ZWN1dG9yIjpudWxsLCJtZXRhZGF0YSI6e30sInByZXZfaGFzaCI6InNoYTI1NjoyYWFlYjM4ZDA3ZmM4NjIwZDIwMTVmYzVkY2ZjMTdhOWI1YzA0NWMzMDFiNDU3NWIwMjQ5YzY4MzQwNWZhMGViIiwicHJvdmVuYW5jZV9jbGFzcyI6IkxPR0dFRCBCWSBBR0VOVCIsInJlZGFjdGVkX2lucHV0c19oYXNoIjoic2hhMjU2OmE5Y2FjNGM5YzAzMGMzNDVlM2E1ZDhlY2ZiMDE3MjhkZjU5MzQxOTRiMmQwZTc1NTA2MjA3NGQxMWY1YmM4ZDkiLCJzZXF1ZW5jZSI6Mywic3RhcnRlZF9hdCI6IjIwMjYtMTEtMTdUMTY6MTk6MTYuMzQ2WiIsInRvb2xfbmFtZSI6Imxvc3RfcmVzcG9uc2VfcHJvYmUifSwicHJvdmVuYW5jZV9jbGFzcyI6IkxPR0dFRCBCWSBBR0VOVCIsInN0YXR1cyI6ImxvZ2dlZCIsInZlcmlmeV91cmwiOiJodHRwczovL3phbWJvLmRldi9hcGkvam91cm5hbC9bcHJpdmF0ZV0vdmVyaWZ5In0sInJlY2VpcHRfc2NoZW1hX3ZlcnNpb24iOiIwLjQiLCJzaWRlX2VmZmVjdHMiOnsiZGVjbGFyYXRpb25faGFzaCI6InNoYTI1NjpkZmI0NDEyYWE0MjlkM2FjNjM3YTA1NjY4YzQzNWJjYzkwYTI1MTM2M2ZjZGQ0OWY3Yjg1YWU0YWI1NWI1YmM5IiwiZGVjbGFyZWQiOlsic3RhdGVfd3JpdGUiXSwic2NoZW1hX3ZlcnNpb24iOiJ6YW1iby1zaWRlLWVmZmVjdHMvMSJ9LCJ0b29sIjp7Im5hbWUiOiJqb3VybmFsX2xvZyIsInNjb3BlIjoicHVibGljIiwidmVyc2lvbiI6IjQuMS40In19",
+          "evidence_byte_length": null,
+          "evidence_content_type": null,
+          "evidence_sha256": null,
+          "evidence_source": null,
+          "evidence_source_url": null,
+          "evidence_status": "empty",
+          "evidence_url": null,
+          "execution_context": {
+            "environment": "zambo.dev hosted MCP",
+            "quota_identity": {
+              "meter_key": "sha256:c14de32ee1a39377be234109c035290b4ec62bc5903f851dc807513590781343",
+              "stable_handle_hash": "sha256:ac167689ad0191555beaa4c0bc30082e33a884c5ed5b6dba9c5732f40c419591"
+            }
+          },
+          "execution_status": "logged_by_agent",
+          "external_evidence": [],
+          "free_limit": 3,
+          "free_remaining": 3,
+          "free_used": 0,
+          "hash_algorithm": "sha256",
+          "id": "9eec3d97-ec95-4dfd-a56a-2726e52ff9c3",
+          "input_hash": "sha256:e1135cc801f1d6fda86d36774eee91826a42fbcc8d15c35d4380adc18714d228",
+          "input_hash_layout": "zambo-json-sorted-keys-utf8-v1",
+          "lifecycle_status": "executed",
+          "metadata_hash": "sha256:843569c4b301d3da46d80f2a23884c2282022f3319322d0d5045332066bb1113",
+          "metered_bucket": "free_20",
+          "metered_limit": 3,
+          "metered_remaining": 3,
+          "metered_used": 0,
+          "output_hash": "sha256:7693d76136d4ea683d3e0e14cbbc18753428cf721499e14f30a80a4b91fc6a37",
+          "persistence": "stored",
+          "price": {
+            "burn_status": "not_attempted",
+            "program": "Token-2022",
+            "treasury": "GuGoJPgF2wufK5U983oTwW5mXJb3GN9KNyj9S5gyffkH",
+            "zambo_burned": 0
+          },
+          "provenance": {
+            "evidence_captures": [],
+            "evidence_source": null,
+            "evidence_status": "empty",
+            "result_source": null
+          },
+          "provenance_class": "LOGGED BY AGENT",
+          "receipt_schema_version": "0.4",
+          "receipt_type": "execution",
+          "result_source": null,
+          "result_status": "logged",
+          "server": "zambo.dev/mcp",
+          "side_effects": {
+            "declaration_hash": "sha256:dfb4412aa429d3ac637a05668c435bcc90a251363fcdd49f7b85ae4ab55b5bc9",
+            "declared": [
+              "state_write"
+            ],
+            "schema_version": "zambo-side-effects/1"
+          },
+          "signal_handle": null,
+          "state_hash": null,
+          "status": "success",
+          "timestamp": "2026-11-17T16:19:16.596Z",
+          "today_url": "https://zambo.dev/today/k/MoO76Zj-YI4Zy3eIxADHD7_DvtxnVB3cpgRB3klQbg88hL7CEN-po63iEDzaS2fLqPRY9Z_g4ajTP5VkwrXPrDhxXG38H-bkHJteuXNEG6d7fsRKXd9vFjq6m57S",
+          "tool": "journal_log",
+          "tool_context": {
+            "name": "journal_log",
+            "scope": "public",
+            "version": "4.1.4"
+          },
+          "verification_status": "not_verified",
+          "workflow": {
+            "id": "2ddfd010-07e3-40e4-9b88-fdd6060503bc",
+            "step_index": 7,
+            "url": "https://zambo.dev/workflow/2ddfd010-07e3-40e4-9b88-fdd6060503bc"
+          },
+          "workflow_index_status": "stored"
+        },
+        "_session_depth": 7,
+        "_session_id": "scoped:aa24de67fb19cc83e07aeac3274a7c67c7845707",
+        "_workflow": {
+          "next_action": "The host AI should integrate this result, continue any remaining steps, verify the requested outcome, and then summarize what is complete.",
+          "protocol": "zambo-collaborative-v4",
+          "session_depth": 7,
+          "session_id": "scoped:aa24de67fb19cc83e07aeac3274a7c67c7845707",
+          "status": "step_completed",
+          "tool": "journal_log"
+        },
+        "content": [
+          {
+            "text": "status: logged\nprovenance class: LOGGED BY AGENT\nentry / job id: lr-op-498c01b299-a1\nentry / entry id: 2900a5bd-e66a-430b-bd6a-7d75c0d3bb4d\nentry / sequence: 3\nentry / provenance class: LOGGED BY AGENT\nentry / tool name: lost_response_probe\nentry / redacted inputs hash: sha256:a9cac4c9c030c345e3a5d8ecfb01728df5934194b2d0e755062074d11f5bc8d9\nentry / started at: 2026-11-17T16:19:16.346Z\nentry / completed at: 2026-11-17T16:19:16.346Z\nentry / duration ms: 0\nentry / executor identity: lost-response-harness\nentry / prev hash: sha256:2aaeb38d07fc8620d2015fc5dcfc17a9b5c045c301b4575b0249c683405fa0eb\nentry / entry hash: sha256:df2e0d77f54eedb8ba7ee0357aae58d3856d020889d92b7f8ddb01ebfc9125e1\nentry / deleted: false\nattests: Zambo attests that this record was received, redacted, timestamped, and chained.\ndoes not attest: Zambo did not run or observe the reported action.\nverify url: https://zambo.dev/api/journal/lr-op-498c01b299-a1/verify\n suppress session\n\nReceipt: https://zambo.dev/run/9eec3d97-ec95-4dfd-a56a-2726e52ff9c3\ntoday history: https://zambo.dev/today/k/MoO76Zj-YI4Zy3eIxADHD7_DvtxnVB3cpgRB3klQbg88hL7CEN-po63iEDzaS2fLqPRY9Z_g4ajTP5VkwrXPrDhxXG38H-bkHJteuXNEG6d7fsRKXd9vFjq6m57S\nEvery tool is free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free. The Day Pass makes every tool unlimited for 24 hours for $0.99. [Get Day Pass](https://zambo.dev/day-pass/?chat_checkout=GpRvKEnsOHbtWfm8Xl5a0JjM&quota_handle=zch_zTkx68mxR-DYqYbZ7fjfQt.6PuUF2YtcQZn3UizvJ-teE#checkout)\ntry a workflow: hand this job to another AI and pick it up there free: https://zambo.dev/workflows/cross-ai-relay-long-job\nall workflows: https://zambo.dev/workflows\nnext visit: ask your AI to call zambo_home using the same caller identity to find your saved work. Save notes you choose to keep or wrap up before leaving; your private chat is not saved automatically.",
+            "type": "text"
+          },
+          {
+            "mimeType": "text/html",
+            "name": "Zambo execution receipt",
+            "type": "resource_link",
+            "uri": "https://zambo.dev/run/9eec3d97-ec95-4dfd-a56a-2726e52ff9c3"
+          }
+        ],
+        "continuity_status": "persisted",
+        "isError": false,
+        "resultType": "complete",
+        "structuredContent": {
+          "attests": "Zambo attests that this record was received, redacted, timestamped, and chained.",
+          "caller_handle": "zch_nykRgt6m4KFUtxfVcnYmAK.pAgjVJkHYStWofO7oDw6oU",
+          "caller_handle_instruction": "Persist the initialize caller_handle in private durable agent state scoped to this user or tenant. Reuse it as _caller_handle on every call, including after reconnects and restarts; never share it across unrelated users. Keep _session_id separate and stable only while resuming the same job. This handle can retrieve facts the user chose to save, so keep it private; it is not authentication or payment authorization. If you cannot retain it safely, do not promise cross-session continuity. Keep the handle private; it is not payment authorization.",
+          "does_not_attest": "Zambo did not run or observe the reported action.",
+          "entry": {
+            "completed_at": "2026-11-17T16:19:16.346Z",
+            "deleted": false,
+            "duration_ms": 0,
+            "entry_hash": "sha256:df2e0d77f54eedb8ba7ee0357aae58d3856d020889d92b7f8ddb01ebfc9125e1",
+            "entry_id": "2900a5bd-e66a-430b-bd6a-7d75c0d3bb4d",
+            "executor_identity": "lost-response-harness",
+            "external_executor": null,
+            "job_id": "lr-op-498c01b299-a1",
+            "metadata": {},
+            "prev_hash": "sha256:2aaeb38d07fc8620d2015fc5dcfc17a9b5c045c301b4575b0249c683405fa0eb",
+            "provenance_class": "LOGGED BY AGENT",
+            "redacted_inputs_hash": "sha256:a9cac4c9c030c345e3a5d8ecfb01728df5934194b2d0e755062074d11f5bc8d9",
+            "sequence": 3,
+            "started_at": "2026-11-17T16:19:16.346Z",
+            "tool_name": "lost_response_probe"
+          },
+          "human_line": "status: logged",
+          "ids": {
+            "receipt_id": "9eec3d97-ec95-4dfd-a56a-2726e52ff9c3"
+          },
+          "next_steps": [],
+          "ok": true,
+          "provenance_class": "LOGGED BY AGENT",
+          "quota_handle": "zch_zTkx68mxR-DYqYbZ7fjfQt.6PuUF2YtcQZn3UizvJ-teE",
+          "quota_handle_instruction": "Reuse the issued caller_handle and quota_handle together, or keep reusing quota_handle if caller_handle is unavailable. Their paired values preserve one daily bucket; a different explicit caller_handle selects a separate bucket. Neither is payment authorization or private-memory ownership.",
+          "receipt_standard": "Every call returns an AER-1 receipt (IETF Internet-Draft draft-zambo-aer1-26, current revision) that anyone can verify offline at https://zambo.dev/verify/.",
+          "receipt_url": "https://zambo.dev/run/9eec3d97-ec95-4dfd-a56a-2726e52ff9c3",
+          "result": {
+            "attests": "Zambo attests that this record was received, redacted, timestamped, and chained.",
+            "does_not_attest": "Zambo did not run or observe the reported action.",
+            "entry": {
+              "completed_at": "2026-11-17T16:19:16.346Z",
+              "deleted": false,
+              "duration_ms": 0,
+              "entry_hash": "sha256:df2e0d77f54eedb8ba7ee0357aae58d3856d020889d92b7f8ddb01ebfc9125e1",
+              "entry_id": "2900a5bd-e66a-430b-bd6a-7d75c0d3bb4d",
+              "executor_identity": "lost-response-harness",
+              "external_executor": null,
+              "job_id": "lr-op-498c01b299-a1",
+              "metadata": {},
+              "prev_hash": "sha256:2aaeb38d07fc8620d2015fc5dcfc17a9b5c045c301b4575b0249c683405fa0eb",
+              "provenance_class": "LOGGED BY AGENT",
+              "redacted_inputs_hash": "sha256:a9cac4c9c030c345e3a5d8ecfb01728df5934194b2d0e755062074d11f5bc8d9",
+              "sequence": 3,
+              "started_at": "2026-11-17T16:19:16.346Z",
+              "tool_name": "lost_response_probe"
+            },
+            "provenance_class": "LOGGED BY AGENT",
+            "receipt_url": "https://zambo.dev/run/9eec3d97-ec95-4dfd-a56a-2726e52ff9c3",
+            "status": "logged",
+            "today_url": "https://zambo.dev/today/k/MoO76Zj-YI4Zy3eIxADHD7_DvtxnVB3cpgRB3klQbg88hL7CEN-po63iEDzaS2fLqPRY9Z_g4ajTP5VkwrXPrDhxXG38H-bkHJteuXNEG6d7fsRKXd9vFjq6m57S",
+            "verify_url": "https://zambo.dev/api/journal/lr-op-498c01b299-a1/verify"
+          },
+          "status": "logged",
+          "today_url": "https://zambo.dev/today/k/MoO76Zj-YI4Zy3eIxADHD7_DvtxnVB3cpgRB3klQbg88hL7CEN-po63iEDzaS2fLqPRY9Z_g4ajTP5VkwrXPrDhxXG38H-bkHJteuXNEG6d7fsRKXd9vFjq6m57S",
+          "urls": {
+            "receipt": "https://zambo.dev/run/9eec3d97-ec95-4dfd-a56a-2726e52ff9c3",
+            "receipt_url": "https://zambo.dev/run/9eec3d97-ec95-4dfd-a56a-2726e52ff9c3",
+            "today_url": "https://zambo.dev/today/k/MoO76Zj-YI4Zy3eIxADHD7_DvtxnVB3cpgRB3klQbg88hL7CEN-po63iEDzaS2fLqPRY9Z_g4ajTP5VkwrXPrDhxXG38H-bkHJteuXNEG6d7fsRKXd9vFjq6m57S",
+            "verify_url": "https://zambo.dev/api/journal/lr-op-498c01b299-a1/verify"
+          },
+          "verify_url": "https://zambo.dev/api/journal/lr-op-498c01b299-a1/verify"
+        },
+        "today_url": "https://zambo.dev/today/k/MoO76Zj-YI4Zy3eIxADHD7_DvtxnVB3cpgRB3klQbg88hL7CEN-po63iEDzaS2fLqPRY9Z_g4ajTP5VkwrXPrDhxXG38H-bkHJteuXNEG6d7fsRKXd9vFjq6m57S"
+      }
+    },
+    "dropped": false,
+    "receipt_ids": [
+      "9eec3d97-ec95-4dfd-a56a-2726e52ff9c3"
+    ],
+    "response_class": "success",
+    "transport": {
+      "content_length_header": "12370",
+      "elapsed_ms": 2501,
+      "http_status": 200,
+      "jsonrpc_id": "bc1f8208be7042c7860be86ed859c25d",
+      "received_at": "2026-11-17T16:19:17.295887Z",
+      "response_bytes": 12370,
+      "sent_at": "2026-11-17T16:19:14.794430Z"
+    }
+  },
+  "label": "a5_delayed_retry_identical",
+  "session_id": "lr-498c01b299-a1"
+}
