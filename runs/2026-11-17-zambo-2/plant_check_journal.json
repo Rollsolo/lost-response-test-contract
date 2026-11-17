@@ -1,0 +1,11 @@
+{
+  "body": {
+    "break_at": null,
+    "job_id": "lr-op-d2945b2c6e-a1",
+    "reason": null,
+    "status": "empty",
+    "valid": true
+  },
+  "http_status": 200,
+  "url": "https://zambo.dev/api/journal/lr-op-d2945b2c6e-a1/verify"
+}
