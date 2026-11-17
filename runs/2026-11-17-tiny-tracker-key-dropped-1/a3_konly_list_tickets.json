@@ -1,0 +1,57 @@
+{
+  "body": {
+    "id": "7af0224931504374ba63c0ced4af7b11",
+    "jsonrpc": "2.0",
+    "result": {
+      "content": [
+        {
+          "text": "T-1 [inbox] open \"lr-op-626d87b0f2-a1 lost-response probe\"; current expected_version: 1\nT-2 [inbox] open \"lr-op-626d87b0f2-a1 lost-response probe\"; current expected_version: 1",
+          "type": "text"
+        }
+      ],
+      "structuredContent": {
+        "tickets": [
+          {
+            "assignee": null,
+            "id": "T-1",
+            "priority": 3,
+            "project": "inbox",
+            "status": "open",
+            "title": "lr-op-626d87b0f2-a1 lost-response probe",
+            "version": 1
+          },
+          {
+            "assignee": null,
+            "id": "T-2",
+            "priority": 3,
+            "project": "inbox",
+            "status": "open",
+            "title": "lr-op-626d87b0f2-a1 lost-response probe",
+            "version": 1
+          }
+        ]
+      }
+    }
+  },
+  "request": {
+    "id": "7af0224931504374ba63c0ced4af7b11",
+    "jsonrpc": "2.0",
+    "method": "tools/call",
+    "params": {
+      "arguments": {
+        "title_prefix": "lr-op-626d87b0f2-a1"
+      },
+      "name": "list_tickets"
+    }
+  },
+  "transport": {
+    "content_type": "text/event-stream",
+    "elapsed_ms": 2,
+    "http_status": 200,
+    "jsonrpc_id": "7af0224931504374ba63c0ced4af7b11",
+    "mcp_session_id_header": null,
+    "received_at": "2026-11-17T02:13:28.694337Z",
+    "response_bytes": 619,
+    "sent_at": "2026-11-17T02:13:28.692501Z"
+  }
+}

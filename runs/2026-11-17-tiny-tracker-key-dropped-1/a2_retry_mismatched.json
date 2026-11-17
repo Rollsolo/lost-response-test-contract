@@ -1,0 +1,52 @@
+{
+  "K": "lr-op-626d87b0f2-a2",
+  "arguments_sent": {
+    "description": "lost-response harness, session lr-626d87b0f2-a2",
+    "idempotency_key": "lr-op-626d87b0f2-a2",
+    "priority": 4,
+    "title": "lr-op-626d87b0f2-a2 lost-response probe"
+  },
+  "at": "2026-11-17T02:13:28.690631Z",
+  "call": {
+    "body": {
+      "id": "fbb1e423bf384da8ad20bea2829e6e6a",
+      "jsonrpc": "2.0",
+      "result": {
+        "content": [
+          {
+            "text": "Created ticket T-4 in project inbox (version 1).",
+            "type": "text"
+          }
+        ],
+        "structuredContent": {
+          "changed": [
+            "created"
+          ],
+          "id": "T-4",
+          "project": "inbox",
+          "replayed": false,
+          "version": 1
+        }
+      }
+    },
+    "dropped": false,
+    "mws_outcome": null,
+    "receipt_ids": [
+      "T-4"
+    ],
+    "replayed": false,
+    "response_class": "success",
+    "transport": {
+      "content_type": "text/event-stream",
+      "elapsed_ms": 2,
+      "http_status": 200,
+      "jsonrpc_id": "fbb1e423bf384da8ad20bea2829e6e6a",
+      "mcp_session_id_header": null,
+      "received_at": "2026-11-17T02:13:28.690615Z",
+      "response_bytes": 279,
+      "sent_at": "2026-11-17T02:13:28.689017Z"
+    }
+  },
+  "label": "a2_retry_mismatched",
+  "session_id": "lr-626d87b0f2-a2"
+}

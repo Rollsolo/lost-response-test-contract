@@ -110,5 +110,9 @@ as raw outputs, not summaries:
   (MCP endpoint; the durable public record is the public AER-1
   receipt record). The recorded runs in ../../../runs/ were executed
   with it.
+- `tiny_tracker.py`: tiny-tracker, a small open-source teaching MCP
+  server run locally (npm @mcp-write-safety/tiny-tracker); the counter
+  is its backend's REST record, and it carries no digests. Configs:
+  ../config.tiny-tracker*.json; runs: ../../../runs/2026-11-17-tiny-tracker-*.
 - `stub.py`: the copyable template. It implements nothing.
 - `base.py`: the contract itself, as an abstract base class.

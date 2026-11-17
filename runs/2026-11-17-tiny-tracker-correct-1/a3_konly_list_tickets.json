@@ -1,0 +1,48 @@
+{
+  "body": {
+    "id": "3b705a5532f946808f93e95491c7d44e",
+    "jsonrpc": "2.0",
+    "result": {
+      "content": [
+        {
+          "text": "T-1 [inbox] open \"lr-op-409891e807-a1 lost-response probe\"; current expected_version: 1",
+          "type": "text"
+        }
+      ],
+      "structuredContent": {
+        "tickets": [
+          {
+            "assignee": null,
+            "id": "T-1",
+            "priority": 3,
+            "project": "inbox",
+            "status": "open",
+            "title": "lr-op-409891e807-a1 lost-response probe",
+            "version": 1
+          }
+        ]
+      }
+    }
+  },
+  "request": {
+    "id": "3b705a5532f946808f93e95491c7d44e",
+    "jsonrpc": "2.0",
+    "method": "tools/call",
+    "params": {
+      "arguments": {
+        "title_prefix": "lr-op-409891e807-a1"
+      },
+      "name": "list_tickets"
+    }
+  },
+  "transport": {
+    "content_type": "text/event-stream",
+    "elapsed_ms": 2,
+    "http_status": 200,
+    "jsonrpc_id": "3b705a5532f946808f93e95491c7d44e",
+    "mcp_session_id_header": null,
+    "received_at": "2026-11-17T02:13:28.563088Z",
+    "response_bytes": 390,
+    "sent_at": "2026-11-17T02:13:28.561205Z"
+  }
+}

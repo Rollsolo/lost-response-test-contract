@@ -1,0 +1,25 @@
+{
+  "K": "lr-op-409891e807-a1",
+  "at": "2026-11-17T02:13:28.554068Z",
+  "attributed_records": [
+    {
+      "counted_as_execution": true,
+      "created_at": "2026-11-17T02:13:28.545Z",
+      "description_names_session": true,
+      "priority": 3,
+      "ticket_id": "T-1",
+      "title": "lr-op-409891e807-a1 lost-response probe",
+      "title_starts_with_K": true
+    }
+  ],
+  "execution_record_ids": [
+    "T-1"
+  ],
+  "external_effect_count": 1,
+  "label": "a1_final",
+  "listing_http_status": 200,
+  "method": "GET <backend>/tickets?title_prefix=<K> on the tiny-tracker backend REST API, read directly (not through MCP); each listed ticket whose title starts with K and whose description names the session identity is one committed execution of create_ticket for the operation",
+  "refusal_records": [],
+  "refusal_records_note": "tiny-tracker writes no record for a refused call",
+  "session_id": "lr-409891e807-a1"
+}

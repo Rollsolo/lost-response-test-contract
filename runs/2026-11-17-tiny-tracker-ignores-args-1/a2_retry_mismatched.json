@@ -1,0 +1,76 @@
+{
+  "K": "lr-op-78ed264dc1-a2",
+  "arguments_sent": {
+    "description": "lost-response harness, session lr-78ed264dc1-a2",
+    "idempotency_key": "lr-op-78ed264dc1-a2",
+    "priority": 4,
+    "title": "lr-op-78ed264dc1-a2 lost-response probe"
+  },
+  "at": "2026-11-17T02:13:28.822261Z",
+  "call": {
+    "body": {
+      "id": "bdddada0f384409b82e0091919c99a14",
+      "jsonrpc": "2.0",
+      "result": {
+        "content": [
+          {
+            "text": "Created ticket T-2 in project inbox (version 1).",
+            "type": "text"
+          },
+          {
+            "text": "{\"id\":\"T-2\",\"version\":1,\"changed\":[\"created\",\"description\",\"priority\",\"title\"],\"replayed\":false,\"project\":\"inbox\",\"mws\":{\"shape\":\"write-result/0.1\",\"outcome\":\"applied\",\"operation\":\"create\",\"repeat\":\"same_key\",\"object\":{\"type\":\"ticket\",\"scope\":\"inbox\",\"id\":\"T-2\",\"version\":1},\"changed\":[\"/description\",\"/priority\",\"/title\"]}}",
+            "type": "text"
+          }
+        ],
+        "structuredContent": {
+          "changed": [
+            "created",
+            "description",
+            "priority",
+            "title"
+          ],
+          "id": "T-2",
+          "mws": {
+            "changed": [
+              "/description",
+              "/priority",
+              "/title"
+            ],
+            "object": {
+              "id": "T-2",
+              "scope": "inbox",
+              "type": "ticket",
+              "version": 1
+            },
+            "operation": "create",
+            "outcome": "applied",
+            "repeat": "same_key",
+            "shape": "write-result/0.1"
+          },
+          "project": "inbox",
+          "replayed": true,
+          "version": 1
+        }
+      }
+    },
+    "dropped": false,
+    "mws_outcome": "applied",
+    "receipt_ids": [
+      "T-2"
+    ],
+    "replayed": true,
+    "response_class": "success",
+    "transport": {
+      "content_type": "text/event-stream",
+      "elapsed_ms": 1,
+      "http_status": 200,
+      "jsonrpc_id": "bdddada0f384409b82e0091919c99a14",
+      "mcp_session_id_header": null,
+      "received_at": "2026-11-17T02:13:28.822235Z",
+      "response_bytes": 935,
+      "sent_at": "2026-11-17T02:13:28.820976Z"
+    }
+  },
+  "label": "a2_retry_mismatched",
+  "session_id": "lr-78ed264dc1-a2"
+}
