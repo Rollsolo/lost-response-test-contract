@@ -1,0 +1,102 @@
+{
+  "K": "lr-op-13118ee094-a1",
+  "arguments_sent": {
+    "_session_id": "lr-13118ee094-a1",
+    "action": "lost_response_probe",
+    "executor_identity": "lost-response-harness",
+    "inputs": {
+      "operation": "lr-op-13118ee094-a1"
+    },
+    "job_id": "lr-op-13118ee094-a1"
+  },
+  "at": "see call transport",
+  "call": {
+    "body": {
+      "id": "4438394fe91445eba20e895fd3bc7456",
+      "jsonrpc": "2.0",
+      "result": {
+        "_meta": {
+          "dev.zambo/receipt": {
+            "id": "e3af210e-182f-4c48-9da1-dd954be4ccda",
+            "output_hash": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+            "run_url": "https://zambo.dev/run/e3af210e-182f-4c48-9da1-dd954be4ccda"
+          }
+        },
+        "_receipt": {
+          "audit": "https://zambo.dev/run/e3af210e-182f-4c48-9da1-dd954be4ccda",
+          "id": "e3af210e-182f-4c48-9da1-dd954be4ccda",
+          "output_hash": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+          "persistence": "stored",
+          "receipt_type": "execution",
+          "receipt_url": "https://zambo.dev/run/e3af210e-182f-4c48-9da1-dd954be4ccda",
+          "tool": "journal_log"
+        },
+        "content": [
+          {
+            "text": "{\"status\":\"logged\",\"provenance_class\":\"LOGGED BY AGENT\",\"entry\":{\"job_id\":\"lr-op-13118ee094-a1\",\"entry_id\":\"a27f708c-1eec-493d-abb5-195d76ba47ac\",\"sequence\":1,\"provenance_class\":\"LOGGED BY AGENT\",\"tool_name\":\"lost_response_probe\",\"redacted_inputs_hash\":\"sha256:f9852ddfc5eb3d86c819bf6f9ce3db079815d51b616d957b00d5bc5f56789ea6\",\"started_at\":\"2026-11-17T17:12:38.521Z\",\"completed_at\":\"2026-11-17T17:12:38.521Z\",\"duration_ms\":0,\"executor_identity\":\"lost-response-harness\",\"external_executor\":null,\"metadata\":{},\"prev_hash\":null,\"entry_hash\":\"sha256:0d3b223914bff4c205da85a95b578de8b1e7fa2f9b64b3a023a6097d1f4e77b4\",\"deleted\":false},\"attests\":\"Zambo attests that this record was received, redacted, timestamped, and chained.\",\"does_not_attest\":\"Zambo did not run or observe the reported action.\",\"verify_url\":\"https://zambo.dev/api/journal/lr-op-13118ee094-a1/verify\"}\n\nOriginal receipt: https://zambo.dev/run/e3af210e-182f-4c48-9da1-dd954be4ccda\nOutput digest: sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+            "type": "text"
+          },
+          {
+            "mimeType": "text/html",
+            "name": "Original execution receipt",
+            "type": "resource_link",
+            "uri": "https://zambo.dev/run/e3af210e-182f-4c48-9da1-dd954be4ccda"
+          }
+        ],
+        "isError": false,
+        "receipt_id": "e3af210e-182f-4c48-9da1-dd954be4ccda",
+        "receipt_url": "https://zambo.dev/run/e3af210e-182f-4c48-9da1-dd954be4ccda",
+        "resultType": "complete",
+        "structuredContent": {
+          "idempotent_replay": true,
+          "original_outcome": {
+            "attests": "Zambo attests that this record was received, redacted, timestamped, and chained.",
+            "does_not_attest": "Zambo did not run or observe the reported action.",
+            "entry": {
+              "completed_at": "2026-11-17T17:12:38.521Z",
+              "deleted": false,
+              "duration_ms": 0,
+              "entry_hash": "sha256:0d3b223914bff4c205da85a95b578de8b1e7fa2f9b64b3a023a6097d1f4e77b4",
+              "entry_id": "a27f708c-1eec-493d-abb5-195d76ba47ac",
+              "executor_identity": "lost-response-harness",
+              "external_executor": null,
+              "job_id": "lr-op-13118ee094-a1",
+              "metadata": {},
+              "prev_hash": null,
+              "provenance_class": "LOGGED BY AGENT",
+              "redacted_inputs_hash": "sha256:f9852ddfc5eb3d86c819bf6f9ce3db079815d51b616d957b00d5bc5f56789ea6",
+              "sequence": 1,
+              "started_at": "2026-11-17T17:12:38.521Z",
+              "tool_name": "lost_response_probe"
+            },
+            "provenance_class": "LOGGED BY AGENT",
+            "status": "logged",
+            "verify_url": "https://zambo.dev/api/journal/lr-op-13118ee094-a1/verify"
+          },
+          "original_outcome_text": "{\"status\":\"logged\",\"provenance_class\":\"LOGGED BY AGENT\",\"entry\":{\"job_id\":\"lr-op-13118ee094-a1\",\"entry_id\":\"a27f708c-1eec-493d-abb5-195d76ba47ac\",\"sequence\":1,\"provenance_class\":\"LOGGED BY AGENT\",\"tool_name\":\"lost_response_probe\",\"redacted_inputs_hash\":\"sha256:f9852ddfc5eb3d86c819bf6f9ce3db079815d51b616d957b00d5bc5f56789ea6\",\"started_at\":\"2026-11-17T17:12:38.521Z\",\"completed_at\":\"2026-11-17T17:12:38.521Z\",\"duration_ms\":0,\"executor_identity\":\"lost-response-harness\",\"external_executor\":null,\"metadata\":{},\"prev_hash\":null,\"entry_hash\":\"sha256:0d3b223914bff4c205da85a95b578de8b1e7fa2f9b64b3a023a6097d1f4e77b4\",\"deleted\":false},\"attests\":\"Zambo attests that this record was received, redacted, timestamped, and chained.\",\"does_not_attest\":\"Zambo did not run or observe the reported action.\",\"verify_url\":\"https://zambo.dev/api/journal/lr-op-13118ee094-a1/verify\"}",
+          "output_digest": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+          "receipt_id": "e3af210e-182f-4c48-9da1-dd954be4ccda",
+          "receipt_url": "https://zambo.dev/run/e3af210e-182f-4c48-9da1-dd954be4ccda",
+          "status": "replayed"
+        }
+      }
+    },
+    "dropped": false,
+    "receipt_ids": [
+      "e3af210e-182f-4c48-9da1-dd954be4ccda"
+    ],
+    "response_class": "success",
+    "transport": {
+      "content_length_header": "4250",
+      "elapsed_ms": 310,
+      "http_status": 200,
+      "jsonrpc_id": "4438394fe91445eba20e895fd3bc7456",
+      "received_at": "2026-11-18T17:51:01.048509Z",
+      "response_bytes": 4250,
+      "sent_at": "2026-11-18T17:51:00.738390Z"
+    }
+  },
+  "label": "a5_delayed_retry_identical_samehandle",
+  "note": "Diagnostic only: identical delayed retry presenting the plant's persisted caller_handle from 00_initialize_plant2.json, fresh transport. Run after the fresh-client protection probes; does not replace them.",
+  "session_id": "lr-13118ee094-a1"
+}

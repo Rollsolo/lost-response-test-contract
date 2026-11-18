@@ -1,0 +1,118 @@
+{
+  "assertion": "A5",
+  "delayed_leg_run_at": "2026-11-18T17:46:23.825049Z",
+  "legs": {
+    "k_only_direct_lookup": {
+      "http_status": 200
+    },
+    "run_id": {
+      "committed_digest": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+      "digest_equal": true,
+      "digest_served": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+      "http_status": 200,
+      "recomputation": {
+        "checks_served": {
+          "canonical_payload_matches": {
+            "detail": "The stored output and known call context reconstruct the exact canonical bytes.",
+            "label": "Canonical payload reconstruction",
+            "passed": true,
+            "status": "pass"
+          },
+          "chain": {
+            "detail": "This endpoint does not verify an append-only receipt chain.",
+            "status": "not_checked"
+          },
+          "commitment_matches": {
+            "computed_hash": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+            "detail": "SHA-256 of the exact decoded canonical bytes matches output_hash.",
+            "expected_hash": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+            "passed": true,
+            "status": "pass"
+          },
+          "issuer_authentication": {
+            "detail": "A zambo.dev receipt URL does not authenticate the issuer; no pinned signature or trusted issuer key was checked.",
+            "label": "Issuer authentication",
+            "passed": false,
+            "status": "not_checked"
+          },
+          "metadata_binding": {
+            "detail": "metadata_hash matches the canonical metadata block.",
+            "label": "AER-1 metadata hash",
+            "passed": true,
+            "status": "pass"
+          },
+          "provenance_binding": {
+            "detail": "The metadata claim is consistent with the verified receipt bytes; issuer is not authenticated.",
+            "label": "Provenance claim binding",
+            "passed": true,
+            "status": "pass"
+          },
+          "schema": {
+            "detail": "Schema conformance is left to the client using the linked hosted-profile schema.",
+            "status": "not_checked"
+          },
+          "signature": {
+            "detail": "No Ed25519 signature or pinned signing key is supplied.",
+            "status": "not_checked"
+          }
+        },
+        "computed_sha256_of_decoded_canonical_bytes": "90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+        "output_hash_served": "90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+        "status": "matched",
+        "verification_status_served": "verified"
+      }
+    }
+  },
+  "plant": {
+    "K": "lr-op-13118ee094-a1",
+    "adapter": "zambo",
+    "adapter_config": {
+      "args_template": {
+        "_session_id": "{SESSION}",
+        "action": "lost_response_probe",
+        "executor_identity": "lost-response-harness",
+        "inputs": {
+          "operation": "{K}"
+        },
+        "job_id": "{K}"
+      },
+      "endpoint": "https://zambo.dev/mcp",
+      "enumerate_tools": [
+        {
+          "arguments": {
+            "_session_id": "{SESSION}"
+          },
+          "name": "workflow_close"
+        }
+      ],
+      "konly_lookup_tools": [
+        {
+          "arguments": {
+            "_session_id": "{K}"
+          },
+          "name": "continuity_get_recent"
+        }
+      ],
+      "mismatch": {
+        "altered_value": "lost_response_probe_altered",
+        "field": "action"
+      },
+      "public_base": "https://zambo.dev",
+      "tool": "journal_log"
+    },
+    "assertion": "A5",
+    "committed_digest": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+    "delay_hours": 24,
+    "due_at": "2026-11-18T17:12:46.716430Z",
+    "endpoint": "https://zambo.dev/mcp",
+    "execution_receipt_ids": [
+      "e3af210e-182f-4c48-9da1-dd954be4ccda"
+    ],
+    "note": "Delayed leg: run the harness with --delayed-leg on this file at or after due_at. Planted 2026-11-17 after the production recovery fix (response kept; the drop in the contract setup is client-side only and the delayed leg holds only K by construction). Short-range verification in runs/2026-11-17-zambo-fix-verify/. The first plant attempt this run (a5_plant_uncommitted.json, K lr-op-d2945b2c6e-a1) never committed: its journal is empty, refused before commit at the metering layer as observed via the empty journal record.",
+    "planted_at": "2026-11-17T17:12:46.716418Z",
+    "session_id": "lr-13118ee094-a1",
+    "system_name": "Zambo production"
+  },
+  "reason": "scored from the delayed run-id digest equality and the K-only lookup, exactly as observed; see a5_delayed_result.json",
+  "score": "pass"
+}

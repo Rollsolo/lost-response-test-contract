@@ -1,0 +1,101 @@
+{
+  "K": "lr-op-13118ee094-a1",
+  "assertion": "A5",
+  "committed_digest": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+  "committed_receipt_id": "e3af210e-182f-4c48-9da1-dd954be4ccda",
+  "delayed_leg_run_at": "2026-11-18T17:46:23.825049Z",
+  "due_at": "2026-11-18T17:12:46.716430Z",
+  "endpoint": "https://zambo.dev/mcp",
+  "evidence_files": [
+    "a5_delayed_result.json",
+    "a5_delayed_runid_receipt.json",
+    "a5_delayed_extra.json",
+    "a5_delayed_extra_initialize.json",
+    "a5_delayed_konly_run_lookup.json",
+    "a5_delayed_konly_continuity_get_recent.json",
+    "a5_delayed_konly_continuity_samehandle.json",
+    "count_a5_delayed_before_protection.json",
+    "count_a5_delayed_final.json",
+    "a5_delayed_retry_identical.json",
+    "a5_delayed_retry_mismatched.json",
+    "a5_delayed_retry_identical_samehandle.json",
+    "count_a5_delayed_after_samehandle.json",
+    "a5_delayed_extra_probe.py"
+  ],
+  "k_only_recovery": {
+    "continuity_fresh_client": {
+      "note": "With the fresh client's new caller_handle, continuity_get_recent with K as the only identifier returned the caller's recent-events stream; the committed digest and original receipt id appear nowhere in it.",
+      "response_class": "success",
+      "returned_committed_outcome": false
+    },
+    "continuity_same_persisted_handle": {
+      "note": "Diagnostic: with the plant's persisted caller_handle (00_initialize_plant2.json), the same K-keyed continuity_get_recent returned status found with the original receipt id and the committed digest (a5_delayed_konly_continuity_samehandle.json).",
+      "returned_committed_outcome": true
+    },
+    "direct_lookup": {
+      "digest_equal_to_committed": true,
+      "digests": {
+        "input_hash": "sha256:da696cef6632a3934060d27e44f801c63be964d288945452ddd84e9b3b88bda8",
+        "output_hash": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d"
+      },
+      "http_status": 200
+    },
+    "harness_delayed_leg_score": "pass",
+    "observed": "pass",
+    "recovered_digest_equal_to_committed": true,
+    "run_id_leg": {
+      "digest_equal": true,
+      "digest_served": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+      "http_status": 200,
+      "recomputation_status": "matched"
+    }
+  },
+  "planted_at": "2026-11-17T17:12:46.716418Z",
+  "protection": {
+    "count_before": 1,
+    "count_final": 2,
+    "execution_receipt_ids_before": [
+      "e3af210e-182f-4c48-9da1-dd954be4ccda"
+    ],
+    "execution_receipt_ids_final": [
+      "e3af210e-182f-4c48-9da1-dd954be4ccda",
+      "f83e0bd2-e387-45fd-aa4d-f43758d21990"
+    ],
+    "identical_retry": {
+      "executed_fresh": true,
+      "note": "Success with a new journal entry (sequence 2) and a new receipt; no idempotent_replay marker. Sent by the fresh client whose initialize on 2026-11-18 issued a new caller_handle, unlike 2026-11-16/17 when initialize returned the stable handle recorded in the plant files.",
+      "receipt_ids": [
+        "f83e0bd2-e387-45fd-aa4d-f43758d21990"
+      ],
+      "response_class": "success"
+    },
+    "mismatched_retry": {
+      "executed": false,
+      "note": "HTTP 409 idempotency_conflict, executed: false; its receipt a1a38ef7-912f-4e02-80bf-285bee1d55c3 is a refusal record (step status rejected_before_execution) and is not counted as an execution.",
+      "receipt_ids": [
+        "a1a38ef7-912f-4e02-80bf-285bee1d55c3"
+      ],
+      "response_class": "tool_error:idempotency_conflict"
+    },
+    "observed": "fail",
+    "protected": false
+  },
+  "run": "2026-11-17-zambo-2",
+  "same_handle_diagnostic": {
+    "identical_retry_with_plant_persisted_caller_handle": {
+      "count_after": 2,
+      "idempotent_replay": true,
+      "new_execution": false,
+      "note": "Run after the protection probes, so the count it observed (2) already includes the fresh-client execution f83e0bd2-e387-45fd-aa4d-f43758d21990; the same-handle retry itself added no execution. Recorded as a diagnostic of the mechanism (replay is scoped to the plant's persisted caller_handle); it does not change the score, which is taken from the prescribed probes exactly as observed.",
+      "receipt_ids": [
+        "e3af210e-182f-4c48-9da1-dd954be4ccda"
+      ],
+      "response_class": "success"
+    }
+  },
+  "score": "fail",
+  "score_basis": "Pass only if K-only recovery after the delay returns the committed outcome with digest equal to the committed digest AND the operation identity stayed protected during the window (neither delayed retry executes; effect count stays 1; identical retry replays or is refused; modified-parameter retry is refused as a conflict). The recovery condition was met; the protection condition was not, as observed on the prescribed fresh-client protection probes.",
+  "scored_at": "2026-11-18T17:52:51.053442Z",
+  "session_id": "lr-13118ee094-a1",
+  "system_name": "Zambo production"
+}

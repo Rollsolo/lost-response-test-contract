@@ -1,0 +1,87 @@
+{
+  "K": "lr-op-13118ee094-a1",
+  "assertion": "A5",
+  "committed_digest": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+  "extra_legs_run_at_note": "timestamps inside raw files",
+  "initialize": {
+    "caller_handle_issued": true,
+    "http_status": 200
+  },
+  "k_only_recovery": {
+    "attempts": [
+      {
+        "http_status": 200,
+        "page_http_status": 200,
+        "page_title_not_found": true,
+        "path": "GET /api/v2/receipt/<K>/verify and GET /run/<K>",
+        "response_class": "found"
+      },
+      {
+        "path": "tools/call continuity_get_recent with K as the only identifier",
+        "receipt_ids_returned": [
+          "6ff07a1d-68c6-4cb0-8fdd-88d3341afe43",
+          "bb4f5bad-6455-45b1-ab6a-640563a19266",
+          "28a4ded5-cccc-48ce-a1db-3066dad9d235",
+          "9def36c1-95ca-42e8-bd09-77e669a4bcb3",
+          "2ce36343-d419-4e7d-9071-23fef30f424a",
+          "59af3fb8-a6e8-449a-9f6a-a59ea1bad839",
+          "c1f79bcd-4cd4-4a46-bc1a-a37897d9eebc",
+          "ebf49d1c-9770-4dcb-b0ad-9ce9c6c8a7dc",
+          "7936fe42-8681-4311-8212-a56e922f8a51",
+          "17922dd4-d4c3-4a51-b5b5-4f6304386ec1",
+          "98d98ec0-1a48-4092-b867-08136c56ecd2",
+          "87ee33fe-cc47-4fe8-b75d-a06c3b4bed0a",
+          "bc954d27-0acb-446f-a799-77306eec2db6",
+          "84337878-4c0c-4112-a540-b3b953a04bb5",
+          "86f86d11-673d-4202-8038-c502b5e1b538",
+          "b8fe014c-c3ad-4bfa-bc74-439b89246dfb",
+          "2bd3a02f-8d19-4544-a564-b721c1b61657",
+          "10745e4c-d0ee-4ac4-b8f2-751b0db8e4b9",
+          "c009b930-16fc-4218-b57b-146aacb25f11",
+          "150f7ea7-c876-4139-8ede-36d0f9f199ea",
+          "8d611b32-7f60-4cee-917c-1c8c4cab6429",
+          "example"
+        ],
+        "response_class": "success"
+      }
+    ],
+    "continuity_has_committed_digest": false,
+    "continuity_has_original_receipt_id": false,
+    "continuity_response_class": "success",
+    "direct_lookup_digests": {
+      "input_hash": "sha256:da696cef6632a3934060d27e44f801c63be964d288945452ddd84e9b3b88bda8",
+      "output_hash": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d"
+    },
+    "direct_lookup_http_status": 200,
+    "observed": "pass",
+    "recovered_digest_equal_to_committed": true,
+    "score_basis": "pass only if a K-only attempt returns the committed outcome with digest equal to committed digest"
+  },
+  "protection": {
+    "count_before": 1,
+    "count_final": 2,
+    "execution_receipt_ids_before": [
+      "e3af210e-182f-4c48-9da1-dd954be4ccda"
+    ],
+    "execution_receipt_ids_final": [
+      "e3af210e-182f-4c48-9da1-dd954be4ccda",
+      "f83e0bd2-e387-45fd-aa4d-f43758d21990"
+    ],
+    "identical_retry": {
+      "receipt_ids": [
+        "f83e0bd2-e387-45fd-aa4d-f43758d21990"
+      ],
+      "response_class": "success"
+    },
+    "mismatched_retry": {
+      "altered_value": "lost_response_probe_altered",
+      "mismatched_field": "action",
+      "receipt_ids": [
+        "a1a38ef7-912f-4e02-80bf-285bee1d55c3"
+      ],
+      "response_class": "tool_error:idempotency_conflict"
+    },
+    "protected": false
+  },
+  "session_id": "lr-13118ee094-a1"
+}
