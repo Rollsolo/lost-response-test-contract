@@ -1,0 +1,21 @@
+{
+  "phase1_legacy_key": {
+    "K": "lr-op-13118ee094-a1",
+    "continuity_fresh_client": "pass",
+    "identical_retry": "pass (replay of e3af210e, no third execution)",
+    "lookup_digest_match": true,
+    "mismatched_retry": "pass (refused before execution, idempotency_conflict)"
+  },
+  "phase2_fresh_plant": {
+    "A1": "pass",
+    "A2": "pass",
+    "A3": "pass",
+    "A5": "unproven, planted, due 2026-11-19T18:38:16.846509Z",
+    "K": "lr-op-bb150ceec1-a1",
+    "committed_digest": "sha256:c63fbfb9a34b33df4e5d2d821186ba7020c7e67217d8f80958b228710f106818",
+    "receipt": "e2568939-b651-4150-b059-a1eeebbf7319",
+    "session": "lr-bb150ceec1-a1"
+  },
+  "purpose": "post-publish acceptance of the operation-key binding fix",
+  "run": "2026-11-18-zambo-3"
+}

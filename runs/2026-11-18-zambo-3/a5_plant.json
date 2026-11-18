@@ -1,0 +1,50 @@
+{
+  "K": "lr-op-bb150ceec1-a1",
+  "adapter": "zambo",
+  "adapter_config": {
+    "args_template": {
+      "_session_id": "{SESSION}",
+      "action": "lost_response_probe",
+      "executor_identity": "lost-response-harness",
+      "inputs": {
+        "operation": "{K}"
+      },
+      "job_id": "{K}"
+    },
+    "endpoint": "https://zambo.dev/mcp",
+    "enumerate_tools": [
+      {
+        "arguments": {
+          "_session_id": "{SESSION}"
+        },
+        "name": "workflow_close"
+      }
+    ],
+    "konly_lookup_tools": [
+      {
+        "arguments": {
+          "_session_id": "{K}"
+        },
+        "name": "continuity_get_recent"
+      }
+    ],
+    "mismatch": {
+      "altered_value": "lost_response_probe_altered",
+      "field": "action"
+    },
+    "public_base": "https://zambo.dev",
+    "tool": "journal_log"
+  },
+  "assertion": "A5",
+  "committed_digest": "sha256:c63fbfb9a34b33df4e5d2d821186ba7020c7e67217d8f80958b228710f106818",
+  "delay_hours": 24,
+  "due_at": "2026-11-19T18:38:16.846509Z",
+  "endpoint": "https://zambo.dev/mcp",
+  "execution_receipt_ids": [
+    "e2568939-b651-4150-b059-a1eeebbf7319"
+  ],
+  "note": "Planted 2026-11-18 after the crew key-binding publish; short-range fresh-client battery in this run dir (phase 2) scored replay + conflict + key-only recovery PASS at plant time. Delayed leg due at due_at.",
+  "planted_at": "2026-11-18T18:37:56.486622Z",
+  "session_id": "lr-bb150ceec1-a1",
+  "system_name": "Zambo production"
+}

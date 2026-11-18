@@ -1,0 +1,70 @@
+{
+  "id": "8140d9dca5b34e638cc86e4d",
+  "jsonrpc": "2.0",
+  "result": {
+    "_meta": {
+      "dev.zambo/receipt": {
+        "id": "e3af210e-182f-4c48-9da1-dd954be4ccda",
+        "output_hash": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+        "run_url": "https://zambo.dev/run/e3af210e-182f-4c48-9da1-dd954be4ccda"
+      }
+    },
+    "_receipt": {
+      "audit": "https://zambo.dev/run/e3af210e-182f-4c48-9da1-dd954be4ccda",
+      "id": "e3af210e-182f-4c48-9da1-dd954be4ccda",
+      "output_hash": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+      "persistence": "stored",
+      "receipt_type": "execution",
+      "receipt_url": "https://zambo.dev/run/e3af210e-182f-4c48-9da1-dd954be4ccda",
+      "tool": "journal_log"
+    },
+    "content": [
+      {
+        "text": "{\"status\":\"logged\",\"provenance_class\":\"LOGGED BY AGENT\",\"entry\":{\"job_id\":\"lr-op-13118ee094-a1\",\"entry_id\":\"a27f708c-1eec-493d-abb5-195d76ba47ac\",\"sequence\":1,\"provenance_class\":\"LOGGED BY AGENT\",\"tool_name\":\"lost_response_probe\",\"redacted_inputs_hash\":\"sha256:f9852ddfc5eb3d86c819bf6f9ce3db079815d51b616d957b00d5bc5f56789ea6\",\"started_at\":\"2026-11-17T17:12:38.521Z\",\"completed_at\":\"2026-11-17T17:12:38.521Z\",\"duration_ms\":0,\"executor_identity\":\"lost-response-harness\",\"external_executor\":null,\"metadata\":{},\"prev_hash\":null,\"entry_hash\":\"sha256:0d3b223914bff4c205da85a95b578de8b1e7fa2f9b64b3a023a6097d1f4e77b4\",\"deleted\":false},\"attests\":\"Zambo attests that this record was received, redacted, timestamped, and chained.\",\"does_not_attest\":\"Zambo did not run or observe the reported action.\",\"verify_url\":\"https://zambo.dev/api/journal/lr-op-13118ee094-a1/verify\"}\n\nOriginal receipt: https://zambo.dev/run/e3af210e-182f-4c48-9da1-dd954be4ccda\nOutput digest: sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+        "type": "text"
+      },
+      {
+        "mimeType": "text/html",
+        "name": "Original execution receipt",
+        "type": "resource_link",
+        "uri": "https://zambo.dev/run/e3af210e-182f-4c48-9da1-dd954be4ccda"
+      }
+    ],
+    "isError": false,
+    "receipt_id": "e3af210e-182f-4c48-9da1-dd954be4ccda",
+    "receipt_url": "https://zambo.dev/run/e3af210e-182f-4c48-9da1-dd954be4ccda",
+    "resultType": "complete",
+    "structuredContent": {
+      "idempotent_replay": true,
+      "original_outcome": {
+        "attests": "Zambo attests that this record was received, redacted, timestamped, and chained.",
+        "does_not_attest": "Zambo did not run or observe the reported action.",
+        "entry": {
+          "completed_at": "2026-11-17T17:12:38.521Z",
+          "deleted": false,
+          "duration_ms": 0,
+          "entry_hash": "sha256:0d3b223914bff4c205da85a95b578de8b1e7fa2f9b64b3a023a6097d1f4e77b4",
+          "entry_id": "a27f708c-1eec-493d-abb5-195d76ba47ac",
+          "executor_identity": "lost-response-harness",
+          "external_executor": null,
+          "job_id": "lr-op-13118ee094-a1",
+          "metadata": {},
+          "prev_hash": null,
+          "provenance_class": "LOGGED BY AGENT",
+          "redacted_inputs_hash": "sha256:f9852ddfc5eb3d86c819bf6f9ce3db079815d51b616d957b00d5bc5f56789ea6",
+          "sequence": 1,
+          "started_at": "2026-11-17T17:12:38.521Z",
+          "tool_name": "lost_response_probe"
+        },
+        "provenance_class": "LOGGED BY AGENT",
+        "status": "logged",
+        "verify_url": "https://zambo.dev/api/journal/lr-op-13118ee094-a1/verify"
+      },
+      "original_outcome_text": "{\"status\":\"logged\",\"provenance_class\":\"LOGGED BY AGENT\",\"entry\":{\"job_id\":\"lr-op-13118ee094-a1\",\"entry_id\":\"a27f708c-1eec-493d-abb5-195d76ba47ac\",\"sequence\":1,\"provenance_class\":\"LOGGED BY AGENT\",\"tool_name\":\"lost_response_probe\",\"redacted_inputs_hash\":\"sha256:f9852ddfc5eb3d86c819bf6f9ce3db079815d51b616d957b00d5bc5f56789ea6\",\"started_at\":\"2026-11-17T17:12:38.521Z\",\"completed_at\":\"2026-11-17T17:12:38.521Z\",\"duration_ms\":0,\"executor_identity\":\"lost-response-harness\",\"external_executor\":null,\"metadata\":{},\"prev_hash\":null,\"entry_hash\":\"sha256:0d3b223914bff4c205da85a95b578de8b1e7fa2f9b64b3a023a6097d1f4e77b4\",\"deleted\":false},\"attests\":\"Zambo attests that this record was received, redacted, timestamped, and chained.\",\"does_not_attest\":\"Zambo did not run or observe the reported action.\",\"verify_url\":\"https://zambo.dev/api/journal/lr-op-13118ee094-a1/verify\"}",
+      "output_digest": "sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d",
+      "receipt_id": "e3af210e-182f-4c48-9da1-dd954be4ccda",
+      "receipt_url": "https://zambo.dev/run/e3af210e-182f-4c48-9da1-dd954be4ccda",
+      "status": "replayed"
+    }
+  }
+}

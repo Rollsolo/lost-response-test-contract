@@ -141,3 +141,36 @@ section.
 | Assertion | System | Outcome | Evidence | Date |
 |---|---|---|---|---|
 | A5 | Zambo | fail | K-only recovery passed: a fresh client holding only K (lr-op-13118ee094-a1) recovered the committed outcome through the direct public-record lookup (GET /api/v2/receipt/<K>/verify, HTTP 200, served output_hash equal to the committed digest sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d), and the run-id leg returned the unaltered record with digest equal and recomputation matched; the harness delayed leg scored those two legs pass. Protection against fresh execution failed on the protection probes (run with a fresh client, mirroring runs/2026-11-16-zambo-1/a5_delayed_extra.json): before the delayed retries the external effect count was 1; the identical delayed retry executed as a fresh call (success, new journal entry sequence 2, new receipt f83e0bd2-e387-45fd-aa4d-f43758d21990, no replay marker), raising the count to 2; the modified-parameter delayed retry (action changed to lost_response_probe_altered) was refused as a binding conflict (tool_error:idempotency_conflict, HTTP 409, executed: false, refusal receipt a1a38ef7-912f-4e02-80bf-285bee1d55c3, not counted as an execution), so the count stayed 2. Diagnostic, recorded not scored: the fresh client's initialize on 2026-11-18 issued a new caller_handle, unlike 2026-11-16/17 when initialize returned the stable handle recorded in this run's plant files; an identical retry presenting the plant's persisted caller_handle replayed the original receipt (idempotent_replay: true, no new execution), and the K-keyed continuity_get_recent with that handle returned status found with the original receipt and digest, while the same continuity call under the fresh handle returned the generic recent-events stream with no outcome or digest. Replay and continuity recovery are therefore observed to be scoped to the persisted caller_handle; K-only recovery through the direct lookup is not. Raw: runs/2026-11-17-zambo-2/summary_a5.json, runs/2026-11-17-zambo-2/a5_delayed_result.json, runs/2026-11-17-zambo-2/a5_delayed_runid_receipt.json, runs/2026-11-17-zambo-2/a5_delayed_extra.json, runs/2026-11-17-zambo-2/a5_delayed_konly_run_lookup.json, runs/2026-11-17-zambo-2/a5_delayed_konly_continuity_get_recent.json, runs/2026-11-17-zambo-2/a5_delayed_konly_continuity_samehandle.json, runs/2026-11-17-zambo-2/count_a5_delayed_before_protection.json, runs/2026-11-17-zambo-2/count_a5_delayed_final.json, runs/2026-11-17-zambo-2/a5_delayed_retry_identical.json, runs/2026-11-17-zambo-2/a5_delayed_retry_mismatched.json, runs/2026-11-17-zambo-2/a5_delayed_retry_identical_samehandle.json, runs/2026-11-17-zambo-2/count_a5_delayed_after_samehandle.json | 2026-11-18 |
+
+Run of 2026-11-18 (key-binding fix acceptance): Zambo production
+(https://zambo.dev/mcp), target tool journal_log, raw outputs in
+runs/2026-11-18-zambo-3/. On 2026-11-18 the crew published the fix
+that binds replay protection and key-only recovery to the operation
+key (job_id + parameter digest) instead of the caller_handle alone.
+Acceptance ran the same day from fresh clients (each initialize
+issued a new caller_handle), first against the zambo-2 operation
+itself, then against a fresh plant.
+
+Post-publish probes on the zambo-2 operation (K
+lr-op-13118ee094-a1, committed receipt
+e3af210e-182f-4c48-9da1-dd954be4ccda, committed digest
+sha256:90c4715cfe287641f6145abe9a9cbc074eb85b3c3bf3af2a1022a35f9a44bd1d;
+its two historical executions stand, history not rewritten):
+
+| Leg | System | Outcome | Evidence | Date |
+|---|---|---|---|---|
+| K-only recovery (fresh client) | Zambo | pass | continuity_get_recent holding only K returned the original receipt id and the committed digest; the same call under a fresh handle on 2026-11-18 before the publish returned only the fresh caller's own stream. Direct lookup GET /api/v2/receipt/<K>/verify HTTP 200, commitment_matches computed_hash equal to the committed digest. Raw: runs/2026-11-18-zambo-3/p1_konly_continuity.json, runs/2026-11-18-zambo-3/p1_run_lookup.json | 2026-11-18 |
+| Identical retry (fresh client) | Zambo | pass | Answered success as a replay of the original receipt e3af210e-182f-4c48-9da1-dd954be4ccda (idempotent_replay marker present); no third execution: the workflow snapshot children before and after differ only by a workflow_close wrap receipt and the refusal record below. Raw: runs/2026-11-18-zambo-3/p1_retry_identical.json, runs/2026-11-18-zambo-3/p1_count_before_raw.json, runs/2026-11-18-zambo-3/p1_count_after_raw.json | 2026-11-18 |
+| Modified-parameter retry (fresh client) | Zambo | pass | Refused before execution: "This operation key is already bound to different parameters. No journal entry was added" (idempotency_conflict; refusal receipt 3c091933-6125-42eb-8795-29b2414a96a8, step rejected_before_execution, not an execution). Raw: runs/2026-11-18-zambo-3/p1_retry_mismatched.json | 2026-11-18 |
+
+Fresh plant, short range (K lr-op-bb150ceec1-a1, session
+lr-bb150ceec1-a1, planted 2026-11-18T18:37:56Z, committed receipt
+e2568939-b651-4150-b059-a1eeebbf7319, committed digest
+sha256:c63fbfb9a34b33df4e5d2d821186ba7020c7e67217d8f80958b228710f106818):
+
+| Assertion | System | Outcome | Evidence | Date |
+|---|---|---|---|---|
+| A1 | Zambo | pass | External effect count exactly 1 at planting (workflow snapshot holds the single journal_log execution e2568939-b651-4150-b059-a1eeebbf7319); the identical retry from a second fresh client answered success as a replay of that same receipt (idempotent_replay marker), and the post-retry snapshot adds only a workflow_close wrap receipt and the A2 refusal record, no new execution. Raw: runs/2026-11-18-zambo-3/p2_attempt1.json, runs/2026-11-18-zambo-3/p2_snapshot1.json, runs/2026-11-18-zambo-3/p2_retry_identical.json, runs/2026-11-18-zambo-3/p2_snapshot2.json | 2026-11-18 |
+| A2 | Zambo | pass | The mismatched retry (action changed to lost_response_probe_altered) was refused before execution as a binding conflict (idempotency_conflict; refusal receipt a35a5d03-76fc-48bc-b60e-430a8db6444e); the count stayed 1. Raw: runs/2026-11-18-zambo-3/p2_retry_mismatched.json | 2026-11-18 |
+| A3 | Zambo | pass | K-only recovery from a fresh client: continuity_get_recent holding only K returned the committed receipt id and the committed digest sha256:c63fbfb9a34b33df4e5d2d821186ba7020c7e67217d8f80958b228710f106818. Raw: runs/2026-11-18-zambo-3/p2_konly_continuity.json | 2026-11-18 |
+| A5 | Zambo | unproven | The 24 hour delayed leg cannot complete on the planting day. The operation is planted with its commit timestamp recorded in runs/2026-11-18-zambo-3/a5_plant.json (due 2026-11-19T18:38:16Z); the delayed leg runs later with the same fresh-client probes used by the zambo-2 delayed leg. | 2026-11-18 |

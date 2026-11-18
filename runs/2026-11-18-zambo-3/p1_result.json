@@ -1,0 +1,27 @@
+{
+  "continuity_class": "success",
+  "continuity_has_committed_digest": true,
+  "continuity_has_original_receipt": true,
+  "count_after": 0,
+  "count_before": 0,
+  "identical": {
+    "class": "success",
+    "receipts": [
+      "e3af210e-182f-4c48-9da1-dd954be4ccda"
+    ],
+    "replay_marker": true
+  },
+  "init_has_caller_handle": true,
+  "init_http": 200,
+  "lookup_digest": null,
+  "lookup_digest_match": false,
+  "lookup_http": 200,
+  "mismatched": {
+    "class": "tool_error:Call rejected before execution: This operation key is already bound to different",
+    "receipts": [
+      "3c091933-6125-42eb-8795-29b2414a96a8"
+    ]
+  },
+  "targets_after": {},
+  "targets_before": {}
+}

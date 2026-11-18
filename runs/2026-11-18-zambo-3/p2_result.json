@@ -1,0 +1,52 @@
+{
+  "K": "lr-op-bb150ceec1-a1",
+  "attempt1": {
+    "class": "success",
+    "receipts": [
+      "e2568939-b651-4150-b059-a1eeebbf7319"
+    ]
+  },
+  "attempt1_tools": [
+    "journal_log"
+  ],
+  "committed_digest": "sha256:c63fbfb9a34b33df4e5d2d821186ba7020c7e67217d8f80958b228710f106818",
+  "continuity_has_digest": true,
+  "continuity_has_receipt": true,
+  "due_at": "2026-11-19T18:38:16.846509Z",
+  "identical": {
+    "class": "success",
+    "receipts": [
+      "e2568939-b651-4150-b059-a1eeebbf7319"
+    ],
+    "replay_marker": true
+  },
+  "mismatched": {
+    "class": "tool_error:Call rejected before execution: This operation key is already bound to different",
+    "receipts": [
+      "a35a5d03-76fc-48bc-b60e-430a8db6444e"
+    ]
+  },
+  "new_children_after_retries": {
+    "a35a5d03-76fc-48bc-b60e-430a8db6444e": "cf0ba49914fb6bc071d1af4166fd63959c646888f1a21af5cdc01a3860b1c681",
+    "f07bd1c2-fda4-4348-92e2-3d3d638af13f": "90681754999f7d53523172e83405e3a7b72a4f4008f8252abf9ae572ecffc01c"
+  },
+  "new_children_tools": {
+    "a35a5d03-76fc-48bc-b60e-430a8db6444e": [
+      "journal_log"
+    ],
+    "f07bd1c2-fda4-4348-92e2-3d3d638af13f": [
+      "workflow_close"
+    ]
+  },
+  "planted_at": "2026-11-18T18:37:56.486622Z",
+  "session": "lr-bb150ceec1-a1",
+  "snapshot1_children": {
+    "e2568939-b651-4150-b059-a1eeebbf7319": "c63fbfb9a34b33df4e5d2d821186ba7020c7e67217d8f80958b228710f106818"
+  },
+  "snapshot2_children": {
+    "a35a5d03-76fc-48bc-b60e-430a8db6444e": "cf0ba49914fb6bc071d1af4166fd63959c646888f1a21af5cdc01a3860b1c681",
+    "e2568939-b651-4150-b059-a1eeebbf7319": "c63fbfb9a34b33df4e5d2d821186ba7020c7e67217d8f80958b228710f106818",
+    "f07bd1c2-fda4-4348-92e2-3d3d638af13f": "90681754999f7d53523172e83405e3a7b72a4f4008f8252abf9ae572ecffc01c"
+  },
+  "tag": "bb150ceec1"
+}
