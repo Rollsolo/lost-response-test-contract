@@ -176,3 +176,22 @@ sha256:c63fbfb9a34b33df4e5d2d821186ba7020c7e67217d8f80958b228710f106818):
 | A2 | Zambo | pass | The mismatched retry (action changed to lost_response_probe_altered) was refused before execution as a binding conflict (idempotency_conflict; refusal receipt a35a5d03-76fc-48bc-b60e-430a8db6444e); the count stayed 1. Raw: runs/2026-11-18-zambo-3/p2_retry_mismatched.json | 2026-11-18 |
 | A3 | Zambo | pass | K-only recovery from a fresh client: continuity_get_recent holding only K returned the committed receipt id and the committed digest sha256:c63fbfb9a34b33df4e5d2d821186ba7020c7e67217d8f80958b228710f106818. Raw: runs/2026-11-18-zambo-3/p2_konly_continuity.json | 2026-11-18 |
 | A5 | Zambo | unproven | The 24 hour delayed leg cannot complete on the planting day. The operation is planted with its commit timestamp recorded in runs/2026-11-18-zambo-3/a5_plant.json (due 2026-11-19T18:38:16Z); the delayed leg runs later with the same fresh-client probes used by the zambo-2 delayed leg. | 2026-11-18 |
+
+Run of 2026-11-18 (key-binding fix acceptance, A5 delayed leg): Zambo
+production (https://zambo.dev/mcp), target tool journal_log, raw outputs
+in runs/2026-11-18-zambo-3/ (summary_a5.json is the scored record for
+A5). This run was planted on 2026-11-18T18:37:56Z, after the crew
+published the fix binding replay protection and key-only recovery to
+the operation key (job_id + parameter digest); its A5 delayed leg ran
+on 2026-11-19 after the due time 2026-11-19T18:38:16Z. Operation: K
+lr-op-bb150ceec1-a1, session lr-bb150ceec1-a1, committed receipt
+e2568939-b651-4150-b059-a1eeebbf7319, committed digest
+sha256:c63fbfb9a34b33df4e5d2d821186ba7020c7e67217d8f80958b228710f106818,
+external effect count at planting 1. The acceptance section's A5
+unproven row above is the planting-day record and is not edited by
+this section. Run 2026-11-17-zambo-2's A5 FAIL row above is historical
+evidence and is not edited by this section.
+
+| Assertion | System | Outcome | Evidence | Date |
+|---|---|---|---|---|
+| A5 | Zambo | pass | Delayed leg run 2026-11-19T18:46:48Z, after the due time 2026-11-19T18:38:16Z. K-only recovery passed: a fresh client holding only K (lr-op-bb150ceec1-a1) recovered the committed outcome through the direct public-record lookup (GET /api/v2/receipt/<K>/verify, HTTP 200, served output_hash equal to the committed digest sha256:c63fbfb9a34b33df4e5d2d821186ba7020c7e67217d8f80958b228710f106818), the K-keyed continuity_get_recent also returned the original receipt id and the committed digest, and the run-id leg returned the unaltered record with digest equal and verification_status verified. Protection against fresh execution passed: before the delayed retries the external effect count was 1; the identical delayed retry answered success as a replay of the original receipt (idempotent_replay marker, receipt e2568939-b651-4150-b059-a1eeebbf7319, no new execution) and the modified-parameter delayed retry (action changed to lost_response_probe_altered) was refused before execution (error.code idempotency_conflict, executed: false, outcome rejected_before_execution, refusal receipt d33fc9a7-7f3a-405f-bd98-6dce72983beb, step status rejected_before_execution, not counted as an execution), so the count stayed 1, confirmed by a live adapter recount (count 1). Counter note, recorded not hidden: the first scoring pass used a receipt_id-keyed counter that returned 0/0; the scored counts are the canonical recount (fixtures/harness/adapters/zambo.py count_effects: journal_log tool plus success step per child public record) from the same saved raw snapshots, with the before/after snapshots and the recount in the run folder. Raw: runs/2026-11-18-zambo-3/summary_a5.json, runs/2026-11-18-zambo-3/a5_delayed_extra.json, runs/2026-11-18-zambo-3/a5_delayed_initialize.json, runs/2026-11-18-zambo-3/a5_delayed_konly_run_lookup.json, runs/2026-11-18-zambo-3/a5_delayed_konly_continuity_get_recent.json, runs/2026-11-18-zambo-3/a5_delayed_runid_receipt.json, runs/2026-11-18-zambo-3/a5_delayed_count_before.json, runs/2026-11-18-zambo-3/a5_delayed_count_after.json, runs/2026-11-18-zambo-3/count_a5_delayed_before_protection.json, runs/2026-11-18-zambo-3/count_a5_delayed_final.json, runs/2026-11-18-zambo-3/count_a5_delayed_recount.json, runs/2026-11-18-zambo-3/a5_delayed_retry_identical.json, runs/2026-11-18-zambo-3/a5_delayed_retry_mismatched.json, runs/2026-11-18-zambo-3/a5_delayed_probe.py, runs/2026-11-18-zambo-3/a5_delayed_recount.py | 2026-11-19 |
