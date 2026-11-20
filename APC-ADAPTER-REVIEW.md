@@ -13,11 +13,3 @@ The adapter requires a separate durable effect counter. It does not count APC re
 ## Test status
 
 The adapter passed a local **mock-interface software check** against a simulated APC REST endpoint and the synthetic provider. That is not an APC product result. A1–A4 have not been run against the deployed APC product; A5 requires a real 24-hour delayed run. No certification or independent assessment is claimed.
-
-## Baseline
-
-The first joint APC run must remain pinned to **7.1.8-dev**. The separately versioned 7.1.8-dev.1 FIX1 derivative is not a substitute for the frozen baseline and must only be tested in a separately identified follow-up run.
-
-## Publication boundary
-
-No APC product source archive, deployment image, private architecture, private endpoint, credential, key, or customer configuration is included in this contribution. The adapter and example files are evaluation glue only. Please agree contribution licensing and merge terms with the repository maintainer before merging this branch.
