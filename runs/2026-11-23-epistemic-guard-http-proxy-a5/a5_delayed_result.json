@@ -1,6 +1,7 @@
 {
   "assertion": "A5",
-  "delayed_leg_run_at": "2026-11-24T00:53:56.725142Z",
+  "build": "epistemic-guard 0.6.5 at 732c551 (includes 1540956 prev_log seeding on rotation); planted on 1540956",
+  "delayed_leg_run_at": "2026-11-24T01:02:57.486352Z",
   "legs": {
     "k_only_direct_lookup": {
       "artifact": "a5_delayed_konly_lookup.json",
@@ -79,7 +80,7 @@
     "score": "pass"
   },
   "protection_score": "pass",
-  "reason": "",
+  "reason": "Delayed leg run 2026-11-24T01:02:57Z, about 26.8h after the plant. K-only recovery passes (HTTP 200, served digest equals committed digest, output_hash recomputation matched); run-id leg passes separately. Backend effect count 1 -> 1 across the delayed retries: identical retry replayed (success), mismatched retry refused (jsonrpc_error:-32602, HTTP 409).",
   "recovery_score": "pass",
   "score": "pass"
 }
